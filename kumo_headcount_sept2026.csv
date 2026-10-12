@@ -1,0 +1,601 @@
+Employee no.,Department,Division,Team,Gender,Race,Occupational level,Length of service
+K4001,Operations (Durban),Operations,DBN Shift A,Man,Indian,Semi-skilled,5+ years
+K4002,Operations (Durban),Operations,DBN Shift B,Woman,African,Semi-skilled,5+ years
+K4003,Operations (Durban),Operations,DBN Shift C,Woman,African,Semi-skilled,5+ years
+K4004,Operations (Durban),Operations,DBN Inbound,Man,African,Middle management,1–3 years
+K4005,Operations (Durban),Operations,DBN Shift A,Man,Indian,Semi-skilled,5+ years
+K4006,Operations (Durban),Operations,DBN Shift B,Man,Indian,Skilled,1–3 years
+K4007,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,5+ years
+K4008,Operations (Durban),Operations,DBN Inbound,Man,African,Skilled,5+ years
+K4009,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,Under 1 year
+K4010,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,Under 1 year
+K4011,Operations (Durban),Operations,DBN Shift C,Woman,African,Semi-skilled,5+ years
+K4012,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,5+ years
+K4013,Operations (Durban),Operations,DBN Shift A,Man,Indian,Semi-skilled,1–3 years
+K4014,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,1–3 years
+K4015,Operations (Durban),Operations,DBN Shift C,Man,African,Skilled,5+ years
+K4016,Operations (Durban),Operations,DBN Inbound,Woman,Coloured,Semi-skilled,5+ years
+K4017,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,3–5 years
+K4018,Operations (Durban),Operations,DBN Shift B,Woman,Coloured,Middle management,3–5 years
+K4019,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,5+ years
+K4020,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,3–5 years
+K4021,Operations (Durban),Operations,DBN Shift A,Man,White,Skilled,1–3 years
+K4022,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,1–3 years
+K4023,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,1–3 years
+K4024,Operations (Durban),Operations,DBN Inbound,Man,African,Skilled,Under 1 year
+K4025,Operations (Durban),Operations,DBN Shift A,Man,Indian,Semi-skilled,1–3 years
+K4026,Operations (Durban),Operations,DBN Shift B,Man,African,Skilled,3–5 years
+K4027,Operations (Durban),Operations,DBN Shift C,Man,Coloured,Semi-skilled,5+ years
+K4028,Operations (Durban),Operations,DBN Inbound,Woman,Coloured,Semi-skilled,5+ years
+K4029,Operations (Durban),Operations,DBN Shift A,Woman,African,Skilled,5+ years
+K4030,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,5+ years
+K4031,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,3–5 years
+K4032,Operations (Durban),Operations,DBN Inbound,Man,White,Skilled,Under 1 year
+K4033,Operations (Durban),Operations,DBN Shift A,Man,Coloured,Middle management,5+ years
+K4034,Operations (Durban),Operations,DBN Shift B,Woman,Indian,Semi-skilled,3–5 years
+K4035,Operations (Durban),Operations,DBN Shift C,Man,Indian,Skilled,1–3 years
+K4036,Operations (Durban),Operations,DBN Inbound,Man,Coloured,Semi-skilled,5+ years
+K4037,Operations (Durban),Operations,DBN Shift A,Man,Indian,Semi-skilled,1–3 years
+K4038,Operations (Durban),Operations,DBN Shift B,Man,African,Skilled,3–5 years
+K4039,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,5+ years
+K4040,Operations (Durban),Operations,DBN Inbound,Woman,White,Skilled,1–3 years
+K4041,Operations (Durban),Operations,DBN Shift A,Man,White,Skilled,3–5 years
+K4042,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,Under 1 year
+K4043,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,1–3 years
+K4044,Operations (Durban),Operations,DBN Inbound,Woman,African,Semi-skilled,1–3 years
+K4045,Operations (Durban),Operations,DBN Shift A,Man,Coloured,Semi-skilled,1–3 years
+K4046,Operations (Durban),Operations,DBN Shift B,Man,Indian,Semi-skilled,5+ years
+K4047,Operations (Durban),Operations,DBN Shift C,Woman,African,Skilled,5+ years
+K4048,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,5+ years
+K4049,Operations (Durban),Operations,DBN Shift A,Man,Coloured,Skilled,1–3 years
+K4050,Operations (Durban),Operations,DBN Shift B,Man,Coloured,Skilled,5+ years
+K4051,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,5+ years
+K4052,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,5+ years
+K4053,Operations (Durban),Operations,DBN Shift A,Man,African,Semi-skilled,3–5 years
+K4054,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,1–3 years
+K4055,Operations (Durban),Operations,DBN Shift C,Man,Coloured,Semi-skilled,1–3 years
+K4056,Operations (Durban),Operations,DBN Inbound,Man,Coloured,Skilled,3–5 years
+K4057,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,Under 1 year
+K4058,Operations (Durban),Operations,DBN Shift B,Woman,African,Skilled,1–3 years
+K4059,Operations (Durban),Operations,DBN Shift C,Woman,African,Semi-skilled,3–5 years
+K4060,Operations (Durban),Operations,DBN Inbound,Woman,Coloured,Semi-skilled,5+ years
+K4061,Operations (Durban),Operations,DBN Shift A,Man,Indian,Skilled,1–3 years
+K4062,Operations (Durban),Operations,DBN Shift B,Man,Indian,Semi-skilled,5+ years
+K4063,Operations (Durban),Operations,DBN Shift C,Man,Indian,Semi-skilled,1–3 years
+K4064,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,5+ years
+K4065,Operations (Durban),Operations,DBN Shift A,Man,African,Skilled,5+ years
+K4066,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,5+ years
+K4067,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,Under 1 year
+K4068,Operations (Durban),Operations,DBN Inbound,Man,Coloured,Semi-skilled,5+ years
+K4069,Operations (Durban),Operations,DBN Shift A,Woman,African,Skilled,5+ years
+K4070,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,5+ years
+K4071,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,1–3 years
+K4072,Operations (Durban),Operations,DBN Inbound,Man,Indian,Skilled,3–5 years
+K4073,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,5+ years
+K4074,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,3–5 years
+K4075,Operations (Durban),Operations,DBN Shift C,Woman,African,Semi-skilled,5+ years
+K4076,Operations (Durban),Operations,DBN Inbound,Man,African,Middle management,Under 1 year
+K4077,Operations (Durban),Operations,DBN Shift A,Woman,Indian,Semi-skilled,3–5 years
+K4078,Operations (Durban),Operations,DBN Shift B,Man,Indian,Semi-skilled,1–3 years
+K4079,Operations (Durban),Operations,DBN Shift C,Woman,Indian,Semi-skilled,1–3 years
+K4080,Operations (Durban),Operations,DBN Inbound,Man,Coloured,Semi-skilled,5+ years
+K4081,Operations (Durban),Operations,DBN Shift A,Woman,Coloured,Semi-skilled,1–3 years
+K4082,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,5+ years
+K4083,Operations (Durban),Operations,DBN Shift C,Man,Coloured,Semi-skilled,3–5 years
+K4084,Operations (Durban),Operations,DBN Inbound,Man,White,Senior management,5+ years
+K4085,Operations (Durban),Operations,DBN Shift A,Man,Indian,Skilled,5+ years
+K4086,Operations (Durban),Operations,DBN Shift B,Man,African,Skilled,1–3 years
+K4087,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,5+ years
+K4088,Operations (Durban),Operations,DBN Inbound,Woman,African,Semi-skilled,3–5 years
+K4089,Operations (Durban),Operations,DBN Shift A,Woman,Coloured,Skilled,5+ years
+K4090,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,Under 1 year
+K4091,Operations (Durban),Operations,DBN Shift C,Man,Coloured,Skilled,1–3 years
+K4092,Operations (Durban),Operations,DBN Inbound,Man,Indian,Middle management,1–3 years
+K4093,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,5+ years
+K4094,Operations (Durban),Operations,DBN Shift B,Man,African,Skilled,3–5 years
+K4095,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,1–3 years
+K4096,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,1–3 years
+K4097,Operations (Durban),Operations,DBN Shift A,Man,African,Skilled,5+ years
+K4098,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,3–5 years
+K4099,Operations (Durban),Operations,DBN Shift C,Man,White,Middle management,3–5 years
+K4100,Operations (Durban),Operations,DBN Inbound,Man,White,Skilled,1–3 years
+K4101,Operations (Durban),Operations,DBN Shift A,Woman,African,Middle management,5+ years
+K4102,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,1–3 years
+K4103,Operations (Durban),Operations,DBN Shift C,Man,Indian,Senior management,Under 1 year
+K4104,Operations (Durban),Operations,DBN Inbound,Man,Indian,Skilled,3–5 years
+K4105,Operations (Durban),Operations,DBN Shift A,Man,African,Semi-skilled,5+ years
+K4106,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,5+ years
+K4107,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,1–3 years
+K4108,Operations (Durban),Operations,DBN Inbound,Man,African,Skilled,1–3 years
+K4109,Operations (Durban),Operations,DBN Shift A,Woman,Indian,Middle management,1–3 years
+K4110,Operations (Durban),Operations,DBN Shift B,Man,African,Skilled,3–5 years
+K4111,Operations (Durban),Operations,DBN Shift C,Man,African,Skilled,Under 1 year
+K4112,Operations (Durban),Operations,DBN Inbound,Woman,African,Semi-skilled,3–5 years
+K4113,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,1–3 years
+K4114,Operations (Durban),Operations,DBN Shift B,Woman,African,Skilled,5+ years
+K4115,Operations (Durban),Operations,DBN Shift C,Woman,Coloured,Semi-skilled,3–5 years
+K4116,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,Under 1 year
+K4117,Operations (Durban),Operations,DBN Shift A,Man,African,Semi-skilled,1–3 years
+K4118,Operations (Durban),Operations,DBN Shift B,Man,White,Senior management,1–3 years
+K4119,Operations (Durban),Operations,DBN Shift C,Man,White,Skilled,1–3 years
+K4120,Operations (Durban),Operations,DBN Inbound,Woman,African,Semi-skilled,1–3 years
+K4121,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,1–3 years
+K4122,Operations (Durban),Operations,DBN Shift B,Woman,African,Semi-skilled,Under 1 year
+K4123,Operations (Durban),Operations,DBN Shift C,Man,Coloured,Semi-skilled,1–3 years
+K4124,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,Under 1 year
+K4125,Operations (Durban),Operations,DBN Shift A,Man,Indian,Semi-skilled,5+ years
+K4126,Operations (Durban),Operations,DBN Shift B,Man,African,Skilled,1–3 years
+K4127,Operations (Durban),Operations,DBN Shift C,Man,Coloured,Semi-skilled,Under 1 year
+K4128,Operations (Durban),Operations,DBN Inbound,Man,Coloured,Skilled,1–3 years
+K4129,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,5+ years
+K4130,Operations (Durban),Operations,DBN Shift B,Man,White,Skilled,1–3 years
+K4131,Operations (Durban),Operations,DBN Shift C,Woman,African,Skilled,5+ years
+K4132,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,3–5 years
+K4133,Operations (Durban),Operations,DBN Shift A,Woman,African,Semi-skilled,Under 1 year
+K4134,Operations (Durban),Operations,DBN Shift B,Woman,Coloured,Semi-skilled,5+ years
+K4135,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,1–3 years
+K4136,Operations (Durban),Operations,DBN Inbound,Woman,African,Semi-skilled,5+ years
+K4137,Operations (Durban),Operations,DBN Shift A,Woman,Indian,Semi-skilled,3–5 years
+K4138,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,5+ years
+K4139,Operations (Durban),Operations,DBN Shift C,Man,African,Semi-skilled,Under 1 year
+K4140,Operations (Durban),Operations,DBN Inbound,Woman,White,Middle management,Under 1 year
+K4141,Operations (Durban),Operations,DBN Shift A,Man,African,Semi-skilled,1–3 years
+K4142,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,Under 1 year
+K4143,Operations (Durban),Operations,DBN Shift C,Woman,African,Skilled,5+ years
+K4144,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,1–3 years
+K4145,Operations (Durban),Operations,DBN Shift A,Woman,Coloured,Semi-skilled,5+ years
+K4146,Operations (Durban),Operations,DBN Shift B,Man,Coloured,Semi-skilled,3–5 years
+K4147,Operations (Durban),Operations,DBN Shift C,Woman,African,Semi-skilled,3–5 years
+K4148,Operations (Durban),Operations,DBN Inbound,Man,African,Semi-skilled,5+ years
+K4149,Operations (Durban),Operations,DBN Shift A,Man,African,Semi-skilled,1–3 years
+K4150,Operations (Durban),Operations,DBN Shift B,Man,African,Semi-skilled,1–3 years
+K4151,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,1–3 years
+K4152,Operations (Johannesburg),Operations,JHB Shift B,Man,White,Middle management,1–3 years
+K4153,Operations (Johannesburg),Operations,JHB Dispatch,Woman,African,Skilled,3–5 years
+K4154,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,1–3 years
+K4155,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,1–3 years
+K4156,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,5+ years
+K4157,Operations (Johannesburg),Operations,JHB Dispatch,Woman,Coloured,Semi-skilled,5+ years
+K4158,Operations (Johannesburg),Operations,JHB Fleet,Man,White,Middle management,1–3 years
+K4159,Operations (Johannesburg),Operations,JHB Shift A,Man,Coloured,Semi-skilled,3–5 years
+K4160,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,5+ years
+K4161,Operations (Johannesburg),Operations,JHB Dispatch,Woman,White,Skilled,5+ years
+K4162,Operations (Johannesburg),Operations,JHB Fleet,Man,Indian,Skilled,1–3 years
+K4163,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Skilled,3–5 years
+K4164,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,3–5 years
+K4165,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,1–3 years
+K4166,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,1–3 years
+K4167,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,5+ years
+K4168,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,1–3 years
+K4169,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,5+ years
+K4170,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Skilled,1–3 years
+K4171,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,5+ years
+K4172,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,5+ years
+K4173,Operations (Johannesburg),Operations,JHB Dispatch,Woman,White,Skilled,1–3 years
+K4174,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,5+ years
+K4175,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Skilled,5+ years
+K4176,Operations (Johannesburg),Operations,JHB Shift B,Woman,White,Semi-skilled,5+ years
+K4177,Operations (Johannesburg),Operations,JHB Dispatch,Woman,White,Skilled,3–5 years
+K4178,Operations (Johannesburg),Operations,JHB Fleet,Man,White,Senior management,1–3 years
+K4179,Operations (Johannesburg),Operations,JHB Shift A,Man,Indian,Semi-skilled,1–3 years
+K4180,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,3–5 years
+K4181,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,5+ years
+K4182,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Skilled,1–3 years
+K4183,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,Under 1 year
+K4184,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Skilled,1–3 years
+K4185,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,1–3 years
+K4186,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Skilled,5+ years
+K4187,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,5+ years
+K4188,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,3–5 years
+K4189,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,3–5 years
+K4190,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,5+ years
+K4191,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,5+ years
+K4192,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Skilled,1–3 years
+K4193,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,3–5 years
+K4194,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Senior management,3–5 years
+K4195,Operations (Johannesburg),Operations,JHB Shift A,Woman,Coloured,Skilled,5+ years
+K4196,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,3–5 years
+K4197,Operations (Johannesburg),Operations,JHB Dispatch,Man,White,Semi-skilled,3–5 years
+K4198,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,Under 1 year
+K4199,Operations (Johannesburg),Operations,JHB Shift A,Woman,White,Skilled,5+ years
+K4200,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,3–5 years
+K4201,Operations (Johannesburg),Operations,JHB Dispatch,Woman,African,Semi-skilled,5+ years
+K4202,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Semi-skilled,1–3 years
+K4203,Operations (Johannesburg),Operations,JHB Shift A,Man,Indian,Semi-skilled,Under 1 year
+K4204,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Skilled,5+ years
+K4205,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,5+ years
+K4206,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Skilled,1–3 years
+K4207,Operations (Johannesburg),Operations,JHB Shift A,Man,Indian,Middle management,5+ years
+K4208,Operations (Johannesburg),Operations,JHB Shift B,Woman,Indian,Skilled,5+ years
+K4209,Operations (Johannesburg),Operations,JHB Dispatch,Man,Indian,Middle management,1–3 years
+K4210,Operations (Johannesburg),Operations,JHB Fleet,Man,Coloured,Semi-skilled,5+ years
+K4211,Operations (Johannesburg),Operations,JHB Shift A,Man,Coloured,Semi-skilled,5+ years
+K4212,Operations (Johannesburg),Operations,JHB Shift B,Man,Coloured,Semi-skilled,5+ years
+K4213,Operations (Johannesburg),Operations,JHB Dispatch,Woman,African,Skilled,3–5 years
+K4214,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Skilled,5+ years
+K4215,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Middle management,5+ years
+K4216,Operations (Johannesburg),Operations,JHB Shift B,Man,Coloured,Skilled,Under 1 year
+K4217,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,1–3 years
+K4218,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,1–3 years
+K4219,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Middle management,5+ years
+K4220,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,5+ years
+K4221,Operations (Johannesburg),Operations,JHB Dispatch,Man,Coloured,Semi-skilled,1–3 years
+K4222,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,3–5 years
+K4223,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,Under 1 year
+K4224,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,5+ years
+K4225,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,Under 1 year
+K4226,Operations (Johannesburg),Operations,JHB Fleet,Woman,Indian,Skilled,Under 1 year
+K4227,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Skilled,Under 1 year
+K4228,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Skilled,1–3 years
+K4229,Operations (Johannesburg),Operations,JHB Dispatch,Woman,African,Semi-skilled,Under 1 year
+K4230,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,5+ years
+K4231,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Skilled,5+ years
+K4232,Operations (Johannesburg),Operations,JHB Shift B,Man,White,Skilled,1–3 years
+K4233,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,3–5 years
+K4234,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,5+ years
+K4235,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,5+ years
+K4236,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Skilled,5+ years
+K4237,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,1–3 years
+K4238,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,3–5 years
+K4239,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Skilled,Under 1 year
+K4240,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,5+ years
+K4241,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,5+ years
+K4242,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Semi-skilled,Under 1 year
+K4243,Operations (Johannesburg),Operations,JHB Shift A,Woman,African,Semi-skilled,5+ years
+K4244,Operations (Johannesburg),Operations,JHB Shift B,Man,Coloured,Semi-skilled,3–5 years
+K4245,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,Under 1 year
+K4246,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,Under 1 year
+K4247,Operations (Johannesburg),Operations,JHB Shift A,Man,Coloured,Semi-skilled,Under 1 year
+K4248,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,1–3 years
+K4249,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,1–3 years
+K4250,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Skilled,1–3 years
+K4251,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Skilled,5+ years
+K4252,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Middle management,5+ years
+K4253,Operations (Johannesburg),Operations,JHB Dispatch,Woman,African,Semi-skilled,3–5 years
+K4254,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Middle management,Under 1 year
+K4255,Operations (Johannesburg),Operations,JHB Shift A,Man,White,Skilled,5+ years
+K4256,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,1–3 years
+K4257,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,1–3 years
+K4258,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,3–5 years
+K4259,Operations (Johannesburg),Operations,JHB Shift A,Man,White,Semi-skilled,Under 1 year
+K4260,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Skilled,3–5 years
+K4261,Operations (Johannesburg),Operations,JHB Dispatch,Man,Coloured,Middle management,5+ years
+K4262,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,1–3 years
+K4263,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,3–5 years
+K4264,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,Under 1 year
+K4265,Operations (Johannesburg),Operations,JHB Dispatch,Woman,African,Skilled,5+ years
+K4266,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Skilled,1–3 years
+K4267,Operations (Johannesburg),Operations,JHB Shift A,Woman,African,Semi-skilled,1–3 years
+K4268,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Skilled,3–5 years
+K4269,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,5+ years
+K4270,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Semi-skilled,5+ years
+K4271,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,Under 1 year
+K4272,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,3–5 years
+K4273,Operations (Johannesburg),Operations,JHB Dispatch,Man,White,Skilled,3–5 years
+K4274,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Skilled,5+ years
+K4275,Operations (Johannesburg),Operations,JHB Shift A,Woman,African,Semi-skilled,5+ years
+K4276,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,1–3 years
+K4277,Operations (Johannesburg),Operations,JHB Dispatch,Man,White,Middle management,5+ years
+K4278,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,5+ years
+K4279,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,1–3 years
+K4280,Operations (Johannesburg),Operations,JHB Shift B,Woman,Coloured,Semi-skilled,Under 1 year
+K4281,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,5+ years
+K4282,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Semi-skilled,Under 1 year
+K4283,Operations (Johannesburg),Operations,JHB Shift A,Man,Coloured,Semi-skilled,1–3 years
+K4284,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,5+ years
+K4285,Operations (Johannesburg),Operations,JHB Dispatch,Man,Coloured,Semi-skilled,1–3 years
+K4286,Operations (Johannesburg),Operations,JHB Fleet,Man,Indian,Semi-skilled,3–5 years
+K4287,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,3–5 years
+K4288,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,1–3 years
+K4289,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,3–5 years
+K4290,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Middle management,1–3 years
+K4291,Operations (Johannesburg),Operations,JHB Shift A,Man,Indian,Middle management,1–3 years
+K4292,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Semi-skilled,3–5 years
+K4293,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,5+ years
+K4294,Operations (Johannesburg),Operations,JHB Fleet,Woman,African,Semi-skilled,1–3 years
+K4295,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,3–5 years
+K4296,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,1–3 years
+K4297,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,3–5 years
+K4298,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,3–5 years
+K4299,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Middle management,3–5 years
+K4300,Operations (Johannesburg),Operations,JHB Shift B,Man,African,Skilled,Under 1 year
+K4301,Operations (Johannesburg),Operations,JHB Dispatch,Woman,Coloured,Semi-skilled,1–3 years
+K4302,Operations (Johannesburg),Operations,JHB Fleet,Man,Coloured,Skilled,1–3 years
+K4303,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,Under 1 year
+K4304,Operations (Johannesburg),Operations,JHB Shift B,Man,Indian,Semi-skilled,1–3 years
+K4305,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Skilled,5+ years
+K4306,Operations (Johannesburg),Operations,JHB Fleet,Man,White,Semi-skilled,5+ years
+K4307,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,1–3 years
+K4308,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,5+ years
+K4309,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,3–5 years
+K4310,Operations (Johannesburg),Operations,JHB Fleet,Man,African,Semi-skilled,3–5 years
+K4311,Operations (Johannesburg),Operations,JHB Shift A,Man,Coloured,Skilled,1–3 years
+K4312,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Semi-skilled,3–5 years
+K4313,Operations (Johannesburg),Operations,JHB Dispatch,Man,African,Semi-skilled,3–5 years
+K4314,Operations (Johannesburg),Operations,JHB Fleet,Man,Coloured,Skilled,5+ years
+K4315,Operations (Johannesburg),Operations,JHB Shift A,Man,African,Semi-skilled,Under 1 year
+K4316,Operations (Johannesburg),Operations,JHB Shift B,Man,White,Skilled,Under 1 year
+K4317,Operations (Johannesburg),Operations,JHB Dispatch,Woman,African,Semi-skilled,3–5 years
+K4318,Operations (Johannesburg),Operations,JHB Fleet,Woman,Indian,Skilled,5+ years
+K4319,Operations (Johannesburg),Operations,JHB Shift A,Woman,African,Skilled,1–3 years
+K4320,Operations (Johannesburg),Operations,JHB Shift B,Woman,African,Skilled,3–5 years
+K4321,Finance,Head office,Finance,Man,White,Senior management,5+ years
+K4322,Finance,Head office,Finance,Man,White,Senior management,5+ years
+K4323,Finance,Head office,Finance,Woman,African,Skilled,5+ years
+K4324,Finance,Head office,Finance,Man,African,Middle management,5+ years
+K4325,Finance,Head office,Finance,Man,African,Skilled,3–5 years
+K4326,Finance,Head office,Finance,Woman,African,Skilled,1–3 years
+K4327,Finance,Head office,Finance,Woman,White,Skilled,3–5 years
+K4328,Finance,Head office,Finance,Man,African,Skilled,1–3 years
+K4329,Finance,Head office,Finance,Woman,African,Semi-skilled,3–5 years
+K4330,Finance,Head office,Finance,Man,White,Middle management,1–3 years
+K4331,Finance,Head office,Finance,Woman,African,Skilled,Under 1 year
+K4332,Finance,Head office,Finance,Woman,Coloured,Middle management,5+ years
+K4333,Finance,Head office,Finance,Woman,African,Skilled,3–5 years
+K4334,Finance,Head office,Finance,Woman,African,Skilled,3–5 years
+K4335,Finance,Head office,Finance,Man,Indian,Skilled,5+ years
+K4336,Finance,Head office,Finance,Man,African,Senior management,1–3 years
+K4337,Finance,Head office,Finance,Man,African,Semi-skilled,1–3 years
+K4338,Finance,Head office,Finance,Woman,African,Skilled,Under 1 year
+K4339,Finance,Head office,Finance,Woman,Coloured,Skilled,5+ years
+K4340,Finance,Head office,Finance,Man,White,Middle management,Under 1 year
+K4341,Finance,Head office,Finance,Woman,African,Skilled,3–5 years
+K4342,Finance,Head office,Finance,Woman,African,Middle management,3–5 years
+K4343,Finance,Head office,Finance,Man,Coloured,Middle management,5+ years
+K4344,Finance,Head office,Finance,Man,African,Semi-skilled,3–5 years
+K4345,Finance,Head office,Finance,Woman,African,Skilled,3–5 years
+K4346,Finance,Head office,Finance,Man,African,Senior management,Under 1 year
+K4347,Finance,Head office,Finance,Man,Coloured,Middle management,3–5 years
+K4348,Finance,Head office,Finance,Man,Indian,Middle management,1–3 years
+K4349,Finance,Head office,Finance,Woman,White,Skilled,1–3 years
+K4350,Finance,Head office,Finance,Man,African,Skilled,3–5 years
+K4351,Finance,Head office,Finance,Man,African,Skilled,1–3 years
+K4352,Finance,Head office,Finance,Man,Indian,Middle management,1–3 years
+K4353,Finance,Head office,Finance,Man,White,Senior management,1–3 years
+K4354,Finance,Head office,Finance,Woman,African,Skilled,3–5 years
+K4355,Finance,Head office,Finance,Woman,African,Skilled,1–3 years
+K4356,Finance,Head office,Finance,Woman,Indian,Skilled,1–3 years
+K4357,Finance,Head office,Finance,Man,African,Semi-skilled,3–5 years
+K4358,Finance,Head office,Finance,Woman,African,Middle management,5+ years
+K4359,Finance,Head office,Finance,Man,African,Middle management,1–3 years
+K4360,Finance,Head office,Finance,Woman,African,Skilled,Under 1 year
+K4361,Finance,Head office,Finance,Man,African,Skilled,5+ years
+K4362,Finance,Head office,Finance,Woman,African,Semi-skilled,1–3 years
+K4363,Finance,Head office,Finance,Man,White,Skilled,1–3 years
+K4364,Finance,Head office,Finance,Woman,Indian,Skilled,3–5 years
+K4365,Finance,Head office,Finance,Man,African,Skilled,1–3 years
+K4366,Sales,Commercial,Sales Inland,Woman,Indian,Skilled,1–3 years
+K4367,Sales,Commercial,Sales Coastal,Man,Indian,Skilled,1–3 years
+K4368,Sales,Commercial,Sales Inland,Man,White,Skilled,1–3 years
+K4369,Sales,Commercial,Sales Coastal,Man,White,Middle management,1–3 years
+K4370,Sales,Commercial,Sales Inland,Woman,Coloured,Semi-skilled,1–3 years
+K4371,Sales,Commercial,Sales Coastal,Man,White,Middle management,3–5 years
+K4372,Sales,Commercial,Sales Inland,Man,African,Skilled,5+ years
+K4373,Sales,Commercial,Sales Coastal,Man,African,Skilled,5+ years
+K4374,Sales,Commercial,Sales Inland,Woman,Coloured,Skilled,5+ years
+K4375,Sales,Commercial,Sales Coastal,Man,African,Middle management,3–5 years
+K4376,Sales,Commercial,Sales Inland,Man,African,Skilled,3–5 years
+K4377,Sales,Commercial,Sales Coastal,Non-binary,African,Middle management,5+ years
+K4378,Sales,Commercial,Sales Inland,Man,Coloured,Middle management,1–3 years
+K4379,Sales,Commercial,Sales Coastal,Man,Indian,Middle management,1–3 years
+K4380,Sales,Commercial,Sales Inland,Man,African,Skilled,1–3 years
+K4381,Sales,Commercial,Sales Coastal,Man,African,Skilled,3–5 years
+K4382,Sales,Commercial,Sales Inland,Man,White,Senior management,1–3 years
+K4383,Sales,Commercial,Sales Coastal,Woman,African,Senior management,5+ years
+K4384,Sales,Commercial,Sales Inland,Woman,African,Skilled,5+ years
+K4385,Sales,Commercial,Sales Coastal,Woman,African,Skilled,1–3 years
+K4386,Sales,Commercial,Sales Inland,Man,African,Semi-skilled,3–5 years
+K4387,Sales,Commercial,Sales Coastal,Man,Indian,Senior management,5+ years
+K4388,Sales,Commercial,Sales Inland,Man,White,Middle management,3–5 years
+K4389,Sales,Commercial,Sales Coastal,Woman,White,Skilled,5+ years
+K4390,Sales,Commercial,Sales Inland,Woman,African,Semi-skilled,1–3 years
+K4391,Sales,Commercial,Sales Coastal,Man,African,Skilled,Under 1 year
+K4392,Sales,Commercial,Sales Inland,Man,African,Middle management,5+ years
+K4393,Sales,Commercial,Sales Coastal,Woman,White,Middle management,Under 1 year
+K4394,Sales,Commercial,Sales Inland,Man,African,Skilled,3–5 years
+K4395,Sales,Commercial,Sales Coastal,Man,White,Skilled,5+ years
+K4396,Sales,Commercial,Sales Inland,Woman,African,Middle management,5+ years
+K4397,Sales,Commercial,Sales Coastal,Man,African,Skilled,3–5 years
+K4398,Sales,Commercial,Sales Inland,Man,African,Middle management,Under 1 year
+K4399,Sales,Commercial,Sales Coastal,Non-binary,African,Skilled,5+ years
+K4400,Sales,Commercial,Sales Inland,Woman,Indian,Skilled,1–3 years
+K4401,Sales,Commercial,Sales Coastal,Man,Coloured,Skilled,3–5 years
+K4402,Sales,Commercial,Sales Inland,Woman,Coloured,Skilled,1–3 years
+K4403,Sales,Commercial,Sales Coastal,Woman,African,Skilled,3–5 years
+K4404,Sales,Commercial,Sales Inland,Woman,Indian,Skilled,5+ years
+K4405,Sales,Commercial,Sales Coastal,Woman,African,Skilled,5+ years
+K4406,Sales,Commercial,Sales Inland,Man,African,Skilled,3–5 years
+K4407,Sales,Commercial,Sales Coastal,Man,White,Skilled,Under 1 year
+K4408,Sales,Commercial,Sales Inland,Woman,African,Skilled,5+ years
+K4409,Sales,Commercial,Sales Coastal,Man,Coloured,Skilled,5+ years
+K4410,Sales,Commercial,Sales Inland,Woman,African,Skilled,5+ years
+K4411,Sales,Commercial,Sales Coastal,Woman,African,Middle management,5+ years
+K4412,Sales,Commercial,Sales Inland,Man,White,Senior management,3–5 years
+K4413,Sales,Commercial,Sales Coastal,Man,African,Senior management,1–3 years
+K4414,Sales,Commercial,Sales Inland,Man,African,Middle management,1–3 years
+K4415,Sales,Commercial,Sales Coastal,Woman,African,Semi-skilled,3–5 years
+K4416,Sales,Commercial,Sales Inland,Man,African,Skilled,3–5 years
+K4417,Sales,Commercial,Sales Coastal,Man,White,Skilled,1–3 years
+K4418,Sales,Commercial,Sales Inland,Woman,White,Skilled,5+ years
+K4419,Sales,Commercial,Sales Coastal,Woman,White,Skilled,1–3 years
+K4420,Sales,Commercial,Sales Inland,Woman,African,Skilled,1–3 years
+K4421,Sales,Commercial,Sales Coastal,Non-binary,African,Middle management,1–3 years
+K4422,Sales,Commercial,Sales Inland,Man,Indian,Middle management,5+ years
+K4423,Sales,Commercial,Sales Coastal,Man,Coloured,Semi-skilled,1–3 years
+K4424,Sales,Commercial,Sales Inland,Man,African,Skilled,1–3 years
+K4425,Sales,Commercial,Sales Coastal,Man,White,Middle management,1–3 years
+K4426,Sales,Commercial,Sales Inland,Woman,White,Skilled,5+ years
+K4427,Sales,Commercial,Sales Coastal,Woman,African,Semi-skilled,3–5 years
+K4428,Sales,Commercial,Sales Inland,Man,Coloured,Skilled,1–3 years
+K4429,Sales,Commercial,Sales Coastal,Woman,Coloured,Skilled,3–5 years
+K4430,Sales,Commercial,Sales Inland,Man,African,Semi-skilled,5+ years
+K4431,Sales,Commercial,Sales Coastal,Man,White,Skilled,3–5 years
+K4432,Sales,Commercial,Sales Inland,Man,African,Middle management,1–3 years
+K4433,Sales,Commercial,Sales Coastal,Man,White,Middle management,3–5 years
+K4434,Sales,Commercial,Sales Inland,Man,White,Senior management,1–3 years
+K4435,Sales,Commercial,Sales Coastal,Woman,African,Skilled,5+ years
+K4436,Technology,Head office,Technology,Man,White,Skilled,1–3 years
+K4437,Technology,Head office,Technology,Man,Indian,Senior management,5+ years
+K4438,Technology,Head office,Technology,Man,Indian,Middle management,3–5 years
+K4439,Technology,Head office,Technology,Man,African,Skilled,Under 1 year
+K4440,Technology,Head office,Technology,Woman,African,Middle management,3–5 years
+K4441,Technology,Head office,Technology,Man,Indian,Skilled,1–3 years
+K4442,Technology,Head office,Technology,Man,White,Skilled,5+ years
+K4443,Technology,Head office,Technology,Man,African,Skilled,3–5 years
+K4444,Technology,Head office,Technology,Man,Coloured,Skilled,1–3 years
+K4445,Technology,Head office,Technology,Man,Indian,Skilled,5+ years
+K4446,Technology,Head office,Technology,Man,African,Middle management,Under 1 year
+K4447,Technology,Head office,Technology,Woman,Coloured,Skilled,1–3 years
+K4448,Technology,Head office,Technology,Man,White,Senior management,1–3 years
+K4449,Technology,Head office,Technology,Man,African,Skilled,5+ years
+K4450,Technology,Head office,Technology,Man,African,Semi-skilled,Under 1 year
+K4451,Technology,Head office,Technology,Woman,African,Skilled,Under 1 year
+K4452,Technology,Head office,Technology,Man,White,Middle management,1–3 years
+K4453,Technology,Head office,Technology,Man,White,Middle management,5+ years
+K4454,Technology,Head office,Technology,Man,African,Skilled,1–3 years
+K4455,Technology,Head office,Technology,Man,African,Middle management,5+ years
+K4456,Technology,Head office,Technology,Man,Coloured,Middle management,5+ years
+K4457,Technology,Head office,Technology,Woman,African,Middle management,5+ years
+K4458,Technology,Head office,Technology,Man,African,Semi-skilled,3–5 years
+K4459,Technology,Head office,Technology,Woman,African,Skilled,5+ years
+K4460,Technology,Head office,Technology,Man,African,Skilled,1–3 years
+K4461,Technology,Head office,Technology,Man,African,Skilled,3–5 years
+K4462,Technology,Head office,Technology,Woman,White,Skilled,1–3 years
+K4463,Technology,Head office,Technology,Man,African,Semi-skilled,5+ years
+K4464,Technology,Head office,Technology,Man,White,Middle management,3–5 years
+K4465,Technology,Head office,Technology,Man,African,Skilled,3–5 years
+K4466,Technology,Head office,Technology,Man,White,Middle management,3–5 years
+K4467,Technology,Head office,Technology,Man,White,Skilled,5+ years
+K4468,Technology,Head office,Technology,Woman,African,Skilled,3–5 years
+K4469,Technology,Head office,Technology,Man,African,Skilled,5+ years
+K4470,Technology,Head office,Technology,Woman,African,Middle management,5+ years
+K4471,Technology,Head office,Technology,Man,White,Skilled,Under 1 year
+K4472,Technology,Head office,Technology,Woman,African,Skilled,1–3 years
+K4473,Technology,Head office,Technology,Man,White,Skilled,3–5 years
+K4474,Technology,Head office,Technology,Woman,Coloured,Skilled,1–3 years
+K4475,Technology,Head office,Technology,Man,African,Semi-skilled,5+ years
+K4476,Technology,Head office,Technology,Man,White,Middle management,3–5 years
+K4477,Technology,Head office,Technology,Woman,African,Skilled,3–5 years
+K4478,Technology,Head office,Technology,Man,African,Middle management,5+ years
+K4479,Technology,Head office,Technology,Woman,African,Skilled,Under 1 year
+K4480,Technology,Head office,Technology,Man,African,Skilled,5+ years
+K4481,Technology,Head office,Technology,Man,White,Middle management,1–3 years
+K4482,Technology,Head office,Technology,Woman,African,Skilled,5+ years
+K4483,Technology,Head office,Technology,Man,African,Skilled,5+ years
+K4484,Technology,Head office,Technology,Man,White,Skilled,Under 1 year
+K4485,Technology,Head office,Technology,Man,African,Semi-skilled,3–5 years
+K4486,Technology,Head office,Technology,Woman,African,Semi-skilled,3–5 years
+K4487,Technology,Head office,Technology,Man,White,Middle management,1–3 years
+K4488,Technology,Head office,Technology,Man,African,Semi-skilled,5+ years
+K4489,Technology,Head office,Technology,Man,African,Skilled,5+ years
+K4490,Technology,Head office,Technology,Woman,Coloured,Skilled,5+ years
+K4491,Customer Service,Commercial,CS Team 1,Woman,White,Middle management,Under 1 year
+K4492,Customer Service,Commercial,CS Team 2,Woman,Coloured,Semi-skilled,1–3 years
+K4493,Customer Service,Commercial,CS Team 3,Woman,African,Semi-skilled,3–5 years
+K4494,Customer Service,Commercial,CS Team 1,Woman,African,Skilled,5+ years
+K4495,Customer Service,Commercial,CS Team 2,Woman,White,Semi-skilled,5+ years
+K4496,Customer Service,Commercial,CS Team 3,Man,African,Skilled,Under 1 year
+K4497,Customer Service,Commercial,CS Team 1,Woman,Coloured,Skilled,Under 1 year
+K4498,Customer Service,Commercial,CS Team 2,Man,Coloured,Skilled,Under 1 year
+K4499,Customer Service,Commercial,CS Team 3,Man,African,Semi-skilled,5+ years
+K4500,Customer Service,Commercial,CS Team 1,Woman,White,Skilled,1–3 years
+K4501,Customer Service,Commercial,CS Team 2,Man,African,Semi-skilled,1–3 years
+K4502,Customer Service,Commercial,CS Team 3,Woman,Coloured,Skilled,3–5 years
+K4503,Customer Service,Commercial,CS Team 1,Woman,White,Skilled,5+ years
+K4504,Customer Service,Commercial,CS Team 2,Man,Indian,Middle management,1–3 years
+K4505,Customer Service,Commercial,CS Team 3,Man,Coloured,Middle management,1–3 years
+K4506,Customer Service,Commercial,CS Team 1,Man,African,Skilled,5+ years
+K4507,Customer Service,Commercial,CS Team 2,Man,African,Semi-skilled,5+ years
+K4508,Customer Service,Commercial,CS Team 3,Woman,Indian,Skilled,5+ years
+K4509,Customer Service,Commercial,CS Team 1,Man,Coloured,Semi-skilled,Under 1 year
+K4510,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,3–5 years
+K4511,Customer Service,Commercial,CS Team 3,Woman,Indian,Skilled,5+ years
+K4512,Customer Service,Commercial,CS Team 1,Woman,Indian,Skilled,5+ years
+K4513,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,3–5 years
+K4514,Customer Service,Commercial,CS Team 3,Man,African,Skilled,Under 1 year
+K4515,Customer Service,Commercial,CS Team 1,Woman,White,Middle management,5+ years
+K4516,Customer Service,Commercial,CS Team 2,Man,African,Semi-skilled,5+ years
+K4517,Customer Service,Commercial,CS Team 3,Woman,African,Semi-skilled,1–3 years
+K4518,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,Under 1 year
+K4519,Customer Service,Commercial,CS Team 2,Man,African,Semi-skilled,5+ years
+K4520,Customer Service,Commercial,CS Team 3,Woman,African,Skilled,3–5 years
+K4521,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,5+ years
+K4522,Customer Service,Commercial,CS Team 2,Woman,Indian,Semi-skilled,1–3 years
+K4523,Customer Service,Commercial,CS Team 3,Woman,Coloured,Semi-skilled,Under 1 year
+K4524,Customer Service,Commercial,CS Team 1,Man,Coloured,Skilled,1–3 years
+K4525,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,5+ years
+K4526,Customer Service,Commercial,CS Team 3,Woman,Coloured,Semi-skilled,1–3 years
+K4527,Customer Service,Commercial,CS Team 1,Man,Coloured,Middle management,5+ years
+K4528,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,5+ years
+K4529,Customer Service,Commercial,CS Team 3,Man,African,Semi-skilled,5+ years
+K4530,Customer Service,Commercial,CS Team 1,Woman,African,Skilled,1–3 years
+K4531,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,5+ years
+K4532,Customer Service,Commercial,CS Team 3,Man,Indian,Skilled,5+ years
+K4533,Customer Service,Commercial,CS Team 1,Man,White,Skilled,1–3 years
+K4534,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,5+ years
+K4535,Customer Service,Commercial,CS Team 3,Woman,Indian,Semi-skilled,5+ years
+K4536,Customer Service,Commercial,CS Team 1,Man,Coloured,Semi-skilled,3–5 years
+K4537,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,5+ years
+K4538,Customer Service,Commercial,CS Team 3,Man,African,Semi-skilled,5+ years
+K4539,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,1–3 years
+K4540,Customer Service,Commercial,CS Team 2,Woman,African,Skilled,Under 1 year
+K4541,Customer Service,Commercial,CS Team 3,Woman,African,Semi-skilled,5+ years
+K4542,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,5+ years
+K4543,Customer Service,Commercial,CS Team 2,Man,Coloured,Skilled,Under 1 year
+K4544,Customer Service,Commercial,CS Team 3,Man,Indian,Skilled,Under 1 year
+K4545,Customer Service,Commercial,CS Team 1,Man,White,Skilled,Under 1 year
+K4546,Customer Service,Commercial,CS Team 2,Man,African,Middle management,Under 1 year
+K4547,Customer Service,Commercial,CS Team 3,Man,Indian,Senior management,3–5 years
+K4548,Customer Service,Commercial,CS Team 1,Woman,White,Skilled,3–5 years
+K4549,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,5+ years
+K4550,Customer Service,Commercial,CS Team 3,Woman,White,Skilled,3–5 years
+K4551,Customer Service,Commercial,CS Team 1,Woman,African,Skilled,5+ years
+K4552,Customer Service,Commercial,CS Team 2,Man,African,Semi-skilled,Under 1 year
+K4553,Customer Service,Commercial,CS Team 3,Woman,African,Semi-skilled,1–3 years
+K4554,Customer Service,Commercial,CS Team 1,Woman,African,Middle management,3–5 years
+K4555,Customer Service,Commercial,CS Team 2,Man,African,Semi-skilled,1–3 years
+K4556,Customer Service,Commercial,CS Team 3,Woman,White,Skilled,3–5 years
+K4557,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,1–3 years
+K4558,Customer Service,Commercial,CS Team 2,Man,African,Semi-skilled,3–5 years
+K4559,Customer Service,Commercial,CS Team 3,Woman,African,Semi-skilled,1–3 years
+K4560,Customer Service,Commercial,CS Team 1,Woman,Coloured,Skilled,5+ years
+K4561,Customer Service,Commercial,CS Team 2,Man,White,Middle management,5+ years
+K4562,Customer Service,Commercial,CS Team 3,Man,Coloured,Middle management,Under 1 year
+K4563,Customer Service,Commercial,CS Team 1,Man,African,Skilled,1–3 years
+K4564,Customer Service,Commercial,CS Team 2,Woman,Coloured,Skilled,Under 1 year
+K4565,Customer Service,Commercial,CS Team 3,Woman,African,Skilled,3–5 years
+K4566,Customer Service,Commercial,CS Team 1,Man,African,Semi-skilled,Under 1 year
+K4567,Customer Service,Commercial,CS Team 2,Woman,African,Skilled,3–5 years
+K4568,Customer Service,Commercial,CS Team 3,Man,African,Skilled,1–3 years
+K4569,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,5+ years
+K4570,Customer Service,Commercial,CS Team 2,Woman,African,Semi-skilled,1–3 years
+K4571,Customer Service,Commercial,CS Team 3,Woman,White,Middle management,3–5 years
+K4572,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,5+ years
+K4573,Customer Service,Commercial,CS Team 2,Woman,African,Skilled,5+ years
+K4574,Customer Service,Commercial,CS Team 3,Man,Coloured,Skilled,5+ years
+K4575,Customer Service,Commercial,CS Team 1,Woman,Coloured,Skilled,5+ years
+K4576,Customer Service,Commercial,CS Team 2,Woman,Coloured,Skilled,5+ years
+K4577,Customer Service,Commercial,CS Team 3,Man,White,Skilled,Under 1 year
+K4578,Customer Service,Commercial,CS Team 1,Woman,African,Semi-skilled,3–5 years
+K4579,Customer Service,Commercial,CS Team 2,Man,Coloured,Semi-skilled,1–3 years
+K4580,Customer Service,Commercial,CS Team 3,Woman,African,Semi-skilled,5+ years
+K4581,People & Culture,Head office,People & Culture,Man,African,Skilled,3–5 years
+K4582,People & Culture,Head office,People & Culture,Man,African,Senior management,Under 1 year
+K4583,People & Culture,Head office,People & Culture,Man,African,Middle management,Under 1 year
+K4584,People & Culture,Head office,People & Culture,Man,African,Skilled,5+ years
+K4585,People & Culture,Head office,People & Culture,Woman,Coloured,Skilled,Under 1 year
+K4586,People & Culture,Head office,People & Culture,Woman,African,Skilled,3–5 years
+K4587,People & Culture,Head office,People & Culture,Woman,African,Semi-skilled,3–5 years
+K4588,People & Culture,Head office,People & Culture,Man,African,Skilled,1–3 years
+K4589,People & Culture,Head office,People & Culture,Woman,White,Middle management,5+ years
+K4590,People & Culture,Head office,People & Culture,Man,White,Middle management,Under 1 year
+K4591,People & Culture,Head office,People & Culture,Woman,African,Skilled,5+ years
+K4592,People & Culture,Head office,People & Culture,Man,African,Skilled,5+ years
+K4593,People & Culture,Head office,People & Culture,Man,White,Skilled,5+ years
+K4594,People & Culture,Head office,People & Culture,Woman,Coloured,Semi-skilled,1–3 years
+K4595,People & Culture,Head office,People & Culture,Woman,African,Middle management,3–5 years
+K4596,People & Culture,Head office,People & Culture,Woman,African,Skilled,3–5 years
+K4597,People & Culture,Head office,People & Culture,Man,African,Skilled,5+ years
+K4598,People & Culture,Head office,People & Culture,Woman,African,Skilled,3–5 years
+K4599,People & Culture,Head office,People & Culture,Woman,Indian,Skilled,5+ years
+K4600,People & Culture,Head office,People & Culture,Woman,Indian,Skilled,1–3 years
