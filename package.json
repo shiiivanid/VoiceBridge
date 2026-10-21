@@ -6,7 +6,8 @@
   "description": "Turn employee survey results into findings people act on.",
   "scripts": {
     "build": "node build.mjs",
-    "start": "node build.mjs && node server.mjs"
+    "start": "node build.mjs && node server.mjs",
+    "test": "node test/validate.mjs && node test/stress.mjs"
   },
   "engines": {
     "node": ">=20"

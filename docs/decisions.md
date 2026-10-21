@@ -37,12 +37,34 @@ Shivani's answers to the six open questions from the handout (HANDOFF.md, sectio
 
 **Related fix.** VoiceBridge now also reads other general DEI, culture and wellbeing surveys: semicolon files, prefixed theme headers like `DEI_Belonging`, reverse-scored items and numeric tenure. Tested with Shivani's own synthetic file.
 
-## 6. Stack: R + Shiny (changed 12 October)
+## 6. Stack: JavaScript, hosted on GitHub Pages (reversed 21 October)
 
 **First decision (8 October).** Keep the JavaScript prototype. The proposal had said Python.
 
-**Changed (12 October).** The final tool is being rebuilt in R + Shiny, run from RStudio and hosted on shinyapps.io. The JavaScript version stays as the reference prototype the R version is ported from, and its numbers are the acceptance test.
+**Changed (12 October).** I planned to rebuild the final tool in R + Shiny, because I assumed the assignment had to be in R, the language we use in the module.
 
-**What this changes.** In the JavaScript version the survey file never left the browser. In Shiny the file is analysed by the R server: on the user's own computer when run from RStudio, but on Posit's servers (outside South Africa) when hosted on shinyapps.io. The app keeps the file in memory and never saves it, but the outline's "Ethics & data" section must say this, and the demo uses synthetic data only.
+**Reversed (21 October).** I checked with the lecturer, who confirmed JavaScript is fine; the brief is tool- and platform-agnostic. I kept the JavaScript version as the final tool because:
+- It works as a website anyone can open from a link, which is how I want HR teams to use it.
+- All my stress testing, real-data testing and fixes (rounds 1 to 3) were done on this version, and its automated checks pass. A rebuild five days before Demo Day would have meant redoing that validation.
+- The survey file is analysed in the user's own browser and never uploaded. Hosted on shinyapps.io, the file would go to Posit's servers outside South Africa, which is a weaker position under POPIA (s 72, cross-border transfer).
+- GitHub Pages gives a free, permanent link and also holds the source code for submission.
 
-**For the outline.** Add your own reason for the switch here.
+**Decided against.** R + Shiny. The rebuild prompt was kept in my old-versions folder as a record of the design process.
+
+## 7. A headcount that doesn't match the survey blocks the analysis (17 October)
+
+**Decision.** If the headcount file's labels don't match the survey (e.g. "F" vs "Female", "African" vs "Black African"), VoiceBridge refuses to analyse until a corrected headcount is uploaded.
+
+**Why.** The stress test showed that mismatched labels quietly switched off the silence test and changed the top three findings. A first fix added a warning but still let the analysis continue. On re-checking, I decided a warning is too easy to ignore: people would use the results at face value, and the report would look more rigorous than it is. Organisations without any headcount can still use the tool, and every finding then says the silence test wasn't run.
+
+## 8. At least 20 responses (17 October)
+
+**Decision.** VoiceBridge refuses to report on fewer than 20 real responses.
+
+**Why.** On the 8-person stress-test file, the tool still produced a report. With fewer than 20 responses, the organisation-wide margin of error is wider than ±22 points, almost every group falls below the anonymity threshold, and individuals could be recognised from their answers. 20 is a judgement call, not a published standard; 30 would give about ±18 points.
+
+## 9. The data requirements are stated up front (17 October)
+
+**Decision.** The start screen lists what a file needs (1–5 scale, theme tags, consistent labels, at least 20 responses, a matching headcount), with downloadable templates.
+
+**Why.** Users should know the rules before uploading rather than discovering them through errors, and the report can only be as reliable as the data it gets.

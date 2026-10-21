@@ -1,0 +1,451 @@
+Employee no.,Department,Region,Team,Gender,Race,Job level,Age,Years of service,Disability
+M7001,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,30,4.9,No
+M7002,Store Operations,Gauteng,JHB Store 9,Male,Indian,Unskilled,35,5.4,No
+M7003,Store Operations,Western Cape,CPT Store 12,Male,Coloured,Skilled,28,5.6,No
+M7004,Store Operations,Western Cape,CPT Store 3,Male,Black African,Unskilled,41,3.8,No
+M7005,Store Operations,KwaZulu-Natal,PMB Store 1,Male,White,Semi-skilled,36,8.1,No
+M7006,Store Operations,Gauteng,JHB Store 4,Female,Black African,Junior management,37,3.5,No
+M7007,Store Operations,Gauteng,JHB Store 4,Female,Black African,Unskilled,40,5.1,Yes
+M7008,Store Operations,Gauteng,JHB Store 4,Female,Black African,Semi-skilled,39,2.7,No
+M7009,Store Operations,Gauteng,JHB Store 4,Female,Black African,Semi-skilled,31,2.2,No
+M7010,Store Operations,Western Cape,CPT Store 3,Female,Black African,Semi-skilled,40,5.7,Yes
+M7011,Store Operations,Western Cape,CPT Store 12,Female,Coloured,Semi-skilled,46,6.5,No
+M7012,Store Operations,Western Cape,CPT Store 12,Male,Black African,Semi-skilled,18,19.6,No
+M7013,Store Operations,Gauteng,PTA Store 2,Female,Black African,Unskilled,23,0.1,No
+M7014,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Semi-skilled,45,4.7,No
+M7015,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,22,0.6,No
+M7016,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Junior management,18,7.5,No
+M7017,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,37,0.6,No
+M7018,Store Operations,Gauteng,PTA Store 2,Male,Black African,Unskilled,42,0.8,No
+M7019,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Semi-skilled,26,4.3,No
+M7020,Store Operations,Western Cape,CPT Store 3,Male,Black African,Semi-skilled,25,7.6,No
+M7021,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,31,21.2,No
+M7022,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,25,15.1,No
+M7023,Store Operations,Eastern Cape,PE Store 5,Male,Coloured,Unskilled,35,6.5,No
+M7024,Store Operations,Western Cape,CPT Store 12,Male,Black African,Skilled,25,2.4,No
+M7025,Store Operations,Gauteng,JHB Store 9,Female,Black African,Junior management,43,2.8,No
+M7026,Store Operations,Gauteng,JHB Store 9,Male,Black African,Semi-skilled,33,0.1,No
+M7027,Store Operations,Gauteng,JHB Store 9,Female,Black African,Skilled,28,7.8,No
+M7028,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Black African,Unskilled,34,1.7,No
+M7029,Store Operations,Gauteng,JHB Store 9,Male,Black African,Semi-skilled,31,2.8,Yes
+M7030,Store Operations,Eastern Cape,PE Store 5,Female,Coloured,Semi-skilled,21,4.4,No
+M7031,Store Operations,Gauteng,JHB Store 9,Male,Black African,Junior management,33,2.2,No
+M7032,Store Operations,Western Cape,CPT Store 3,Male,Black African,Unskilled,31,13.9,No
+M7033,Store Operations,Western Cape,CPT Store 12,Female,Black African,Skilled,32,2.0,No
+M7034,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Unskilled,49,16.8,No
+M7035,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,20,11.5,No
+M7036,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Black African,Semi-skilled,28,1.9,No
+M7037,Store Operations,Gauteng,JHB Store 4,Female,Black African,Semi-skilled,31,0.1,No
+M7038,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,20,5.9,No
+M7039,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,34,17.9,No
+M7040,Store Operations,Western Cape,CPT Store 12,Female,Black African,Skilled,27,3.9,No
+M7041,Store Operations,Gauteng,JHB Store 4,Female,Black African,Semi-skilled,30,4.9,No
+M7042,Store Operations,Gauteng,PTA Store 2,Female,Black African,Unskilled,23,2.9,No
+M7043,Store Operations,Gauteng,JHB Store 9,Female,Indian,Skilled,44,6.6,No
+M7044,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Indian,Semi-skilled,38,11.5,No
+M7045,Store Operations,Gauteng,JHB Store 9,Male,Coloured,Semi-skilled,31,0.7,No
+M7046,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Junior management,40,5.2,No
+M7047,Store Operations,Western Cape,CPT Store 12,Female,Coloured,Junior management,43,10.1,No
+M7048,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Black African,Unskilled,41,3.7,No
+M7049,Store Operations,Gauteng,JHB Store 9,Female,Coloured,Semi-skilled,31,2.0,No
+M7050,Store Operations,Gauteng,JHB Store 9,Male,Coloured,Unskilled,20,0.5,No
+M7051,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Junior management,38,4.8,No
+M7052,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Coloured,Semi-skilled,36,0.8,No
+M7053,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Skilled,36,4.5,No
+M7054,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Skilled,32,2.0,No
+M7055,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Unskilled,23,6.4,No
+M7056,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Skilled,36,4.4,No
+M7057,Store Operations,Western Cape,CPT Store 3,Male,White,Semi-skilled,27,0.1,No
+M7058,Store Operations,KwaZulu-Natal,PMB Store 1,Female,White,Unskilled,40,0.4,No
+M7059,Store Operations,Western Cape,CPT Store 12,Male,Coloured,Semi-skilled,33,10.5,No
+M7060,Store Operations,Western Cape,CPT Store 12,Male,Black African,Skilled,42,4.4,No
+M7061,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Black African,Semi-skilled,24,28.4,No
+M7062,Store Operations,Gauteng,PTA Store 2,Male,Black African,Skilled,38,2.0,No
+M7063,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Indian,Semi-skilled,27,19.2,No
+M7064,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Semi-skilled,32,22.3,No
+M7065,Store Operations,Gauteng,PTA Store 2,Male,Coloured,Unskilled,30,0.3,No
+M7066,Store Operations,Gauteng,JHB Store 4,Male,White,Unskilled,32,7.7,No
+M7067,Store Operations,Gauteng,PTA Store 2,Male,Black African,Unskilled,25,1.4,No
+M7068,Store Operations,Gauteng,JHB Store 9,Male,Black African,Semi-skilled,28,5.9,No
+M7069,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Unskilled,18,9.1,No
+M7070,Store Operations,Western Cape,CPT Store 12,Female,Coloured,Semi-skilled,18,5.3,No
+M7071,Store Operations,KwaZulu-Natal,PMB Store 1,Male,White,Semi-skilled,23,4.8,No
+M7072,Store Operations,Gauteng,PTA Store 2,Male,Black African,Unskilled,18,7.7,No
+M7073,Store Operations,Western Cape,CPT Store 3,Female,Black African,Junior management,36,5.8,No
+M7074,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,39,7.8,No
+M7075,Store Operations,Gauteng,JHB Store 4,Male,Black African,Unskilled,35,0.5,No
+M7076,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Black African,Semi-skilled,46,0.8,No
+M7077,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Junior management,32,1.7,No
+M7078,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Unskilled,33,6.7,No
+M7079,Store Operations,Western Cape,CPT Store 12,Male,Indian,Unskilled,18,5.6,No
+M7080,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Skilled,40,4.5,Yes
+M7081,Store Operations,Gauteng,PTA Store 2,Male,Black African,Unskilled,18,0.1,No
+M7082,Store Operations,Eastern Cape,PE Store 5,Male,White,Semi-skilled,43,6.6,No
+M7083,Store Operations,Gauteng,PTA Store 2,Female,Black African,Unskilled,31,6.6,No
+M7084,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Skilled,38,3.7,No
+M7085,Store Operations,Western Cape,CPT Store 12,Female,Black African,Semi-skilled,28,8.7,No
+M7086,Store Operations,Gauteng,JHB Store 4,Male,Black African,Skilled,19,5.3,No
+M7087,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Black African,Semi-skilled,45,0.7,No
+M7088,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Black African,Semi-skilled,38,3.8,No
+M7089,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,52,4.9,No
+M7090,Store Operations,Western Cape,CPT Store 12,Male,Coloured,Junior management,47,1.1,No
+M7091,Store Operations,Gauteng,JHB Store 9,Female,Coloured,Skilled,29,3.6,No
+M7092,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Coloured,Semi-skilled,33,4.0,No
+M7093,Store Operations,Gauteng,JHB Store 9,Male,Black African,Skilled,39,2.1,No
+M7094,Store Operations,Western Cape,CPT Store 12,Female,Black African,Semi-skilled,23,1.0,No
+M7095,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Indian,Skilled,36,5.0,No
+M7096,Store Operations,Western Cape,CPT Store 3,Male,White,Skilled,21,1.9,No
+M7097,Store Operations,Gauteng,PTA Store 2,Female,White,Semi-skilled,28,5.3,No
+M7098,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Coloured,Skilled,29,2.3,No
+M7099,Store Operations,Gauteng,PTA Store 2,Female,White,Semi-skilled,32,2.4,No
+M7100,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,29,21.9,No
+M7101,Store Operations,Eastern Cape,PE Store 5,Male,Coloured,Skilled,47,3.8,No
+M7102,Store Operations,Eastern Cape,PE Store 5,Female,White,Semi-skilled,36,0.8,No
+M7103,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Semi-skilled,42,1.6,No
+M7104,Store Operations,Western Cape,CPT Store 12,Male,Coloured,Semi-skilled,45,0.8,No
+M7105,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Semi-skilled,34,1.8,No
+M7106,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Semi-skilled,27,2.7,No
+M7107,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Semi-skilled,45,2.1,No
+M7108,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Semi-skilled,32,3.1,No
+M7109,Store Operations,Western Cape,CPT Store 12,Female,White,Semi-skilled,18,7.3,No
+M7110,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Indian,Skilled,34,1.0,No
+M7111,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Skilled,24,1.0,No
+M7112,Store Operations,Gauteng,JHB Store 9,Female,White,Junior management,49,2.6,No
+M7113,Store Operations,Western Cape,CPT Store 12,Male,Coloured,Unskilled,48,0.1,No
+M7114,Store Operations,Western Cape,CPT Store 3,Male,White,Skilled,51,15.3,No
+M7115,Store Operations,Western Cape,CPT Store 3,Male,Black African,Skilled,43,4.6,No
+M7116,Store Operations,Gauteng,PTA Store 2,Female,Black African,Unskilled,29,6.2,No
+M7117,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Black African,Unskilled,30,5.3,No
+M7118,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,38,0.1,No
+M7119,Store Operations,Gauteng,JHB Store 4,Male,Black African,Semi-skilled,41,6.3,No
+M7120,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Semi-skilled,32,1.6,Yes
+M7121,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Semi-skilled,47,1.3,No
+M7122,Store Operations,Western Cape,CPT Store 3,Male,Black African,Middle management,28,6.1,Yes
+M7123,Store Operations,Gauteng,PTA Store 2,Female,Black African,Semi-skilled,21,0.4,No
+M7124,Store Operations,Western Cape,CPT Store 12,Male,Coloured,Skilled,39,3.2,No
+M7125,Store Operations,Gauteng,JHB Store 9,Female,White,Semi-skilled,31,1.0,No
+M7126,Store Operations,Western Cape,CPT Store 3,Female,Coloured,Semi-skilled,29,5.6,No
+M7127,Store Operations,Eastern Cape,PE Store 5,Male,Coloured,Skilled,25,2.5,No
+M7128,Store Operations,Gauteng,PTA Store 2,Male,Black African,Unskilled,35,0.8,No
+M7129,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Skilled,20,0.6,No
+M7130,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,25,5.2,Yes
+M7131,Store Operations,Western Cape,CPT Store 12,Male,Black African,Skilled,33,2.7,No
+M7132,Store Operations,KwaZulu-Natal,PMB Store 1,Female,White,Junior management,31,2.0,No
+M7133,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Unskilled,30,1.9,No
+M7134,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Semi-skilled,18,6.3,No
+M7135,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Middle management,18,12.1,No
+M7136,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Junior management,19,8.4,No
+M7137,Store Operations,Western Cape,CPT Store 3,Male,Coloured,Skilled,42,0.5,No
+M7138,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Black African,Junior management,39,12.2,No
+M7139,Store Operations,Eastern Cape,PE Store 5,Male,Indian,Unskilled,38,2.8,Yes
+M7140,Store Operations,Western Cape,CPT Store 3,Male,Black African,Semi-skilled,41,9.0,No
+M7141,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Black African,Semi-skilled,42,7.9,No
+M7142,Store Operations,Gauteng,PTA Store 2,Male,White,Skilled,43,0.6,No
+M7143,Store Operations,Gauteng,PTA Store 2,Female,Black African,Skilled,18,0.7,Yes
+M7144,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,40,11.7,No
+M7145,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Semi-skilled,53,5.3,No
+M7146,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Skilled,33,12.5,No
+M7147,Store Operations,Gauteng,PTA Store 2,Female,Indian,Unskilled,31,0.2,No
+M7148,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Unskilled,54,4.3,No
+M7149,Store Operations,Western Cape,CPT Store 12,Male,Black African,Junior management,18,13.1,No
+M7150,Store Operations,Western Cape,CPT Store 3,Female,Black African,Semi-skilled,23,2.8,No
+M7151,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Semi-skilled,31,0.1,No
+M7152,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Unskilled,20,1.8,No
+M7153,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Semi-skilled,40,3.7,No
+M7154,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Indian,Semi-skilled,33,2.8,No
+M7155,Store Operations,Gauteng,JHB Store 4,Male,Black African,Semi-skilled,37,10.1,No
+M7156,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,36,6.3,No
+M7157,Store Operations,Western Cape,CPT Store 12,Male,Black African,Unskilled,38,2.5,No
+M7158,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Semi-skilled,37,0.9,No
+M7159,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Skilled,27,4.5,No
+M7160,Store Operations,Western Cape,CPT Store 3,Male,Indian,Semi-skilled,21,1.3,No
+M7161,Store Operations,Eastern Cape,PE Store 5,Male,White,Junior management,38,14.2,No
+M7162,Store Operations,Gauteng,JHB Store 9,Female,Black African,Unskilled,19,0.2,No
+M7163,Store Operations,KwaZulu-Natal,DBN Store 7,Male,White,Semi-skilled,46,3.3,No
+M7164,Store Operations,Eastern Cape,PE Store 5,Female,White,Skilled,33,1.5,No
+M7165,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Semi-skilled,38,2.1,No
+M7166,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Junior management,33,0.9,No
+M7167,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Semi-skilled,18,0.9,No
+M7168,Store Operations,Western Cape,CPT Store 3,Female,Black African,Skilled,29,0.8,No
+M7169,Store Operations,Gauteng,JHB Store 9,Male,Black African,Junior management,38,1.5,No
+M7170,Store Operations,Western Cape,CPT Store 12,Male,Black African,Semi-skilled,37,0.6,No
+M7171,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Semi-skilled,23,3.8,No
+M7172,Store Operations,Gauteng,PTA Store 2,Female,Coloured,Semi-skilled,33,4.5,No
+M7173,Store Operations,Gauteng,JHB Store 9,Female,Black African,Junior management,41,0.6,No
+M7174,Store Operations,Western Cape,CPT Store 12,Male,Black African,Semi-skilled,43,1.0,No
+M7175,Store Operations,Gauteng,JHB Store 9,Female,Indian,Semi-skilled,34,12.9,No
+M7176,Store Operations,Gauteng,JHB Store 9,Female,Indian,Semi-skilled,28,4.8,No
+M7177,Store Operations,Western Cape,CPT Store 12,Male,Black African,Skilled,21,8.4,No
+M7178,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Junior management,32,1.2,No
+M7179,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Indian,Skilled,32,5.6,No
+M7180,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Middle management,44,0.4,No
+M7181,Store Operations,KwaZulu-Natal,PMB Store 1,Female,Black African,Semi-skilled,20,0.7,No
+M7182,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Skilled,55,2.4,No
+M7183,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Semi-skilled,29,10.8,No
+M7184,Store Operations,Western Cape,CPT Store 12,Male,Coloured,Semi-skilled,44,8.2,No
+M7185,Store Operations,Western Cape,CPT Store 3,Female,Coloured,Semi-skilled,38,1.0,No
+M7186,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Unskilled,26,0.2,No
+M7187,Store Operations,Gauteng,JHB Store 9,Male,Black African,Semi-skilled,52,1.4,Yes
+M7188,Store Operations,KwaZulu-Natal,PMB Store 1,Female,White,Unskilled,29,0.8,No
+M7189,Store Operations,Western Cape,CPT Store 3,Male,Coloured,Semi-skilled,45,13.5,No
+M7190,Store Operations,Gauteng,PTA Store 2,Male,White,Semi-skilled,42,1.2,No
+M7191,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Skilled,47,4.4,Yes
+M7192,Store Operations,Gauteng,JHB Store 9,Male,Black African,Semi-skilled,20,0.3,No
+M7193,Store Operations,Eastern Cape,PE Store 5,Female,White,Skilled,23,1.8,No
+M7194,Store Operations,Western Cape,CPT Store 12,Female,Coloured,Unskilled,32,4.6,No
+M7195,Store Operations,Gauteng,JHB Store 4,Male,White,Junior management,51,3.2,No
+M7196,Store Operations,Gauteng,PTA Store 2,Male,White,Semi-skilled,30,12.1,No
+M7197,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Unskilled,50,3.3,Yes
+M7198,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Unskilled,22,3.9,No
+M7199,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Junior management,45,7.4,No
+M7200,Store Operations,Western Cape,CPT Store 3,Male,Coloured,Semi-skilled,35,2.8,No
+M7201,Store Operations,Eastern Cape,PE Store 5,Female,Coloured,Middle management,34,4.0,No
+M7202,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Semi-skilled,40,7.6,No
+M7203,Store Operations,Gauteng,PTA Store 2,Female,Indian,Unskilled,34,11.9,No
+M7204,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Unskilled,23,4.3,No
+M7205,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Skilled,27,4.7,No
+M7206,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Skilled,37,4.0,No
+M7207,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,44,4.6,No
+M7208,Store Operations,Western Cape,CPT Store 3,Female,Coloured,Skilled,45,13.1,No
+M7209,Store Operations,Western Cape,CPT Store 3,Male,White,Unskilled,45,6.4,No
+M7210,Store Operations,KwaZulu-Natal,DBN Store 7,Female,Black African,Semi-skilled,20,4.8,No
+M7211,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Black African,Semi-skilled,34,4.0,No
+M7212,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Skilled,43,6.0,No
+M7213,Store Operations,Western Cape,CPT Store 3,Male,Black African,Semi-skilled,39,16.4,No
+M7214,Store Operations,Gauteng,PTA Store 2,Male,Black African,Skilled,28,0.2,No
+M7215,Store Operations,Gauteng,PTA Store 2,Male,Coloured,Junior management,31,7.2,Yes
+M7216,Store Operations,Western Cape,CPT Store 3,Male,Coloured,Skilled,34,1.5,No
+M7217,Store Operations,Gauteng,JHB Store 4,Female,Coloured,Semi-skilled,26,0.3,No
+M7218,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,33,4.1,No
+M7219,Store Operations,KwaZulu-Natal,PMB Store 1,Male,Black African,Skilled,33,1.0,No
+M7220,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Unskilled,25,2.8,No
+M7221,Store Operations,Eastern Cape,PE Store 5,Male,Black African,Junior management,37,2.4,No
+M7222,Store Operations,Gauteng,PTA Store 2,Male,Coloured,Junior management,44,5.4,No
+M7223,Store Operations,Eastern Cape,PE Store 5,Female,Black African,Semi-skilled,18,0.5,No
+M7224,Store Operations,Gauteng,PTA Store 2,Male,Black African,Semi-skilled,44,8.4,No
+M7225,Store Operations,Gauteng,JHB Store 4,Female,Indian,Semi-skilled,41,1.3,No
+M7226,Store Operations,Gauteng,JHB Store 9,Female,Black African,Semi-skilled,35,1.0,No
+M7227,Store Operations,KwaZulu-Natal,DBN Store 7,Male,Black African,Semi-skilled,25,20.5,No
+M7228,Store Operations,Gauteng,PTA Store 2,Female,Black African,Semi-skilled,45,5.4,No
+M7229,Store Operations,Western Cape,CPT Store 12,Male,Black African,Skilled,29,3.7,No
+M7230,Store Operations,Gauteng,JHB Store 4,Female,Indian,Semi-skilled,40,0.6,No
+M7231,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Coloured,Skilled,38,0.9,No
+M7232,Distribution Centre,Gauteng,DC Midrand Day,Female,Black African,Semi-skilled,34,6.6,Yes
+M7233,Distribution Centre,Gauteng,DC Midrand Night,Male,Coloured,Unskilled,18,3.1,No
+M7234,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Coloured,Skilled,19,2.8,No
+M7235,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Semi-skilled,31,4.1,No
+M7236,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Semi-skilled,36,5.5,No
+M7237,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Coloured,Unskilled,38,17.5,No
+M7238,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Semi-skilled,22,8.8,No
+M7239,Distribution Centre,KwaZulu-Natal,DC Durban Day,Female,Black African,Unskilled,44,0.1,No
+M7240,Distribution Centre,Gauteng,DC Midrand Day,Female,Black African,Semi-skilled,18,3.0,No
+M7241,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Black African,Unskilled,31,0.7,No
+M7242,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Semi-skilled,31,3.3,No
+M7243,Distribution Centre,Gauteng,DC Midrand Day,Male,Coloured,Unskilled,41,4.6,No
+M7244,Distribution Centre,KwaZulu-Natal,DC Durban Night,Female,White,Semi-skilled,48,3.8,No
+M7245,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Unskilled,26,3.9,No
+M7246,Distribution Centre,Gauteng,DC Midrand Night,Male,Indian,Junior management,29,7.6,No
+M7247,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Unskilled,21,1.0,No
+M7248,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Black African,Skilled,38,0.1,No
+M7249,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Skilled,18,1.8,No
+M7250,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Coloured,Semi-skilled,32,1.3,No
+M7251,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Indian,Semi-skilled,25,2.3,No
+M7252,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Unskilled,28,1.0,No
+M7253,Distribution Centre,Gauteng,DC Midrand Night,Female,Indian,Unskilled,34,0.2,No
+M7254,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Indian,Unskilled,46,16.9,No
+M7255,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Semi-skilled,19,0.1,No
+M7256,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Black African,Semi-skilled,46,6.7,No
+M7257,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Unskilled,42,0.6,No
+M7258,Distribution Centre,Gauteng,DC Midrand Night,Male,Coloured,Unskilled,30,16.7,No
+M7259,Distribution Centre,KwaZulu-Natal,DC Durban Day,Female,Black African,Skilled,40,0.1,No
+M7260,Distribution Centre,KwaZulu-Natal,DC Durban Day,Female,Black African,Semi-skilled,25,3.6,No
+M7261,Distribution Centre,Gauteng,DC Midrand Night,Female,Indian,Semi-skilled,42,3.7,No
+M7262,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Junior management,46,14.5,No
+M7263,Distribution Centre,Gauteng,DC Midrand Day,Male,White,Unskilled,23,0.7,No
+M7264,Distribution Centre,Gauteng,DC Midrand Day,Male,Indian,Semi-skilled,18,14.0,No
+M7265,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Black African,Unskilled,44,4.1,No
+M7266,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Unskilled,54,32.7,No
+M7267,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Unskilled,32,4.0,No
+M7268,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,White,Junior management,27,7.6,No
+M7269,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Skilled,41,5.0,No
+M7270,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Unskilled,46,3.8,No
+M7271,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,White,Semi-skilled,27,4.7,No
+M7272,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Semi-skilled,35,5.1,No
+M7273,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Junior management,25,0.5,No
+M7274,Distribution Centre,Gauteng,DC Midrand Day,Male,White,Unskilled,18,4.0,No
+M7275,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Coloured,Semi-skilled,45,2.9,No
+M7276,Distribution Centre,Gauteng,DC Midrand Day,Male,Coloured,Middle management,44,1.8,No
+M7277,Distribution Centre,Gauteng,DC Midrand Day,Female,Black African,Semi-skilled,27,7.9,No
+M7278,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Unskilled,18,0.4,No
+M7279,Distribution Centre,Gauteng,DC Midrand Day,Female,Black African,Semi-skilled,29,2.7,No
+M7280,Distribution Centre,KwaZulu-Natal,DC Durban Night,Female,Black African,Semi-skilled,31,4.8,No
+M7281,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Black African,Junior management,20,0.3,No
+M7282,Distribution Centre,Gauteng,DC Midrand Night,Female,Coloured,Unskilled,27,0.6,No
+M7283,Distribution Centre,Gauteng,DC Midrand Day,Male,White,Unskilled,25,1.3,No
+M7284,Distribution Centre,Gauteng,DC Midrand Night,Male,Coloured,Semi-skilled,40,13.0,No
+M7285,Distribution Centre,Gauteng,DC Midrand Day,Female,Black African,Semi-skilled,34,14.5,No
+M7286,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Black African,Skilled,18,14.4,No
+M7287,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,White,Unskilled,42,17.6,No
+M7288,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Coloured,Semi-skilled,47,19.3,Yes
+M7289,Distribution Centre,Gauteng,DC Midrand Day,Female,White,Unskilled,31,5.5,No
+M7290,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Black African,Skilled,39,2.0,No
+M7291,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Unskilled,27,2.1,No
+M7292,Distribution Centre,Gauteng,DC Midrand Night,Male,Coloured,Unskilled,32,2.5,No
+M7293,Distribution Centre,Gauteng,DC Midrand Day,Male,Indian,Skilled,28,3.8,Yes
+M7294,Distribution Centre,KwaZulu-Natal,DC Durban Night,Female,Black African,Semi-skilled,39,1.8,No
+M7295,Distribution Centre,Gauteng,DC Midrand Day,Female,Black African,Unskilled,32,5.7,No
+M7296,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Black African,Unskilled,36,0.1,No
+M7297,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Unskilled,30,1.2,No
+M7298,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Coloured,Semi-skilled,42,5.0,No
+M7299,Distribution Centre,Gauteng,DC Midrand Day,Female,Black African,Semi-skilled,33,2.5,No
+M7300,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Unskilled,29,1.5,No
+M7301,Distribution Centre,Gauteng,DC Midrand Night,Female,Indian,Skilled,36,11.3,No
+M7302,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Skilled,22,0.2,No
+M7303,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Unskilled,19,8.7,No
+M7304,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Semi-skilled,31,3.0,No
+M7305,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Unskilled,20,14.8,No
+M7306,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Semi-skilled,36,4.8,No
+M7307,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Black African,Semi-skilled,33,6.3,No
+M7308,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Black African,Semi-skilled,44,3.6,No
+M7309,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Semi-skilled,21,0.3,Yes
+M7310,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Semi-skilled,37,14.5,No
+M7311,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Black African,Semi-skilled,34,2.0,No
+M7312,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Semi-skilled,18,2.1,No
+M7313,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Semi-skilled,46,19.6,No
+M7314,Distribution Centre,KwaZulu-Natal,DC Durban Night,Male,Black African,Semi-skilled,34,0.4,No
+M7315,Distribution Centre,KwaZulu-Natal,DC Durban Day,Male,Black African,Unskilled,30,14.3,No
+M7316,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Unskilled,39,31.4,No
+M7317,Distribution Centre,Gauteng,DC Midrand Night,Male,Coloured,Unskilled,19,2.8,No
+M7318,Distribution Centre,Gauteng,DC Midrand Night,Male,Black African,Semi-skilled,33,2.5,No
+M7319,Distribution Centre,Gauteng,DC Midrand Day,Male,Black African,Semi-skilled,43,3.3,No
+M7320,Distribution Centre,Gauteng,DC Midrand Night,Female,Black African,Unskilled,34,7.1,No
+M7321,Customer Contact Centre,Gauteng,Contact Centre B,Female,Coloured,Skilled,42,3.8,No
+M7322,Customer Contact Centre,Gauteng,Contact Centre B,Female,White,Semi-skilled,38,8.4,No
+M7323,Customer Contact Centre,Gauteng,Contact Centre A,Male,Black African,Skilled,25,1.3,No
+M7324,Customer Contact Centre,Gauteng,Contact Centre A,Female,Coloured,Semi-skilled,34,3.7,No
+M7325,Customer Contact Centre,Gauteng,Contact Centre B,Male,Black African,Semi-skilled,41,9.4,No
+M7326,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Skilled,30,0.7,No
+M7327,Customer Contact Centre,Gauteng,Contact Centre B,Female,Coloured,Semi-skilled,24,7.5,No
+M7328,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Semi-skilled,37,4.7,No
+M7329,Customer Contact Centre,Gauteng,Contact Centre B,Female,White,Skilled,38,3.2,No
+M7330,Customer Contact Centre,Gauteng,Contact Centre A,Male,Black African,Semi-skilled,24,1.0,No
+M7331,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Semi-skilled,25,17.8,No
+M7332,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Semi-skilled,26,4.5,No
+M7333,Customer Contact Centre,Gauteng,Contact Centre A,Male,White,Semi-skilled,18,2.9,No
+M7334,Customer Contact Centre,Gauteng,Contact Centre B,Male,Black African,Skilled,25,8.2,No
+M7335,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Skilled,31,3.0,No
+M7336,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Skilled,38,2.7,Yes
+M7337,Customer Contact Centre,Gauteng,Contact Centre B,Female,Coloured,Semi-skilled,37,1.0,No
+M7338,Customer Contact Centre,Gauteng,Contact Centre B,Female,Coloured,Semi-skilled,30,12.5,No
+M7339,Customer Contact Centre,Gauteng,Contact Centre B,Male,White,Semi-skilled,45,5.0,No
+M7340,Customer Contact Centre,Gauteng,Contact Centre A,Male,White,Junior management,35,7.6,No
+M7341,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Junior management,21,2.9,No
+M7342,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Junior management,27,1.1,No
+M7343,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Junior management,26,1.8,No
+M7344,Customer Contact Centre,Gauteng,Contact Centre B,Female,Coloured,Skilled,37,3.4,No
+M7345,Customer Contact Centre,Gauteng,Contact Centre A,Male,White,Junior management,33,2.0,No
+M7346,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Skilled,45,1.0,No
+M7347,Customer Contact Centre,Gauteng,Contact Centre A,Male,Black African,Semi-skilled,30,5.5,No
+M7348,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Skilled,38,9.7,No
+M7349,Customer Contact Centre,Gauteng,Contact Centre B,Female,White,Semi-skilled,27,3.8,No
+M7350,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Skilled,58,8.4,No
+M7351,Customer Contact Centre,Gauteng,Contact Centre A,Female,Coloured,Skilled,52,3.6,No
+M7352,Customer Contact Centre,Gauteng,Contact Centre A,Male,Black African,Semi-skilled,32,4.9,Yes
+M7353,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Semi-skilled,18,13.4,No
+M7354,Customer Contact Centre,Gauteng,Contact Centre A,Male,Coloured,Semi-skilled,31,5.2,No
+M7355,Customer Contact Centre,Gauteng,Contact Centre A,Male,Black African,Semi-skilled,34,25.2,No
+M7356,Customer Contact Centre,Gauteng,Contact Centre B,Female,Black African,Semi-skilled,31,3.5,No
+M7357,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Junior management,39,10.8,No
+M7358,Customer Contact Centre,Gauteng,Contact Centre A,Female,White,Skilled,37,4.9,No
+M7359,Customer Contact Centre,Gauteng,Contact Centre A,Female,Black African,Junior management,46,3.6,No
+M7360,Customer Contact Centre,Gauteng,Contact Centre B,Male,Black African,Semi-skilled,27,13.0,No
+M7361,Head Office - Finance,Western Cape,HO Finance,Female,Indian,Senior management,26,9.2,No
+M7362,Head Office - Finance,Gauteng,HO Finance,Female,White,Skilled,37,3.3,No
+M7363,Head Office - Finance,Gauteng,HO Finance,Male,Black African,Skilled,40,1.8,No
+M7364,Head Office - Finance,Gauteng,HO Finance,Female,Black African,Skilled,44,11.7,No
+M7365,Head Office - Finance,Western Cape,HO Finance,Male,Black African,Junior management,33,12.8,No
+M7366,Head Office - Finance,Gauteng,HO Finance,Male,Black African,Middle management,44,3.1,No
+M7367,Head Office - Finance,Gauteng,HO Finance,Female,White,Junior management,27,6.4,Yes
+M7368,Head Office - Finance,Gauteng,HO Finance,Male,Coloured,Skilled,43,1.5,No
+M7369,Head Office - Finance,Gauteng,HO Finance,Female,Black African,Skilled,21,4.9,No
+M7370,Head Office - Finance,Western Cape,HO Finance,Female,Black African,Middle management,25,7.4,No
+M7371,Head Office - Finance,Gauteng,HO Finance,Female,White,Skilled,35,5.8,No
+M7372,Head Office - Finance,Gauteng,HO Finance,Male,Black African,Skilled,43,2.7,Yes
+M7373,Head Office - Finance,Western Cape,HO Finance,Female,Black African,Junior management,21,4.0,No
+M7374,Head Office - Finance,Gauteng,HO Finance,Male,White,Senior management,28,10.2,No
+M7375,Head Office - Finance,Gauteng,HO Finance,Male,Black African,Senior management,38,7.6,No
+M7376,Head Office - Finance,Gauteng,HO Finance,Male,Black African,Senior management,18,7.7,No
+M7377,Head Office - Finance,Gauteng,HO Finance,Male,Indian,Senior management,25,2.3,No
+M7378,Head Office - Finance,Gauteng,HO Finance,Female,Indian,Junior management,53,5.2,No
+M7379,Head Office - Finance,Western Cape,HO Finance,Male,Black African,Skilled,29,9.4,No
+M7380,Head Office - Finance,Gauteng,HO Finance,Female,Black African,Skilled,49,2.9,No
+M7381,Head Office - Finance,Gauteng,HO Finance,Male,Black African,Skilled,41,10.1,No
+M7382,Head Office - Finance,Gauteng,HO Finance,Female,Black African,Skilled,39,2.0,No
+M7383,Head Office - Finance,Gauteng,HO Finance,Male,Black African,Skilled,33,3.3,No
+M7384,Head Office - Finance,Gauteng,HO Finance,Female,Indian,Skilled,38,19.5,No
+M7385,Head Office - Finance,Gauteng,HO Finance,Male,Indian,Skilled,22,11.4,No
+M7386,Head Office - Finance,Gauteng,HO Finance,Female,White,Junior management,42,1.2,No
+M7387,Head Office - Finance,Gauteng,HO Finance,Female,Black African,Middle management,31,3.0,No
+M7388,Head Office - Finance,Western Cape,HO Finance,Female,Coloured,Skilled,49,6.0,No
+M7389,Head Office - Finance,Gauteng,HO Finance,Female,White,Middle management,49,3.7,No
+M7390,Head Office - Finance,Gauteng,HO Finance,Female,Black African,Skilled,44,20.9,No
+M7391,Head Office - Marketing,Gauteng,HO Marketing,Female,Black African,Middle management,34,2.0,No
+M7392,Head Office - Marketing,Gauteng,HO Marketing,Male,Black African,Middle management,29,8.9,No
+M7393,Head Office - Marketing,Gauteng,HO Marketing,Female,Coloured,Junior management,48,2.6,No
+M7394,Head Office - Marketing,Gauteng,HO Marketing,Male,Indian,Junior management,37,6.5,No
+M7395,Head Office - Marketing,Gauteng,HO Marketing,Male,Indian,Skilled,41,3.4,No
+M7396,Head Office - Marketing,Gauteng,HO Marketing,Female,White,Skilled,27,8.2,No
+M7397,Head Office - Marketing,Gauteng,HO Marketing,Male,Black African,Skilled,29,1.7,Yes
+M7398,Head Office - Marketing,Gauteng,HO Marketing,Male,Coloured,Senior management,28,3.1,No
+M7399,Head Office - Marketing,Gauteng,HO Marketing,Female,White,Senior management,21,3.1,No
+M7400,Head Office - Marketing,Western Cape,HO Marketing,Male,Coloured,Senior management,23,0.5,No
+M7401,Head Office - Marketing,Gauteng,HO Marketing,Female,Black African,Junior management,24,0.9,No
+M7402,Head Office - Marketing,Gauteng,HO Marketing,Female,Indian,Senior management,27,0.7,Yes
+M7403,Head Office - Marketing,Western Cape,HO Marketing,Male,White,Skilled,26,7.1,No
+M7404,Head Office - Marketing,Western Cape,HO Marketing,Male,Black African,Junior management,34,6.6,No
+M7405,Head Office - Marketing,Gauteng,HO Marketing,Female,White,Junior management,18,0.9,No
+M7406,Head Office - Marketing,Gauteng,HO Marketing,Male,Black African,Junior management,28,11.7,No
+M7407,Head Office - Marketing,Western Cape,HO Marketing,Female,Coloured,Middle management,47,1.1,No
+M7408,Head Office - Marketing,Gauteng,HO Marketing,Female,Coloured,Middle management,35,0.8,No
+M7409,Head Office - Marketing,Western Cape,HO Marketing,Female,Black African,Skilled,43,2.9,No
+M7410,Head Office - Marketing,Gauteng,HO Marketing,Female,Black African,Skilled,26,9.8,No
+M7411,Head Office - Marketing,Gauteng,HO Marketing,Female,Black African,Skilled,31,23.9,No
+M7412,Head Office - Marketing,Western Cape,HO Marketing,Female,Coloured,Junior management,44,3.8,No
+M7413,Head Office - Marketing,Gauteng,HO Marketing,Male,Black African,Junior management,30,0.4,No
+M7414,Head Office - Marketing,Western Cape,HO Marketing,Female,Black African,Skilled,41,7.9,No
+M7415,Head Office - Marketing,Western Cape,HO Marketing,Female,Black African,Junior management,41,1.1,No
+M7416,Head Office - IT,Gauteng,HO IT,Female,Coloured,Senior management,28,3.3,No
+M7417,Head Office - IT,Gauteng,HO IT,Female,Black African,Junior management,28,0.2,No
+M7418,Head Office - IT,Gauteng,HO IT,Female,Indian,Skilled,33,4.3,No
+M7419,Head Office - IT,Western Cape,HO IT,Female,Black African,Senior management,40,9.3,No
+M7420,Head Office - IT,Gauteng,HO IT,Male,Black African,Middle management,33,4.9,No
+M7421,Head Office - IT,Gauteng,HO IT,Male,Black African,Junior management,34,0.3,No
+M7422,Head Office - IT,Gauteng,HO IT,Male,Black African,Junior management,30,0.6,No
+M7423,Head Office - IT,Gauteng,HO IT,Male,Black African,Junior management,28,1.1,No
+M7424,Head Office - IT,Gauteng,HO IT,Female,White,Senior management,28,7.1,No
+M7425,Head Office - IT,Gauteng,HO IT,Male,Black African,Top management,31,4.4,No
+M7426,Head Office - IT,Gauteng,HO IT,Female,Coloured,Junior management,36,1.0,No
+M7427,Head Office - IT,Gauteng,HO IT,Female,Black African,Junior management,33,2.8,No
+M7428,Head Office - IT,Gauteng,HO IT,Male,Black African,Skilled,52,1.2,No
+M7429,Head Office - IT,Gauteng,HO IT,Male,Black African,Skilled,30,0.8,No
+M7430,Head Office - IT,Gauteng,HO IT,Male,Black African,Skilled,32,2.8,No
+M7431,Head Office - IT,Gauteng,HO IT,Non-binary,Black African,Skilled,28,12.0,No
+M7432,Head Office - IT,Gauteng,HO IT,Male,Black African,Skilled,31,3.0,Yes
+M7433,Head Office - IT,Western Cape,HO IT,Non-binary,Coloured,Middle management,42,3.5,No
+M7434,Head Office - IT,Gauteng,HO IT,Male,Black African,Junior management,30,5.0,Yes
+M7435,Head Office - IT,Western Cape,HO IT,Male,Black African,Senior management,29,5.4,No
+M7436,Head Office - IT,Western Cape,HO IT,Female,White,Skilled,23,1.7,No
+M7437,Head Office - IT,Gauteng,HO IT,Male,White,Skilled,40,0.4,No
+M7438,Head Office - IT,Gauteng,HO IT,Female,Coloured,Top management,47,2.1,No
+M7439,Head Office - IT,Gauteng,HO IT,Male,Black African,Middle management,29,0.5,No
+M7440,Head Office - IT,Gauteng,HO IT,Female,Black African,Skilled,39,4.1,No
+M7441,Head Office - IT,Gauteng,HO IT,Non-binary,Black African,Senior management,36,8.1,Yes
+M7442,Head Office - IT,Western Cape,HO IT,Female,Black African,Skilled,43,9.3,No
+M7443,Head Office - IT,Gauteng,HO IT,Female,Black African,Middle management,28,1.3,No
+M7444,Head Office - IT,Gauteng,HO IT,Male,Indian,Skilled,41,3.2,No
+M7445,Head Office - IT,Western Cape,HO IT,Male,Black African,Skilled,32,0.6,No
+M7446,Head Office - IT,Gauteng,HO IT,Male,Coloured,Middle management,42,2.6,No
+M7447,Legal,Gauteng,Legal,Female,Black African,Middle management,20,0.3,No
+M7448,Legal,Gauteng,Legal,Male,Black African,Skilled,50,1.4,No
+M7449,Legal,Gauteng,Legal,Male,Black African,Skilled,46,3.6,No
+M7450,Legal,Gauteng,Legal,Female,Black African,Skilled,34,9.5,No

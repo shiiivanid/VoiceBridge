@@ -1,0 +1,11 @@
+﻿Respondent;Department;Gender;B1 [Belonging] I feel I belong here;B2 [Belonging] I am respected;V1 [Voice] I can speak up;Comment
+1;Sales;Female;Agree;Agree;Disagree;Fine
+2;Sales;Male;Strongly agree;Agree;Agree;
+3;Finance;Female;Disagree;Strongly disagree;Strongly disagree;"Nobody listens; ever"
+4;Finance;Male;Agree;Agree
+5;Sales;Female;Neutral;Agree;Agree;
+6;HR;Female;Agree;Agree;Agree;HR is great
+7;Sales;Male;Agree;Strongly agree;Agree;
+8;Finance;Female;Disagree;Disagree;Disagree;Same as last year
+;;;;;;
+Total;;;8;8;7;

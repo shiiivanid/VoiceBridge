@@ -235,7 +235,7 @@ p { margin: 0; }
 /* Dot plot */
 .dots { display: grid; gap: 4px; }
 .dot-row { display: grid; grid-template-columns: minmax(120px, 210px) minmax(0, 1fr) 44px; gap: 12px; align-items: center; font-size: 13.5px; min-height: 26px; }
-.dot-row .lbl { color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dot-row .lbl { color: var(--ink-2); line-height: 1.25; overflow-wrap: anywhere; } /* wraps instead of cutting long labels off */
 .dot-row.hl .lbl { color: var(--concern); font-weight: 700; }
 .dot-row .v { text-align: right; font-weight: 650; }
 .dot-row.hl .v { color: var(--concern); }
@@ -555,3 +555,72 @@ p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Headcount warnings (added after the Masakhane stress test, 17 Oct 2026) */
+.hc-warn { background: var(--concern-soft); border-radius: var(--r); padding: 14px 16px; display: grid; gap: 8px; font-size: 14px; color: var(--ink); }
+.hc-warn h3 { margin: 0; font-size: 15px; color: var(--concern); display: flex; gap: 8px; align-items: center; }
+.hc-warn ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.hc-warn code { font-family: var(--mono); font-size: 12.5px; background: var(--surface); padding: 1px 5px; border-radius: 4px; }
+.sil-note { font-size: 14px; color: var(--ink-2); display: flex; gap: 8px; align-items: flex-start; }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: .45; cursor: not-allowed; box-shadow: none; }
+
+/* "What your file needs" on the start screen (added 17 Oct 2026) */
+.needs { margin: 8px 0 48px; padding: 24px; display: grid; gap: 12px; }
+.needs h2 { margin: 0; }
+.needs-list { margin: 0; padding-left: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px 28px; }
+.needs-list li { display: grid; gap: 2px; font-size: 14.5px; }
+.needs-list li span { color: var(--ink-2); font-size: 13.5px; }
+.needs-go { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* Choosing a theme for each question on the Check screen (added 17 Oct 2026) */
+.theme-edit { margin-top: 6px; }
+.theme-edit summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--accent); }
+.theme-rows { display: grid; gap: 6px; margin-top: 10px; }
+.theme-row { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 12px; align-items: center; font-size: 14px; padding: 6px 8px; border-radius: 8px; }
+.theme-row.is-general { background: var(--concern-soft); }
+.theme-row select { font: inherit; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--line-2, var(--line)); background: var(--surface); color: var(--ink); }
+@media (max-width: 640px) { .theme-row { grid-template-columns: 1fr; } }
+
+/* Round 4 (20 October) */
+.file-x { border: 0; background: var(--sunk); width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; color: var(--ink-2); margin-left: 6px; vertical-align: middle; cursor: pointer; }
+.file-x:hover { background: var(--concern-soft); color: var(--concern); }
+.file-x svg { width: 12px; height: 12px; }
+.st-cmp { display: grid; gap: 4px; font-size: 13px; color: var(--ink-2); }
+.st-cmp b { color: var(--ink); margin-right: 4px; }
+.conf .cmp { grid-template-columns: minmax(0, 1fr); }
+.conf-theme { background: var(--surface); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; font-size: 14.5px; }
+.conf-theme .ct-name { font-size: 13.5px; }
+.conf-theme .ct-name b { font-size: 15px; margin-right: 6px; }
+.cbars { display: grid; gap: 5px; }
+.cbar { display: grid; grid-template-columns: minmax(120px, 230px) minmax(0, 1fr) 44px; gap: 10px; align-items: center; font-size: 13px; color: var(--ink-2); }
+.cbar-t { height: 8px; border-radius: 99px; background: var(--sunk); overflow: hidden; }
+.cbar-t i { display: block; height: 100%; background: var(--ink-3); border-radius: 99px; }
+.cbar.me { color: var(--concern); font-weight: 650; }
+.cbar.me .cbar-t i { background: var(--concern); }
+.cbar b { text-align: right; }
+@media (max-width: 720px) { .cbar { grid-template-columns: minmax(0, 1fr) 40px; } .cbar .cbar-t { grid-column: 1 / -1; grid-row: 2; } }
+/* The older card styles (big numbers, white boxes) must not leak into the new theme rows. */
+.conf .cmp .conf-theme div { background: none; padding: 0; border-radius: 0; }
+.conf .cmp .conf-theme .cbar-t { background: var(--sunk); border-radius: 99px; }
+.conf .cmp .conf-theme b { font-size: inherit; font-family: inherit; font-weight: 700; display: inline; }
+.conf .cmp .conf-theme .ct-name b { font-size: 15px; }
+
+/* Colour keys (20 October) */
+.glance-key { margin-top: 8px; }
+.glance-key .tick-key { width: 2px; height: 12px; border-radius: 0; background: var(--line-2); }
+
+/* Plain-language pass (20 October) */
+.w-row .num { display: grid; justify-items: end; gap: 1px; max-width: 220px; }
+.w-row .num .num-big { color: var(--concern); font-size: 18px; }
+.w-row .num small { text-align: right; }
+.w-row .num .num-cmp { color: var(--ink-2); }
+.plain-key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--ink-2); padding: 10px 14px; border-radius: 10px; background: var(--sunk); }
+.plain-key > b { width: 100%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.plain-key span b { color: var(--ink); }
+.table-key { font-size: 12.5px; padding: 10px 8px 12px; margin: 0; line-height: 1.5; }
+.see-all { margin-top: 4px; justify-self: start; width: auto; }
+
+/* Similar comments (20 October) */
+.quote-g { display: grid; gap: 6px; }
+.sim-btn { font-size: 12.5px; padding: 0 2px; margin-left: 2px; }
+.sim-list { margin: 0 0 4px 18px; padding: 8px 12px 8px 22px; border-left: 2px solid var(--line-2); background: var(--surface); border-radius: 0 8px 8px 0; display: grid; gap: 6px; font-size: 14px; color: var(--ink-2); }

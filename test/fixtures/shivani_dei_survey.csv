@@ -1,0 +1,501 @@
+﻿Employee_ID;Department;Job_Level;Tenure_Years;Work_Arrangement;Age_Band;Gender;Race_Group;Disability_Status;DEI_Belonging;DEI_Respect;DEI_Fairness;DEI_Voice;DEI_Inclusive_Leadership;DEI_Discrimination_Concern;Culture_Trust;Culture_Communication;Culture_Recognition;Culture_Collaboration;Culture_Growth;Wellbeing_Workload;Wellbeing_Work_Life;Wellbeing_Support;Wellbeing_Energy;Wellbeing_Burnout;Overall_Comment
+SYN-0001;Customer Service;Senior Management;4,4;Hybrid;35–44;Man;Black African;No;3;1;2;4;;3;3;4;3;5;4;3;4;3;3;2;
+SYN-0002;Operations;Individual Contributor;3,8;On-site;25–34;Man;White;No;4;3;2;4;5;3;3;5;5;5;2;4;5;2;4;2;Communication from leadership could be clearer.
+SYN-0003;Operations;Individual Contributor;1,9;Hybrid;45–54;Woman;Black African;No;5;;4;4;3;2;4;4;3;4;3;5;5;3;5;1;I appreciate my team, but workloads can be intense.
+SYN-0004;Sales;Individual Contributor;5,9;On-site;25–34;Woman;Coloured;No;4;5;4;4;3;3;4;4;4;4;3;4;4;3;3;1;
+SYN-0005;Customer Service;Individual Contributor;3;Remote;35–44;Man;Black African;Yes;1;2;1;2;1;5;3;1;2;2;2;2;;2;1;5;
+SYN-0006;Operations;Team Lead;4,8;Hybrid;18–24;Man;White;Yes;4;3;3;5;5;3;4;3;3;3;3;4;4;4;3;1;
+SYN-0007;Finance;Senior Management;2;On-site;25–34;Woman;Black African;No;3;4;3;3;2;3;3;2;3;2;2;3;2;2;2;3;
+SYN-0008;Sales;Individual Contributor;2,3;On-site;25–34;Woman;White;Yes;2;3;2;4;2;2;2;2;2;3;3;3;1;3;1;3;I appreciate my team, but workloads can be intense.
+SYN-0009;Technology;Middle Management;3,6;Hybrid;35–44;Woman;Indian/Asian;No;3;3;4;3;3;3;2;3;2;2;4;3;3;4;5;;Flexible working has improved my wellbeing.
+SYN-0010;Sales;Individual Contributor;1,5;On-site;45–54;Woman;Coloured;No;3;3;3;2;4;3;3;3;2;3;5;2;3;4;3;2;
+SYN-0011;Operations;Team Lead;3,1;On-site;45–54;Woman;Black African;No;5;4;4;5;4;2;4;5;4;3;4;3;3;3;4;3;
+SYN-0012;Customer Service;Individual Contributor;3;Hybrid;25–34;Man;Black African;No;3;3;3;3;3;4;3;3;2;4;2;3;3;4;2;4;
+SYN-0013;Sales;Individual Contributor;3,5;On-site;45–54;Woman;Coloured;No;2;4;3;3;4;3;3;3;4;4;2;2;3;3;3;3;
+SYN-0014;Marketing;Senior Management;5;Hybrid;35–44;Man;Black African;No;4;4;3;2;3;3;5;5;5;4;3;2;5;3;;2;
+SYN-0015;Technology;Team Lead;3,4;On-site;35–44;Man;Black African;No;3;2;4;3;2;4;5;;2;4;4;3;2;2;2;3;
+SYN-0016;Finance;Individual Contributor;6,4;On-site;35–44;Man;White;No;2;2;3;;2;3;2;2;4;3;3;2;2;3;2;4;
+SYN-0017;Finance;Middle Management;14;Hybrid;35–44;Man;Black African;No;2;4;4;3;2;4;2;2;3;5;4;3;2;3;3;2;
+SYN-0018;Customer Service;Individual Contributor;3,2;Hybrid;18–24;Woman;White;No;3;2;2;3;4;4;2;3;2;1;2;2;4;2;3;5;Workload peaks make it difficult to switch off.
+SYN-0019;Technology;Team Lead;17,8;Hybrid;35–44;Man;Black African;No;3;5;5;4;5;2;5;5;5;4;5;5;3;4;5;1;
+SYN-0020;Operations;Team Lead;4,9;On-site;25–34;Woman;Indian/Asian;No;4;2;4;5;3;3;3;3;3;2;3;2;1;4;2;4;My colleagues are supportive and respectful.
+SYN-0021;Sales;Middle Management;11,4;Hybrid;35–44;Woman;Black African;No;4;4;3;4;5;2;5;2;4;3;4;3;4;4;5;2;Flexible working has improved my wellbeing.
+SYN-0022;Customer Service;Middle Management;2,9;Hybrid;25–34;Woman;Black African;No;3;4;5;3;4;1;5;4;5;4;3;3;3;4;4;3;
+SYN-0023;Sales;Senior Management;4,1;Hybrid;35–44;Woman;Black African;Yes;3;1;3;3;2;3;2;3;4;2;4;3;3;4;4;3;
+SYN-0024;Operations;Middle Management;3,8;Hybrid;55+;Woman;White;No;5;5;5;5;4;1;5;3;5;5;5;5;3;3;3;1;Career development opportunities feel uneven.
+SYN-0025;Customer Service;Individual Contributor;3,5;On-site;25–34;Woman;Black African;Prefer not to say;2;3;4;3;3;2;4;4;3;4;3;4;3;3;3;4;
+SYN-0026;Finance;Individual Contributor;3,7;Hybrid;25–34;Woman;Black African;No;3;3;4;3;5;1;4;3;3;5;4;3;4;5;4;1;
+SYN-0027;Finance;Individual Contributor;7;On-site;35–44;Man;Coloured;No;4;2;;3;3;4;3;1;4;1;2;2;3;3;2;3;
+SYN-0028;Sales;Senior Management;3,7;Hybrid;35–44;Woman;White;No;4;4;4;4;2;2;4;4;5;4;3;4;4;4;4;3;Career development opportunities feel uneven.
+SYN-0029;Sales;Middle Management;12,2;Hybrid;35–44;Woman;White;No;3;1;3;3;3;4;4;2;4;2;3;1;4;4;2;3;Career development opportunities feel uneven.
+SYN-0030;Human Resources;Middle Management;1;Hybrid;45–54;Woman;White;No;5;5;4;5;5;1;4;5;4;4;4;4;5;5;5;1;
+SYN-0031;Technology;Middle Management;6,9;Hybrid;35–44;Woman;Coloured;Yes;3;4;5;4;4;3;2;;3;3;4;5;3;3;2;2;
+SYN-0032;Marketing;Team Lead;3,9;On-site;25–34;Man;Indian/Asian;No;2;3;5;5;3;;3;3;4;;4;1;4;3;3;2;
+SYN-0033;Operations;Middle Management;2,8;Hybrid;35–44;Woman;Black African;No;3;1;1;3;3;4;3;1;3;4;3;4;3;4;3;3;
+SYN-0034;Customer Service;Individual Contributor;5,8;Remote;25–34;Woman;Black African;No;2;3;3;2;2;5;2;2;2;2;1;2;1;3;3;4;
+SYN-0035;Sales;Middle Management;4,9;Hybrid;35–44;Woman;Black African;No;5;5;3;4;5;1;4;5;3;3;4;4;3;4;3;2;
+SYN-0036;Technology;Individual Contributor;7,9;On-site;35–44;Man;Black African;No;5;4;3;3;1;2;5;4;3;5;4;5;3;3;4;3;Communication from leadership could be clearer.
+SYN-0037;Operations;Individual Contributor;3,4;Remote;35–44;Man;Prefer not to say;No;4;4;4;3;3;3;2;5;1;3;4;4;5;3;5;2;
+SYN-0038;Marketing;Individual Contributor;1,8;Hybrid;35–44;Woman;Coloured;No;4;3;3;4;2;2;3;4;4;3;3;3;4;3;4;1;
+SYN-0039;Finance;Middle Management;3,7;Hybrid;45–54;Woman;White;No;2;3;4;;2;2;3;5;4;4;3;3;3;4;3;2;
+SYN-0040;Sales;Individual Contributor;3,1;On-site;35–44;Woman;Coloured;No;4;4;3;3;5;4;2;3;2;4;3;4;2;2;2;3;
+SYN-0041;Sales;Individual Contributor;7,7;Hybrid;25–34;Woman;Black African;No;4;4;4;5;4;2;4;4;5;2;2;3;4;5;5;;
+SYN-0042;Operations;Individual Contributor;5,7;On-site;35–44;Man;Black African;No;1;2;3;3;2;3;3;2;2;4;3;2;3;4;1;4;
+SYN-0043;Finance;Individual Contributor;4,1;On-site;35–44;Woman;Black African;No;4;1;2;2;2;3;3;3;3;2;2;3;2;3;2;4;
+SYN-0044;Technology;Individual Contributor;3,6;Hybrid;18–24;Man;Black African;No;3;3;1;3;3;3;4;3;5;1;3;4;5;3;3;3;
+SYN-0045;Operations;Team Lead;4,3;Remote;18–24;Man;Black African;No;3;2;3;2;3;2;2;3;3;4;4;2;4;4;3;2;Recognition for good work would improve morale.
+SYN-0046;Operations;Team Lead;12;On-site;18–24;Man;Black African;No;4;4;2;2;3;4;2;4;3;4;3;4;4;4;3;4;
+SYN-0047;Sales;Middle Management;2,5;Remote;35–44;Man;White;No;2;3;1;5;3;;2;4;5;3;3;3;4;1;3;3;
+SYN-0048;Technology;Individual Contributor;5,8;Hybrid;25–34;Man;White;No;3;3;3;2;4;3;2;3;3;2;3;3;2;4;2;3;
+SYN-0049;Operations;Individual Contributor;3,8;On-site;45–54;Woman;Indian/Asian;No;3;3;4;5;3;4;3;2;2;2;3;3;1;4;2;4;
+SYN-0050;Operations;Individual Contributor;2;Hybrid;25–34;Woman;Indian/Asian;Yes;5;3;5;4;4;1;5;4;5;5;;4;5;5;5;1;Managers need more training on inclusive leadership.
+SYN-0051;Finance;Individual Contributor;1,2;Hybrid;35–44;Man;Black African;No;1;2;3;2;3;5;4;2;1;4;1;3;2;3;4;3;
+SYN-0052;Technology;Individual Contributor;20,2;Hybrid;35–44;Woman;Coloured;No;1;;2;1;3;1;3;3;2;4;3;4;2;3;3;3;
+SYN-0053;Human Resources;Senior Management;1,7;Hybrid;35–44;Woman;Indian/Asian;No;4;4;4;2;3;3;4;4;4;3;4;3;4;;5;1;
+SYN-0054;Marketing;Individual Contributor;5,1;Remote;35–44;Man;Black African;No;4;5;5;3;5;2;3;4;4;4;4;4;3;3;5;2;
+SYN-0055;Finance;Individual Contributor;2,7;On-site;25–34;Woman;Black African;No;3;4;2;3;3;1;;2;4;4;4;2;3;3;5;4;
+SYN-0056;Technology;Middle Management;0,9;Hybrid;35–44;Woman;Black African;No;3;3;4;3;2;3;3;2;2;2;2;1;1;3;2;4;Career development opportunities feel uneven.
+SYN-0057;Finance;Team Lead;4,8;Hybrid;25–34;Woman;Coloured;Prefer not to say;3;2;4;3;3;3;3;2;4;3;3;3;3;3;2;2;
+SYN-0058;Finance;Team Lead;7;Hybrid;18–24;Man;Black African;No;4;4;3;4;2;4;4;2;3;3;3;3;2;4;2;3;
+SYN-0059;Operations;Individual Contributor;3,3;Hybrid;45–54;Man;Black African;No;5;4;4;4;5;3;3;4;3;2;3;5;4;4;5;4;
+SYN-0060;Operations;Individual Contributor;3,1;On-site;25–34;Man;Black African;No;4;4;;5;5;2;4;3;5;4;5;2;4;3;2;4;
+SYN-0061;Operations;Team Lead;8;Remote;35–44;Woman;White;Yes;2;1;2;2;2;4;2;2;2;2;1;2;1;2;1;3;
+SYN-0062;Finance;Middle Management;6,6;On-site;25–34;Woman;Black African;No;;4;4;3;3;3;2;5;5;4;5;4;5;3;4;2;
+SYN-0063;Operations;Team Lead;1,2;On-site;25–34;Man;Black African;No;3;3;2;3;2;3;2;3;3;3;2;1;2;2;3;5;
+SYN-0064;Operations;Individual Contributor;1,6;On-site;25–34;Woman;Indian/Asian;No;4;5;5;4;5;2;3;5;5;5;3;5;5;4;5;2;
+SYN-0065;Finance;Individual Contributor;3,8;Remote;18–24;Man;Black African;No;4;3;2;3;4;3;4;4;4;3;4;5;5;3;5;2;Recognition for good work would improve morale.
+SYN-0066;Technology;Individual Contributor;5,7;Remote;25–34;Woman;Indian/Asian;No;4;3;3;4;3;5;3;5;3;3;2;3;3;2;;4;
+SYN-0067;Sales;Individual Contributor;6,8;Hybrid;55+;Man;Black African;No;3;4;3;5;3;1;2;5;4;3;5;1;5;3;5;2;
+SYN-0068;Technology;Individual Contributor;3,9;On-site;45–54;Woman;Coloured;No;1;2;3;4;4;4;1;3;3;1;3;1;3;3;2;2;
+SYN-0069;Finance;Individual Contributor;6,9;Hybrid;35–44;Man;Coloured;No;4;5;5;5;5;2;5;5;5;5;4;5;5;5;5;1;
+SYN-0070;Operations;Individual Contributor;12,8;Hybrid;25–34;Woman;Black African;No;3;2;5;3;1;2;3;2;4;5;2;3;3;4;3;5;
+SYN-0071;Finance;Individual Contributor;4,3;On-site;25–34;Man;Coloured;No;5;3;3;4;4;3;4;3;4;3;4;5;5;3;3;3;
+SYN-0072;Operations;Individual Contributor;2,3;On-site;18–24;Man;Indian/Asian;No;5;4;4;4;3;2;5;;3;4;4;4;4;4;4;1;Workload peaks make it difficult to switch off.
+SYN-0073;Customer Service;Individual Contributor;5,3;Remote;35–44;Man;Coloured;No;4;3;2;2;1;2;2;1;3;1;3;4;4;3;2;3;Communication from leadership could be clearer.
+SYN-0074;Operations;Individual Contributor;10,2;Remote;25–34;Man;Black African;No;3;4;4;3;3;4;3;3;2;3;2;4;3;2;4;3;
+SYN-0075;Operations;Individual Contributor;3;Hybrid;25–34;Woman;Indian/Asian;No;2;4;2;4;3;4;3;3;3;2;2;3;4;3;3;4;
+SYN-0076;Human Resources;Individual Contributor;1,1;Hybrid;25–34;Woman;Black African;No;3;4;4;3;4;1;3;5;4;4;3;3;3;5;4;1;
+SYN-0077;Operations;Individual Contributor;3,1;Hybrid;35–44;Woman;Coloured;No;3;2;1;1;2;3;4;3;2;1;3;2;3;3;4;2;
+SYN-0078;Operations;Individual Contributor;7,5;On-site;25–34;Woman;Black African;No;2;4;3;3;5;2;4;4;2;4;4;3;3;2;2;2;
+SYN-0079;Operations;Individual Contributor;6,5;On-site;35–44;Woman;Coloured;No;2;3;3;2;5;4;2;5;4;3;4;3;4;5;2;4;Workload peaks make it difficult to switch off.
+SYN-0080;Technology;Team Lead;3,8;On-site;25–34;Man;Coloured;No;3;4;4;2;1;3;3;4;2;4;3;4;4;1;3;2;
+SYN-0081;Technology;Individual Contributor;2,1;On-site;45–54;Man;Coloured;No;2;2;2;4;3;3;3;3;2;3;3;2;2;3;3;4;
+SYN-0082;Customer Service;Individual Contributor;4,1;Hybrid;25–34;Man;Black African;No;3;2;3;3;3;3;3;3;3;4;3;2;4;3;4;3;
+SYN-0083;Sales;Senior Management;2;Hybrid;25–34;Man;Coloured;Yes;4;4;3;4;4;;5;5;5;5;5;4;5;5;4;3;
+SYN-0084;Operations;Individual Contributor;1,9;Hybrid;55+;Woman;Black African;No;3;4;2;4;4;2;4;3;3;2;5;3;2;3;4;2;More transparent promotion criteria would help.
+SYN-0085;Sales;Individual Contributor;1;On-site;25–34;Woman;White;No;1;2;1;3;3;2;4;4;4;2;2;3;3;3;4;2;
+SYN-0086;Technology;Individual Contributor;1;Remote;35–44;Woman;Prefer not to say;No;4;4;3;4;3;1;5;4;5;2;4;4;4;5;3;3;Recognition for good work would improve morale.
+SYN-0087;Technology;Senior Management;2,2;Hybrid;45–54;Man;Black African;No;4;4;5;5;3;1;5;4;3;5;3;5;5;5;5;1;Managers need more training on inclusive leadership.
+SYN-0088;Customer Service;Individual Contributor;2,1;Hybrid;25–34;Man;Coloured;No;4;3;4;3;;2;4;5;3;4;2;3;4;5;3;1;
+SYN-0089;Sales;Individual Contributor;1,2;Hybrid;45–54;Man;Black African;No;4;3;3;5;5;2;3;5;3;4;5;3;3;3;4;3;
+SYN-0090;Finance;Individual Contributor;2,3;On-site;25–34;Man;Coloured;No;1;4;1;3;3;4;2;2;4;2;3;2;2;4;1;3;
+SYN-0091;Human Resources;Middle Management;3,2;On-site;25–34;Woman;Coloured;No;1;3;4;3;3;3;4;3;3;3;3;2;3;3;3;5;
+SYN-0092;Sales;Middle Management;6,7;Hybrid;35–44;Man;Indian/Asian;No;5;4;3;3;5;3;3;4;3;4;3;3;5;2;2;1;
+SYN-0093;Sales;Middle Management;1,7;On-site;35–44;Man;Coloured;No;3;3;2;3;2;4;1;1;2;1;2;2;1;1;1;5;Workload peaks make it difficult to switch off.
+SYN-0094;Technology;Individual Contributor;2,8;Hybrid;18–24;Man;Coloured;No;3;4;5;2;5;1;2;4;2;3;4;3;5;4;3;2;
+SYN-0095;Operations;Team Lead;6;Remote;25–34;Man;Indian/Asian;No;1;2;1;3;2;5;4;2;2;1;2;2;3;2;1;2;
+SYN-0096;Human Resources;Middle Management;6,7;On-site;45–54;Woman;White;No;4;3;4;3;4;2;4;3;4;4;;5;4;4;3;2;My colleagues are supportive and respectful.
+SYN-0097;Customer Service;Individual Contributor;3,3;On-site;18–24;Man;Prefer not to say;No;3;4;4;3;4;2;3;3;3;4;3;3;3;4;4;4;
+SYN-0098;Marketing;Middle Management;2,7;Hybrid;25–34;Woman;White;No;4;5;5;3;3;3;4;4;4;3;3;4;5;3;4;2;
+SYN-0099;Sales;Team Lead;12,7;On-site;45–54;Man;Black African;No;3;3;4;2;3;3;2;2;2;2;1;3;2;1;1;3;
+SYN-0100;Sales;Team Lead;6,8;On-site;55+;Woman;Black African;No;3;2;5;3;3;3;4;3;3;3;5;3;2;2;4;;
+SYN-0101;Human Resources;Individual Contributor;8,5;Hybrid;45–54;Woman;Black African;No;4;3;3;4;3;4;3;3;3;2;1;4;4;3;2;2;
+SYN-0102;Technology;Team Lead;6,9;Hybrid;35–44;Woman;Black African;No;2;3;2;5;2;2;2;2;3;4;2;3;1;2;2;3;
+SYN-0103;Sales;Team Lead;2,2;On-site;25–34;Man;Black African;Yes;2;3;4;2;3;3;3;2;2;2;3;3;3;3;3;3;More transparent promotion criteria would help.
+SYN-0104;Marketing;Individual Contributor;4,3;On-site;25–34;Man;Black African;No;1;3;2;2;1;5;1;2;1;1;2;3;1;2;2;4;
+SYN-0105;Sales;Middle Management;3,8;On-site;25–34;Woman;Indian/Asian;No;5;5;5;5;5;1;5;5;4;5;5;5;4;3;5;1;
+SYN-0106;Operations;Individual Contributor;6,7;On-site;45–54;Man;Black African;No;3;3;2;2;3;3;4;2;3;3;3;5;1;3;4;2;
+SYN-0107;Customer Service;Senior Management;1,7;On-site;35–44;Non-binary;Prefer not to say;No;4;4;4;4;5;1;3;5;3;3;4;4;5;2;3;2;
+SYN-0108;Finance;Individual Contributor;2;Hybrid;25–34;Woman;White;No;5;4;4;5;5;2;5;5;4;5;;4;4;5;5;2;Recognition for good work would improve morale.
+SYN-0109;Sales;Individual Contributor;11,1;On-site;25–34;Woman;Black African;No;3;4;2;2;4;4;4;3;4;3;3;5;3;2;3;4;
+SYN-0110;Technology;Individual Contributor;5,8;On-site;25–34;Woman;Black African;Yes;4;3;3;3;3;3;3;4;3;3;3;3;;4;3;4;
+SYN-0111;Finance;Individual Contributor;10,2;Remote;35–44;Man;Prefer not to say;Yes;3;4;2;3;3;3;4;2;3;3;3;4;3;3;3;2;
+SYN-0112;Sales;Team Lead;11,1;Remote;25–34;Man;Coloured;No;4;3;3;3;2;1;;3;2;5;3;5;3;4;2;2;
+SYN-0113;Customer Service;Team Lead;0,6;On-site;55+;Woman;Black African;No;4;4;4;3;4;3;4;5;3;2;4;4;2;5;4;3;
+SYN-0114;Finance;Individual Contributor;1,2;Hybrid;25–34;Man;White;No;3;5;4;4;3;2;4;3;3;3;4;4;2;4;3;1;
+SYN-0115;Customer Service;Individual Contributor;1,1;On-site;25–34;Woman;Black African;No;5;5;5;5;5;1;5;5;4;5;4;5;4;4;5;1;
+SYN-0116;Sales;Senior Management;1,5;Hybrid;25–34;Man;Indian/Asian;No;3;3;3;3;3;3;4;4;2;3;3;4;3;3;4;1;
+SYN-0117;Technology;Individual Contributor;0,5;On-site;25–34;Woman;Black African;No;3;3;2;4;3;3;3;4;2;1;3;2;;3;4;4;
+SYN-0118;Human Resources;Individual Contributor;0,8;On-site;35–44;Man;Coloured;No;3;2;1;3;3;2;3;3;4;4;3;3;4;3;4;4;
+SYN-0119;Customer Service;Team Lead;5,9;On-site;25–34;Woman;Indian/Asian;No;;3;4;4;3;2;4;3;3;4;4;3;5;4;3;3;Managers need more training on inclusive leadership.
+SYN-0120;Sales;Individual Contributor;2,3;Hybrid;35–44;Woman;Indian/Asian;No;5;5;5;5;5;1;5;4;5;4;5;4;5;5;5;1;My colleagues are supportive and respectful.
+SYN-0121;Technology;Individual Contributor;2,5;On-site;35–44;Man;Coloured;No;4;4;5;5;5;2;5;4;4;4;5;5;3;5;5;2;
+SYN-0122;Operations;Senior Management;4,5;Hybrid;25–34;Woman;White;No;3;4;4;5;5;4;3;5;3;4;3;3;4;3;4;3;More transparent promotion criteria would help.
+SYN-0123;Operations;Team Lead;3,3;Hybrid;35–44;Woman;Black African;No;1;3;2;3;4;3;1;4;4;2;2;3;2;3;3;3;
+SYN-0124;Human Resources;Middle Management;7,8;Hybrid;25–34;Man;Black African;No;4;3;2;2;3;3;3;3;4;4;4;4;4;3;4;;Flexible working has improved my wellbeing.
+SYN-0125;Sales;Individual Contributor;2,9;Remote;25–34;Woman;Indian/Asian;No;4;2;3;3;3;1;3;3;2;3;1;4;3;3;3;3;Workload peaks make it difficult to switch off.
+SYN-0126;Operations;Individual Contributor;1,6;Hybrid;35–44;Man;Black African;No;4;3;4;4;4;2;4;5;4;3;2;4;3;2;3;2;
+SYN-0127;Customer Service;Individual Contributor;9;On-site;45–54;Man;White;No;1;;2;3;4;1;2;3;2;3;3;5;3;3;3;2;
+SYN-0128;Marketing;Individual Contributor;6,5;Hybrid;35–44;Woman;Black African;No;2;5;2;3;3;4;3;4;2;3;4;3;4;3;1;1;
+SYN-0129;Operations;Individual Contributor;3,3;On-site;35–44;Man;Black African;No;2;3;2;2;2;4;1;3;1;2;2;3;1;3;1;3;Career development opportunities feel uneven.
+SYN-0130;Sales;Middle Management;7;Hybrid;45–54;Woman;Black African;No;3;5;3;3;3;2;3;3;2;2;3;3;4;5;2;3;
+SYN-0131;Operations;Individual Contributor;10,1;On-site;55+;Woman;Black African;No;5;4;4;5;4;1;5;4;4;5;4;5;4;3;5;1;
+SYN-0132;Technology;Individual Contributor;1,8;Hybrid;45–54;Woman;Black African;No;5;4;4;4;4;1;5;5;5;4;4;4;4;4;3;1;
+SYN-0133;Marketing;Senior Management;2,3;On-site;45–54;Woman;White;No;3;5;3;5;3;2;5;4;4;4;4;5;4;5;3;1;Flexible working has improved my wellbeing.
+SYN-0134;Customer Service;Middle Management;1,2;On-site;25–34;Woman;Black African;No;2;3;2;4;2;4;3;3;4;3;3;2;3;3;2;4;
+SYN-0135;Technology;Individual Contributor;5,4;Hybrid;35–44;Man;Indian/Asian;No;3;5;1;3;4;3;2;4;3;4;3;4;;2;4;3;
+SYN-0136;Technology;Middle Management;1,7;On-site;45–54;Man;Black African;No;1;2;2;1;4;3;3;1;4;3;2;2;4;1;2;;
+SYN-0137;Human Resources;Middle Management;2,6;On-site;45–54;Man;Black African;No;4;3;4;5;4;3;3;5;;3;3;2;3;3;3;3;Communication from leadership could be clearer.
+SYN-0138;Technology;Middle Management;1,7;Hybrid;55+;Man;Black African;No;4;2;3;5;4;3;4;2;3;3;5;4;4;4;3;2;
+SYN-0139;Technology;Team Lead;8,3;Hybrid;18–24;Man;Coloured;Prefer not to say;4;3;4;5;3;2;3;3;3;3;4;4;4;5;4;3;I appreciate my team, but workloads can be intense.
+SYN-0140;Marketing;Team Lead;12,7;On-site;45–54;Woman;Black African;No;5;3;5;5;5;2;5;5;5;3;5;4;4;3;4;3;
+SYN-0141;Finance;Individual Contributor;3,5;Hybrid;35–44;Woman;Black African;No;3;3;3;2;3;3;2;1;3;2;2;3;3;4;3;4;
+SYN-0142;Operations;Team Lead;10,6;On-site;35–44;Woman;Indian/Asian;No;3;4;4;3;4;2;3;4;3;4;3;2;4;3;4;3;Career development opportunities feel uneven.
+SYN-0143;Operations;Individual Contributor;1,8;Hybrid;18–24;Woman;Indian/Asian;No;1;2;2;2;2;4;2;2;2;1;4;2;2;2;1;5;
+SYN-0144;Marketing;Individual Contributor;9,7;On-site;35–44;Woman;Coloured;No;4;4;3;4;4;3;5;4;5;5;4;3;;4;5;3;
+SYN-0145;Customer Service;Team Lead;13,7;Remote;35–44;Woman;White;No;4;;5;3;4;1;4;4;5;4;5;3;2;2;4;2;
+SYN-0146;Human Resources;Individual Contributor;7,5;Remote;25–34;Woman;White;No;3;2;1;3;2;4;2;2;3;3;3;2;3;4;3;3;
+SYN-0147;Technology;Individual Contributor;6,6;On-site;25–34;Man;Black African;No;;4;;5;5;1;4;5;5;5;4;4;4;5;5;1;
+SYN-0148;Finance;Individual Contributor;3,7;On-site;35–44;Woman;Indian/Asian;No;2;3;2;3;2;5;1;1;1;4;2;3;1;2;1;5;
+SYN-0149;Finance;Individual Contributor;6,9;On-site;25–34;Woman;Black African;No;5;5;4;4;4;3;5;5;4;5;4;5;5;4;3;2;
+SYN-0150;Customer Service;Team Lead;4,9;Hybrid;18–24;Woman;Black African;No;3;4;4;4;3;3;3;3;5;4;2;4;4;5;2;2;
+SYN-0151;Finance;Individual Contributor;10,5;On-site;35–44;Woman;Black African;No;3;4;1;2;2;3;2;1;2;2;2;2;3;1;2;5;
+SYN-0152;Sales;Middle Management;13,3;Hybrid;45–54;Man;Black African;No;4;4;3;2;2;4;4;3;2;2;2;2;2;2;2;3;Communication from leadership could be clearer.
+SYN-0153;Technology;Individual Contributor;8,2;On-site;45–54;Woman;Black African;No;2;3;3;5;3;3;2;3;2;2;3;3;3;3;2;4;
+SYN-0154;Finance;Individual Contributor;3,2;On-site;35–44;Woman;White;No;5;4;3;3;3;3;4;3;5;3;4;3;3;3;4;3;
+SYN-0155;Human Resources;Team Lead;10;On-site;35–44;Man;Black African;No;3;2;3;3;3;;2;4;3;3;3;3;4;4;2;1;
+SYN-0156;Human Resources;Individual Contributor;5,1;On-site;35–44;Man;Coloured;No;3;3;4;4;3;1;2;3;5;4;5;3;4;3;3;2;
+SYN-0157;Finance;Individual Contributor;2,3;Hybrid;45–54;Man;Coloured;No;2;3;2;3;3;2;3;4;3;4;4;4;4;4;3;2;
+SYN-0158;Human Resources;Middle Management;5,9;On-site;35–44;Prefer not to say;White;No;5;4;4;4;4;2;5;5;5;5;5;4;3;5;5;2;Workload peaks make it difficult to switch off.
+SYN-0159;Human Resources;Individual Contributor;10,4;On-site;35–44;Man;Black African;No;3;2;3;3;5;2;3;4;5;2;2;3;4;3;2;1;
+SYN-0160;Marketing;Individual Contributor;0,7;Hybrid;35–44;Man;Prefer not to say;No;4;2;3;3;4;2;3;4;2;5;2;4;3;2;3;2;Workload peaks make it difficult to switch off.
+SYN-0161;Finance;Individual Contributor;7,9;On-site;35–44;Man;Coloured;Yes;3;3;4;3;3;1;2;5;3;4;4;4;3;3;;2;
+SYN-0162;Human Resources;Individual Contributor;3,1;Hybrid;18–24;Man;White;No;4;4;3;4;4;4;4;2;4;4;3;4;5;5;5;2;
+SYN-0163;Customer Service;Individual Contributor;4,5;On-site;45–54;Woman;Black African;No;4;1;3;3;2;3;3;3;4;4;4;3;2;2;3;3;
+SYN-0164;Sales;Individual Contributor;12,1;On-site;45–54;Woman;Black African;Yes;2;3;2;2;3;3;2;2;4;4;2;3;3;2;2;3;
+SYN-0165;Human Resources;Individual Contributor;4,6;Remote;25–34;Prefer not to say;Black African;No;2;3;3;4;2;3;3;3;2;2;3;4;4;3;4;2;
+SYN-0166;Operations;Individual Contributor;3,2;On-site;25–34;Man;Black African;No;4;3;3;3;3;2;3;4;2;5;4;3;3;2;4;4;
+SYN-0167;Sales;Individual Contributor;1,7;Hybrid;35–44;Woman;Black African;No;3;3;2;2;3;3;5;4;4;3;1;3;2;1;3;2;
+SYN-0168;Operations;Individual Contributor;6,5;Hybrid;18–24;Woman;Indian/Asian;No;3;4;4;5;4;2;4;3;5;4;4;4;3;4;4;3;
+SYN-0169;Human Resources;Individual Contributor;2,1;On-site;25–34;Man;Black African;No;4;3;4;4;3;3;4;4;5;3;4;3;4;4;3;2;
+SYN-0170;Operations;Middle Management;1,8;Remote;18–24;Woman;White;Yes;4;2;1;2;2;3;4;3;2;2;3;3;3;4;4;2;
+SYN-0171;Sales;Senior Management;5,4;On-site;35–44;Man;Indian/Asian;No;;3;4;4;2;3;4;4;;3;4;3;2;3;4;3;
+SYN-0172;Sales;Middle Management;5,2;On-site;25–34;Woman;Black African;No;2;4;2;3;2;3;4;3;3;1;3;2;2;3;2;4;
+SYN-0173;Operations;Senior Management;4,5;Hybrid;25–34;Woman;Black African;No;2;4;3;4;4;3;4;3;3;2;2;4;4;3;4;4;
+SYN-0174;Finance;Individual Contributor;7;Hybrid;45–54;Woman;White;No;3;3;3;3;2;5;2;4;;3;4;2;4;1;3;4;
+SYN-0175;Marketing;Individual Contributor;6,1;On-site;25–34;Prefer not to say;Prefer not to say;No;4;5;3;3;4;3;4;3;4;4;;3;3;2;3;3;
+SYN-0176;Sales;Middle Management;2;On-site;25–34;Woman;Indian/Asian;No;5;4;5;5;5;1;4;5;3;4;4;4;4;4;5;1;Managers need more training on inclusive leadership.
+SYN-0177;Operations;Team Lead;6,1;Hybrid;25–34;Woman;Indian/Asian;No;3;;5;4;5;1;4;4;4;4;4;5;5;4;;3;
+SYN-0178;Sales;Team Lead;8,2;Remote;55+;Man;Black African;No;2;2;1;1;2;4;2;1;1;1;1;1;1;2;3;5;
+SYN-0179;Sales;Individual Contributor;1,8;Remote;35–44;Man;Black African;No;3;;4;4;3;3;4;4;3;4;3;2;4;2;5;4;
+SYN-0180;Operations;Middle Management;1,1;Hybrid;25–34;Man;White;No;3;3;3;3;3;3;3;4;2;4;3;2;3;5;4;3;Recognition for good work would improve morale.
+SYN-0181;Operations;Senior Management;3,2;Remote;18–24;Woman;Indian/Asian;Yes;2;2;3;1;3;4;2;2;3;2;2;2;2;2;2;3;
+SYN-0182;Customer Service;Individual Contributor;3,4;Hybrid;25–34;Man;Coloured;No;4;3;2;4;3;2;2;2;3;2;2;3;3;2;3;4;
+SYN-0183;Operations;Individual Contributor;3,4;Remote;18–24;Man;Black African;No;4;3;1;1;2;4;3;2;4;2;3;2;4;3;1;4;
+SYN-0184;Technology;Individual Contributor;3,6;Hybrid;35–44;Man;White;No;5;5;5;4;4;1;5;5;5;3;4;5;5;5;4;2;
+SYN-0185;Customer Service;Individual Contributor;0,9;Hybrid;45–54;Man;Indian/Asian;No;5;4;5;3;3;2;5;3;5;;3;3;4;3;4;2;
+SYN-0186;Customer Service;Individual Contributor;1,1;Hybrid;25–34;Woman;Black African;No;4;3;4;3;;4;4;3;5;4;;;3;4;4;4;
+SYN-0187;Customer Service;Individual Contributor;4,2;On-site;25–34;Woman;Black African;No;3;2;2;3;3;2;3;;4;3;3;1;3;3;1;3;Recognition for good work would improve morale.
+SYN-0188;Sales;Individual Contributor;12,2;On-site;25–34;Man;Black African;No;2;2;4;2;2;4;2;3;3;4;3;2;2;1;2;5;
+SYN-0189;Human Resources;Team Lead;5,8;Hybrid;25–34;Woman;White;No;2;3;5;3;4;3;4;3;4;3;4;4;4;5;4;3;
+SYN-0190;Operations;Individual Contributor;4,5;Remote;25–34;Woman;White;No;4;5;4;5;2;2;2;4;4;3;3;5;4;3;4;2;Communication from leadership could be clearer.
+SYN-0191;Finance;Middle Management;7,3;Hybrid;25–34;Man;White;No;3;3;4;5;5;1;4;5;5;3;4;5;4;5;4;2;
+SYN-0192;Sales;Middle Management;1,8;Hybrid;45–54;Woman;Black African;No;4;5;5;5;4;1;5;5;5;5;4;5;5;4;4;1;
+SYN-0193;Operations;Team Lead;8,8;On-site;25–34;Woman;Coloured;No;2;5;1;2;3;4;2;2;2;2;3;2;3;2;3;4;
+SYN-0194;Marketing;Middle Management;2,4;Hybrid;25–34;Man;Prefer not to say;No;2;2;2;3;3;4;3;1;2;2;3;2;2;3;2;4;
+SYN-0195;Customer Service;Team Lead;3;Hybrid;45–54;Woman;White;No;2;2;2;2;3;3;2;1;5;3;2;3;2;2;1;4;
+SYN-0196;Sales;Individual Contributor;5,5;Hybrid;45–54;Man;Black African;Yes;3;1;1;1;1;4;2;3;3;2;1;2;2;1;2;4;
+SYN-0197;Technology;Individual Contributor;6,4;On-site;25–34;Woman;Coloured;No;;4;5;4;3;2;4;5;4;5;4;4;4;3;2;2;
+SYN-0198;Operations;Individual Contributor;8,1;Remote;25–34;Woman;Coloured;No;2;1;2;1;1;5;2;1;1;1;1;1;1;2;1;4;
+SYN-0199;Operations;Individual Contributor;4,4;Hybrid;45–54;Woman;Black African;No;3;2;4;3;3;5;3;3;3;1;2;3;2;3;3;3;
+SYN-0200;Customer Service;Individual Contributor;5,6;Hybrid;45–54;Woman;Black African;No;;2;4;3;3;3;2;1;2;2;3;3;2;3;4;2;
+SYN-0201;Customer Service;Individual Contributor;7,9;On-site;45–54;Woman;Black African;Prefer not to say;3;1;2;2;2;;2;2;1;4;1;1;2;1;2;5;
+SYN-0202;Customer Service;Middle Management;3,5;Remote;35–44;Man;Coloured;No;3;4;2;3;3;4;3;1;3;3;2;5;4;3;3;3;I appreciate my team, but workloads can be intense.
+SYN-0203;Technology;Middle Management;6,7;Hybrid;45–54;Man;Prefer not to say;No;4;3;2;4;5;4;3;3;5;3;3;2;3;5;4;3;
+SYN-0204;Marketing;Individual Contributor;5;On-site;25–34;Prefer not to say;Black African;No;2;3;2;4;3;3;3;3;5;4;3;2;2;3;2;3;More transparent promotion criteria would help.
+SYN-0205;Marketing;Middle Management;7,9;On-site;35–44;Man;Black African;No;3;3;3;2;3;2;3;4;5;3;5;3;4;3;4;4;
+SYN-0206;Sales;Individual Contributor;3,4;Hybrid;35–44;Woman;Black African;No;3;1;2;2;3;5;3;3;3;2;2;3;1;2;2;2;
+SYN-0207;Technology;Team Lead;2,3;On-site;25–34;Woman;Indian/Asian;No;3;2;3;1;3;3;1;3;3;2;4;2;3;3;1;2;
+SYN-0208;Operations;Team Lead;1,9;On-site;18–24;Man;White;No;4;3;3;2;2;2;3;3;3;3;2;3;3;3;3;5;
+SYN-0209;Finance;Individual Contributor;2,5;Remote;55+;Woman;Indian/Asian;Prefer not to say;3;3;3;4;4;4;5;3;3;4;4;5;5;3;5;2;
+SYN-0210;Customer Service;Team Lead;4,7;Remote;25–34;Man;Indian/Asian;No;1;3;2;2;3;3;1;1;1;2;2;1;2;1;2;5;
+SYN-0211;Customer Service;Team Lead;3,2;On-site;25–34;Woman;White;No;3;3;;2;3;5;3;2;3;3;3;3;3;3;3;4;Flexible working has improved my wellbeing.
+SYN-0212;Technology;Team Lead;2,3;Hybrid;25–34;Man;Indian/Asian;Prefer not to say;4;4;4;4;3;2;4;4;5;4;;3;4;5;5;2;Recognition for good work would improve morale.
+SYN-0213;Human Resources;Individual Contributor;7,3;On-site;35–44;Man;Coloured;Yes;4;4;4;5;5;2;5;5;4;5;4;3;4;5;4;3;Managers need more training on inclusive leadership.
+SYN-0214;Sales;Middle Management;12,1;Hybrid;35–44;Woman;Coloured;No;4;4;3;5;5;3;2;4;5;3;3;3;3;4;4;3;Workload peaks make it difficult to switch off.
+SYN-0215;Technology;Team Lead;3,5;On-site;35–44;Woman;Indian/Asian;No;3;4;3;4;4;5;2;2;2;1;3;2;2;;2;4;
+SYN-0216;Operations;Team Lead;5;On-site;35–44;Man;Coloured;No;3;4;5;4;3;1;4;4;4;4;4;3;3;3;2;1;
+SYN-0217;Finance;Team Lead;8,4;On-site;45–54;Woman;Black African;No;2;4;3;2;4;3;3;;4;2;3;4;4;2;4;3;
+SYN-0218;Operations;Middle Management;8,8;Hybrid;35–44;Woman;Black African;No;3;4;2;3;2;4;3;1;4;2;2;3;1;4;4;2;
+SYN-0219;Technology;Team Lead;2,7;Hybrid;35–44;Woman;Black African;No;2;4;3;3;4;3;;3;4;4;4;;4;5;5;3;Recognition for good work would improve morale.
+SYN-0220;Operations;Individual Contributor;2,1;On-site;45–54;Man;Black African;No;3;3;;1;3;3;3;3;3;3;3;3;3;2;2;3;Recognition for good work would improve morale.
+SYN-0221;Sales;Middle Management;5,3;Hybrid;25–34;Man;Black African;No;5;3;4;3;5;3;3;3;3;5;3;5;5;4;2;4;Communication from leadership could be clearer.
+SYN-0222;Sales;Individual Contributor;7,6;Remote;45–54;Man;Coloured;No;3;4;4;3;4;1;4;2;2;4;4;3;4;4;5;1;
+SYN-0223;Operations;Individual Contributor;4,2;On-site;35–44;Woman;Black African;No;4;5;3;4;4;3;3;3;4;5;2;3;3;4;4;2;
+SYN-0224;Operations;Team Lead;0,8;Remote;25–34;Woman;Black African;No;3;4;3;2;3;3;2;1;2;2;3;2;2;4;2;4;
+SYN-0225;Customer Service;Middle Management;1,7;On-site;35–44;Man;Coloured;No;4;4;3;2;3;2;2;4;2;3;2;1;2;4;2;5;
+SYN-0226;Customer Service;Individual Contributor;12,3;Remote;35–44;Woman;Coloured;No;4;4;4;3;;5;5;5;3;3;2;3;2;2;3;3;
+SYN-0227;Operations;Individual Contributor;4;Hybrid;25–34;Woman;White;Yes;4;4;5;2;4;2;4;4;3;5;5;4;4;4;4;3;
+SYN-0228;Human Resources;Middle Management;11,9;Hybrid;45–54;Woman;White;No;4;3;;3;3;3;5;3;3;3;5;4;4;3;4;3;
+SYN-0229;Finance;Middle Management;3,4;On-site;18–24;Man;Indian/Asian;No;4;5;5;4;3;2;5;5;3;5;4;4;3;4;5;2;Recognition for good work would improve morale.
+SYN-0230;Human Resources;Team Lead;5,2;Hybrid;45–54;Woman;Coloured;No;2;2;2;1;3;5;1;2;1;2;1;2;2;2;2;3;
+SYN-0231;Sales;Team Lead;5,8;On-site;18–24;Man;Black African;No;2;3;3;5;3;1;3;2;2;3;3;4;3;3;3;2;
+SYN-0232;Sales;Individual Contributor;0,7;On-site;35–44;Man;Coloured;No;4;5;3;4;4;2;3;4;4;4;4;2;3;4;3;4;
+SYN-0233;Marketing;Team Lead;7,2;On-site;18–24;Man;Black African;Yes;2;3;3;3;3;3;1;4;3;1;3;2;3;1;2;5;
+SYN-0234;Operations;Team Lead;2,4;Remote;35–44;Woman;Black African;No;2;3;3;3;;4;2;3;2;3;2;3;3;3;3;4;Workload peaks make it difficult to switch off.
+SYN-0235;Sales;Individual Contributor;11,3;On-site;18–24;Man;Prefer not to say;No;4;4;3;3;4;3;4;4;4;3;4;3;1;2;3;5;
+SYN-0236;Sales;Middle Management;1,5;Hybrid;25–34;Man;Indian/Asian;No;4;;4;5;4;1;5;5;5;4;4;4;4;4;4;2;
+SYN-0237;Operations;Individual Contributor;3,5;On-site;45–54;Man;White;No;4;3;4;5;2;3;4;3;4;4;4;5;3;2;4;4;
+SYN-0238;Customer Service;Individual Contributor;3,6;On-site;25–34;Man;Coloured;Prefer not to say;3;2;4;2;1;4;1;2;1;3;1;;1;1;1;4;
+SYN-0239;Human Resources;Team Lead;6,6;Hybrid;25–34;Woman;Indian/Asian;No;4;4;4;4;4;2;4;3;3;3;3;3;3;3;4;3;
+SYN-0240;Technology;Individual Contributor;5,9;On-site;25–34;Non-binary;Black African;No;3;3;1;2;3;4;2;3;4;3;4;;2;3;3;2;Recognition for good work would improve morale.
+SYN-0241;Technology;Individual Contributor;2,4;Hybrid;45–54;Man;White;No;4;3;4;4;4;2;4;4;3;5;4;4;4;3;4;2;
+SYN-0242;Technology;Team Lead;6,3;Hybrid;35–44;Man;Black African;No;4;5;4;4;4;1;5;4;5;;4;3;5;5;5;1;
+SYN-0243;Human Resources;Individual Contributor;8,7;On-site;45–54;Woman;White;No;4;4;4;4;5;3;3;3;3;4;5;5;4;4;3;2;
+SYN-0244;Customer Service;Individual Contributor;8,6;On-site;45–54;Man;White;No;5;3;3;3;3;2;4;3;4;4;4;2;3;2;3;3;
+SYN-0245;Customer Service;Team Lead;0,9;Hybrid;35–44;Man;Coloured;No;4;3;3;5;3;1;3;3;4;4;3;3;4;4;4;4;
+SYN-0246;Human Resources;Individual Contributor;1,2;Hybrid;45–54;Woman;Black African;No;5;4;5;5;5;3;5;;5;3;5;5;5;4;2;2;
+SYN-0247;Technology;Individual Contributor;3,6;On-site;35–44;Man;Black African;No;2;3;3;2;4;2;3;2;2;2;3;3;2;2;2;3;
+SYN-0248;Technology;Individual Contributor;2;Hybrid;45–54;Woman;Black African;No;5;5;4;5;5;2;5;4;5;5;3;4;5;4;5;1;
+SYN-0249;Human Resources;Individual Contributor;1,1;On-site;35–44;Man;White;Prefer not to say;5;3;5;3;5;2;4;5;4;4;4;3;5;4;4;2;
+SYN-0250;Customer Service;Individual Contributor;0,2;On-site;45–54;Man;Black African;No;5;3;3;3;2;3;3;3;4;3;3;3;3;3;5;3;
+SYN-0251;Operations;Team Lead;1,5;Hybrid;18–24;Prefer not to say;Black African;No;4;4;3;3;5;3;4;4;5;3;5;4;5;4;3;2;
+SYN-0252;Human Resources;Individual Contributor;9,4;Remote;35–44;Woman;White;Yes;4;3;3;3;3;5;4;3;3;3;3;2;4;3;3;4;
+SYN-0253;Customer Service;Team Lead;3,4;Hybrid;25–34;Man;White;No;4;3;4;3;4;3;3;4;3;4;3;4;4;3;3;3;My colleagues are supportive and respectful.
+SYN-0254;Finance;Individual Contributor;0,6;On-site;18–24;Man;Black African;No;4;4;4;5;5;1;5;3;4;5;5;4;3;5;3;2;
+SYN-0255;Finance;Individual Contributor;8,7;On-site;45–54;Man;Black African;No;4;5;4;;5;1;5;4;5;5;5;4;5;3;5;2;Recognition for good work would improve morale.
+SYN-0256;Marketing;Individual Contributor;3,6;On-site;18–24;Woman;Black African;No;3;3;3;;3;4;3;2;4;3;4;3;3;3;3;4;I appreciate my team, but workloads can be intense.
+SYN-0257;Technology;Team Lead;2,8;Hybrid;25–34;Woman;Black African;No;4;5;4;2;2;2;2;4;3;4;3;3;3;3;3;;
+SYN-0258;Customer Service;Individual Contributor;10,3;On-site;35–44;Woman;Black African;No;4;3;4;3;4;3;4;3;5;2;4;2;2;3;2;4;
+SYN-0259;Sales;Individual Contributor;5,9;On-site;35–44;Man;Coloured;No;4;5;4;4;4;2;4;5;3;4;3;4;2;3;3;3;
+SYN-0260;Finance;Middle Management;0,4;On-site;55+;Woman;White;No;1;2;3;3;3;3;2;2;3;3;;2;3;1;;4;
+SYN-0261;Sales;Team Lead;7,2;Hybrid;25–34;Man;White;No;4;3;3;3;3;2;2;2;3;1;2;3;3;2;3;3;
+SYN-0262;Operations;Individual Contributor;1,4;Hybrid;25–34;Man;Black African;Yes;5;4;3;4;4;4;3;4;3;4;4;3;4;4;3;3;Recognition for good work would improve morale.
+SYN-0263;Human Resources;Individual Contributor;0,9;Hybrid;25–34;Man;Black African;Prefer not to say;2;5;4;3;3;3;2;3;3;3;3;5;4;3;4;2;
+SYN-0264;Sales;Individual Contributor;10,6;Remote;55+;Woman;Black African;No;5;3;3;4;3;3;4;4;4;3;3;3;4;4;;2;
+SYN-0265;Sales;Senior Management;1,9;On-site;35–44;Man;Black African;No;5;3;3;4;4;2;4;5;5;3;5;3;5;3;4;2;Recognition for good work would improve morale.
+SYN-0266;Customer Service;Individual Contributor;3,4;On-site;35–44;Woman;Black African;Yes;4;;3;5;5;1;4;5;5;5;4;4;4;4;4;3;I appreciate my team, but workloads can be intense.
+SYN-0267;Technology;Senior Management;5,3;Hybrid;25–34;Woman;Black African;No;3;;5;5;5;1;5;5;5;5;4;4;5;5;4;2;
+SYN-0268;Sales;Middle Management;6,5;Remote;25–34;Man;Black African;No;4;3;3;3;2;4;4;3;4;4;3;3;4;4;2;3;
+SYN-0269;Operations;Team Lead;5;Remote;45–54;Man;Black African;No;4;4;4;;3;2;2;4;4;5;4;3;3;4;5;4;
+SYN-0270;Technology;Senior Management;2,6;Hybrid;25–34;Woman;Black African;No;2;4;3;3;5;4;4;4;3;2;4;2;3;;3;2;
+SYN-0271;Operations;Middle Management;5,2;On-site;25–34;Woman;Indian/Asian;No;4;3;3;4;4;2;3;4;4;3;3;3;4;3;2;3;
+SYN-0272;Technology;Individual Contributor;3,9;Hybrid;35–44;Woman;Black African;No;2;1;3;3;2;5;1;1;1;2;1;1;1;2;1;5;I appreciate my team, but workloads can be intense.
+SYN-0273;Operations;Middle Management;2,4;On-site;18–24;Woman;White;No;3;5;3;3;2;2;3;2;4;3;3;4;5;2;1;2;
+SYN-0274;Technology;Individual Contributor;16,9;Hybrid;25–34;Woman;Indian/Asian;No;4;5;4;4;4;2;4;3;4;4;3;5;5;3;3;1;
+SYN-0275;Operations;Individual Contributor;9,7;Hybrid;25–34;Woman;Coloured;No;3;3;2;3;2;3;3;3;3;2;3;2;3;3;3;3;More transparent promotion criteria would help.
+SYN-0276;Technology;Individual Contributor;6,1;On-site;45–54;Man;Coloured;No;3;3;4;5;5;2;3;4;4;5;4;4;4;4;3;3;
+SYN-0277;Finance;Individual Contributor;2,8;Hybrid;55+;Woman;Coloured;Yes;5;4;2;4;2;2;4;2;4;4;4;4;3;3;4;2;
+SYN-0278;Human Resources;Individual Contributor;2,8;Remote;25–34;Woman;White;No;2;2;2;2;4;2;3;2;3;3;4;3;3;2;3;3;Recognition for good work would improve morale.
+SYN-0279;Technology;Individual Contributor;6,9;Hybrid;45–54;Woman;Black African;No;5;4;3;4;4;3;;4;4;5;3;4;;3;3;2;I appreciate my team, but workloads can be intense.
+SYN-0280;Customer Service;Senior Management;11,7;On-site;45–54;Man;Black African;No;4;5;4;4;3;2;5;4;5;4;4;5;3;3;4;2;
+SYN-0281;Finance;Individual Contributor;0,9;Hybrid;45–54;Man;White;Prefer not to say;3;2;4;3;3;3;4;3;3;3;3;4;4;4;3;2;
+SYN-0282;Technology;Senior Management;5,4;Hybrid;18–24;Woman;Black African;No;5;5;4;5;;4;;4;4;4;4;5;5;;4;1;
+SYN-0283;Customer Service;Team Lead;10,9;Hybrid;25–34;Man;Black African;No;2;3;3;2;2;5;2;3;2;2;2;1;1;4;5;4;
+SYN-0284;Finance;Individual Contributor;4,9;On-site;25–34;Man;Black African;Yes;4;5;3;3;5;2;4;3;3;4;5;3;3;3;4;4;
+SYN-0285;Operations;Individual Contributor;6,1;On-site;45–54;Woman;Black African;No;3;2;3;3;4;2;1;2;2;2;2;2;2;2;1;2;
+SYN-0286;Operations;Middle Management;1;On-site;25–34;Woman;Black African;No;4;3;3;4;4;2;4;4;5;4;5;3;3;3;5;3;
+SYN-0287;Finance;Individual Contributor;2,1;On-site;45–54;Man;Coloured;No;4;3;3;5;3;2;3;4;3;5;5;3;4;2;3;2;Managers need more training on inclusive leadership.
+SYN-0288;Finance;Individual Contributor;2;Hybrid;25–34;Non-binary;Black African;No;4;3;4;;3;3;4;3;3;2;2;4;3;4;2;3;
+SYN-0289;Finance;Middle Management;4,2;Hybrid;25–34;Man;Indian/Asian;No;4;4;5;3;4;2;3;4;4;3;3;5;4;5;5;4;More transparent promotion criteria would help.
+SYN-0290;Sales;Individual Contributor;7,7;Hybrid;25–34;Woman;Indian/Asian;No;3;2;2;4;3;2;3;3;5;1;4;1;4;3;4;3;
+SYN-0291;Customer Service;Senior Management;6;Hybrid;25–34;Man;Black African;No;2;1;1;2;3;4;3;2;2;1;3;2;2;3;2;3;
+SYN-0292;Sales;Individual Contributor;1,5;On-site;35–44;Woman;Black African;No;3;3;3;4;3;5;3;2;2;1;4;2;1;3;3;3;Managers need more training on inclusive leadership.
+SYN-0293;Sales;Team Lead;2,7;Hybrid;35–44;Woman;Indian/Asian;No;2;3;2;1;2;5;;5;2;5;1;2;2;2;2;4;I appreciate my team, but workloads can be intense.
+SYN-0294;Technology;Individual Contributor;0,9;Hybrid;45–54;Man;Coloured;No;5;3;4;4;3;3;4;4;4;3;3;4;4;3;4;2;
+SYN-0295;Technology;Individual Contributor;3,5;On-site;45–54;Woman;Black African;No;5;4;5;3;4;1;5;4;3;3;4;4;4;4;5;3;
+SYN-0296;Technology;Individual Contributor;3;On-site;55+;Woman;Black African;No;5;3;3;4;4;1;3;3;2;4;3;3;3;5;3;3;Managers need more training on inclusive leadership.
+SYN-0297;Sales;Individual Contributor;1,5;Hybrid;18–24;Man;Black African;Prefer not to say;2;1;2;2;2;3;3;3;2;4;3;4;3;1;2;4;Managers need more training on inclusive leadership.
+SYN-0298;Customer Service;Middle Management;5,2;Hybrid;25–34;Woman;White;Prefer not to say;2;3;4;3;;3;4;3;5;2;3;2;4;3;4;3;Communication from leadership could be clearer.
+SYN-0299;Customer Service;Individual Contributor;5;Hybrid;25–34;Woman;Coloured;No;2;3;2;3;4;1;3;2;3;2;2;1;3;2;3;4;Managers need more training on inclusive leadership.
+SYN-0300;Operations;Middle Management;6,6;Remote;25–34;Man;Black African;No;5;5;5;5;5;1;5;5;5;5;5;5;5;5;5;1;
+SYN-0301;Marketing;Team Lead;9,6;Hybrid;25–34;Woman;Black African;Yes;2;2;2;2;1;2;2;3;2;4;3;3;3;2;2;2;I appreciate my team, but workloads can be intense.
+SYN-0302;Operations;Individual Contributor;4;On-site;25–34;Woman;Indian/Asian;No;3;3;4;3;3;3;3;3;2;3;3;2;2;1;2;3;
+SYN-0303;Customer Service;Team Lead;3,7;On-site;25–34;Woman;Indian/Asian;Prefer not to say;3;2;3;4;3;4;3;4;2;5;4;;2;;2;4;
+SYN-0304;Operations;Senior Management;2,9;On-site;35–44;Man;Coloured;No;4;4;3;5;4;2;2;3;4;4;4;5;3;2;3;3;
+SYN-0305;Operations;Individual Contributor;1,7;On-site;35–44;Man;Black African;Yes;4;4;2;4;4;2;5;5;4;3;5;3;4;3;5;3;I appreciate my team, but workloads can be intense.
+SYN-0306;Technology;Individual Contributor;4,7;On-site;35–44;Woman;Coloured;Yes;2;1;3;2;2;3;2;4;2;3;2;2;4;2;3;3;
+SYN-0307;Customer Service;Middle Management;10,8;Hybrid;25–34;Non-binary;Prefer not to say;No;3;3;3;2;3;4;1;2;1;4;3;3;1;2;3;3;
+SYN-0308;Customer Service;Individual Contributor;0,7;Hybrid;18–24;Man;White;Yes;3;2;4;4;2;2;5;3;4;5;3;3;3;2;2;2;
+SYN-0309;Operations;Individual Contributor;4,1;Remote;25–34;Non-binary;Coloured;No;3;5;3;3;3;3;4;3;3;4;3;5;5;5;5;1;
+SYN-0310;Marketing;Middle Management;4,4;Hybrid;55+;Woman;Indian/Asian;No;2;3;3;3;3;4;4;4;3;2;4;3;2;3;3;4;
+SYN-0311;Sales;Individual Contributor;11,5;Hybrid;25–34;Man;Black African;Prefer not to say;3;3;5;2;3;3;3;2;4;5;3;;3;4;4;4;
+SYN-0312;Customer Service;Individual Contributor;3,4;On-site;35–44;Woman;Black African;No;3;4;;3;4;3;4;3;3;4;2;4;3;4;2;2;
+SYN-0313;Customer Service;Team Lead;7,2;Hybrid;35–44;Man;Black African;No;3;2;3;3;2;2;3;3;2;3;4;4;2;3;4;3;Managers need more training on inclusive leadership.
+SYN-0314;Customer Service;Senior Management;4,5;On-site;45–54;Man;Black African;No;5;4;3;3;3;2;4;3;3;3;3;3;3;2;2;2;
+SYN-0315;Finance;Individual Contributor;3,8;On-site;25–34;Man;White;No;3;2;3;3;3;1;3;2;3;3;4;3;4;2;3;5;
+SYN-0316;Human Resources;Middle Management;4,2;On-site;18–24;Woman;Indian/Asian;No;3;2;3;3;2;4;2;;3;2;1;1;3;2;3;4;
+SYN-0317;Sales;Individual Contributor;2,2;On-site;25–34;Man;White;No;5;5;3;5;5;1;5;4;3;5;5;3;4;2;3;3;
+SYN-0318;Finance;Individual Contributor;6,2;Hybrid;35–44;Woman;Prefer not to say;No;3;1;3;3;5;3;3;4;3;3;3;2;4;3;2;2;
+SYN-0319;Operations;Individual Contributor;2;On-site;25–34;Woman;Black African;No;4;4;4;4;2;3;3;;2;5;2;3;3;4;3;3;
+SYN-0320;Marketing;Individual Contributor;2,5;Hybrid;45–54;Woman;Coloured;No;4;5;3;3;4;3;4;4;4;2;4;4;5;4;2;2;
+SYN-0321;Sales;Team Lead;2,6;On-site;25–34;Woman;Black African;No;3;4;3;4;3;2;4;3;4;5;2;4;1;2;3;2;My colleagues are supportive and respectful.
+SYN-0322;Customer Service;Senior Management;9,5;On-site;35–44;Man;Prefer not to say;No;5;4;4;4;4;1;4;4;4;5;5;2;3;4;3;1;
+SYN-0323;Finance;Individual Contributor;5,3;Remote;25–34;Man;Coloured;No;2;3;4;3;4;2;4;2;3;3;4;4;3;4;;3;
+SYN-0324;Sales;Individual Contributor;8,5;On-site;18–24;Woman;Coloured;No;2;3;2;2;2;3;2;4;2;2;4;4;4;2;3;3;
+SYN-0325;Technology;Team Lead;8,2;On-site;35–44;Woman;Indian/Asian;No;4;5;4;5;4;2;4;5;4;4;4;4;3;4;4;1;
+SYN-0326;Operations;Individual Contributor;3,6;On-site;55+;Man;Black African;Yes;4;3;3;3;4;3;2;2;3;3;3;1;2;3;2;4;Workload peaks make it difficult to switch off.
+SYN-0327;Operations;Individual Contributor;12,7;On-site;25–34;Man;Coloured;No;4;3;4;4;3;3;4;4;2;4;4;5;3;4;1;1;
+SYN-0328;Finance;Individual Contributor;2,1;Remote;45–54;Woman;Black African;Prefer not to say;2;2;4;3;1;3;2;3;2;4;1;3;3;3;3;5;
+SYN-0329;Finance;Individual Contributor;4,8;On-site;25–34;Woman;Coloured;No;4;3;3;4;4;2;2;4;3;4;3;2;3;2;2;4;
+SYN-0330;Customer Service;Individual Contributor;2,9;On-site;35–44;Man;White;No;4;3;3;4;5;2;4;2;3;2;2;1;2;2;3;3;
+SYN-0331;Operations;Team Lead;0,5;On-site;55+;Man;Indian/Asian;Yes;4;2;2;3;2;2;3;5;3;2;4;2;2;2;;4;
+SYN-0332;Human Resources;Team Lead;4;On-site;35–44;Woman;Black African;No;4;3;5;2;3;;4;4;2;4;3;4;5;3;4;2;Flexible working has improved my wellbeing.
+SYN-0333;Customer Service;Individual Contributor;8,2;Hybrid;35–44;Man;Indian/Asian;No;4;4;1;4;5;;3;4;4;4;3;4;4;4;5;3;
+SYN-0334;Marketing;Individual Contributor;6;Remote;45–54;Man;Black African;Yes;3;5;3;;4;1;5;5;3;3;5;5;5;5;5;3;
+SYN-0335;Customer Service;Individual Contributor;7,4;On-site;35–44;Woman;Coloured;No;5;2;4;5;;5;4;;3;4;4;2;3;5;2;3;
+SYN-0336;Marketing;Individual Contributor;2,4;On-site;18–24;Woman;White;No;3;3;3;5;2;3;4;4;;3;2;4;3;2;4;1;
+SYN-0337;Operations;Individual Contributor;2,4;Remote;45–54;Man;Coloured;No;5;3;4;3;2;4;2;2;2;3;3;3;2;2;3;3;
+SYN-0338;Customer Service;Individual Contributor;1;On-site;25–34;Man;White;No;3;3;4;4;3;3;3;3;3;3;2;2;3;1;1;4;
+SYN-0339;Technology;Individual Contributor;3,4;Hybrid;45–54;Man;Coloured;No;4;3;3;3;4;3;5;4;3;4;4;4;4;4;4;2;Career development opportunities feel uneven.
+SYN-0340;Operations;Individual Contributor;3,2;Remote;25–34;Woman;Indian/Asian;No;4;3;2;3;3;1;3;3;3;2;2;5;4;3;4;3;
+SYN-0341;Sales;Individual Contributor;4,3;Hybrid;45–54;Woman;Indian/Asian;No;3;4;4;5;4;2;4;2;4;4;3;2;4;4;4;1;
+SYN-0342;Operations;Individual Contributor;4,7;Hybrid;18–24;Man;Indian/Asian;No;4;4;4;5;4;1;4;5;5;5;5;5;4;3;4;1;Flexible working has improved my wellbeing.
+SYN-0343;Sales;Team Lead;5,5;Remote;55+;Woman;Black African;No;5;4;4;4;4;1;3;4;3;5;4;3;5;3;4;1;
+SYN-0344;Customer Service;Individual Contributor;7,1;On-site;25–34;Woman;Indian/Asian;No;3;2;2;4;3;3;3;3;3;2;2;2;2;2;2;4;
+SYN-0345;Customer Service;Individual Contributor;2,3;On-site;35–44;Woman;Indian/Asian;No;2;2;3;3;2;4;4;2;3;3;3;3;4;1;2;2;
+SYN-0346;Technology;Individual Contributor;3,2;Hybrid;25–34;Man;Coloured;No;3;3;3;4;4;3;4;3;3;4;3;4;5;3;4;3;My colleagues are supportive and respectful.
+SYN-0347;Finance;Team Lead;3,2;Remote;45–54;Man;Indian/Asian;Yes;3;3;2;3;4;3;5;3;2;1;4;2;3;3;3;2;Communication from leadership could be clearer.
+SYN-0348;Customer Service;Senior Management;4,2;Hybrid;35–44;Man;Black African;Yes;2;;4;3;3;2;4;2;4;4;4;4;4;3;3;3;Flexible working has improved my wellbeing.
+SYN-0349;Finance;Team Lead;3,7;On-site;25–34;Man;Coloured;No;3;4;3;4;2;3;4;3;3;3;4;5;4;;3;2;
+SYN-0350;Customer Service;Individual Contributor;3,2;Hybrid;18–24;Man;White;No;5;3;3;4;5;1;2;5;2;4;3;2;3;3;2;3;
+SYN-0351;Customer Service;Senior Management;3,6;On-site;25–34;Man;Black African;Yes;4;4;4;3;5;2;3;4;3;4;3;2;3;1;3;3;
+SYN-0352;Sales;Senior Management;1,1;Hybrid;25–34;Man;Black African;No;4;4;4;5;5;3;4;3;4;5;4;4;3;3;4;3;
+SYN-0353;Finance;Individual Contributor;3,9;On-site;25–34;Man;Black African;No;2;3;2;2;3;3;4;2;2;4;2;3;3;3;2;4;
+SYN-0354;Operations;Senior Management;2,8;On-site;45–54;Woman;Indian/Asian;No;3;3;3;3;3;2;4;3;4;3;2;4;3;4;4;3;
+SYN-0355;Human Resources;Individual Contributor;3,4;Hybrid;25–34;Man;Coloured;Yes;4;3;4;5;3;4;3;4;5;4;5;5;4;4;;1;More transparent promotion criteria would help.
+SYN-0356;Customer Service;Individual Contributor;0,7;Hybrid;25–34;Woman;Black African;No;4;4;3;3;4;3;3;3;4;2;4;3;3;5;4;3;
+SYN-0357;Human Resources;Middle Management;4,7;On-site;25–34;Woman;Coloured;No;3;5;5;4;5;2;4;4;3;5;4;4;5;4;3;3;
+SYN-0358;Customer Service;Individual Contributor;12,7;Hybrid;45–54;Man;Indian/Asian;No;4;4;2;4;3;1;4;4;3;4;4;3;4;4;5;4;
+SYN-0359;Customer Service;Individual Contributor;3,8;On-site;25–34;Prefer not to say;Indian/Asian;No;3;4;5;5;5;3;5;4;4;3;3;4;3;3;4;2;Career development opportunities feel uneven.
+SYN-0360;Human Resources;Team Lead;3,3;On-site;25–34;Man;Coloured;No;1;3;;2;2;4;;2;3;3;2;2;3;3;2;3;
+SYN-0361;Marketing;Individual Contributor;2,8;Hybrid;35–44;Woman;Black African;No;4;4;;3;5;1;5;4;3;3;4;5;5;3;4;2;
+SYN-0362;Technology;Individual Contributor;1,2;Hybrid;18–24;Man;Indian/Asian;No;3;4;3;5;3;2;4;4;3;4;4;4;5;5;4;2;
+SYN-0363;Customer Service;Middle Management;8,4;On-site;25–34;Man;Black African;No;3;3;3;4;3;2;;3;3;3;3;2;4;2;3;4;
+SYN-0364;Customer Service;Individual Contributor;3;On-site;25–34;Woman;Black African;No;1;4;2;3;4;4;5;2;3;3;3;3;4;3;2;3;Recognition for good work would improve morale.
+SYN-0365;Customer Service;Middle Management;4;Hybrid;25–34;Woman;Black African;No;3;4;5;4;5;2;4;3;4;4;4;3;5;3;4;2;
+SYN-0366;Operations;Individual Contributor;8,1;On-site;25–34;Woman;Black African;No;3;2;3;4;3;4;4;2;3;3;4;2;2;1;3;5;
+SYN-0367;Technology;Individual Contributor;7,9;Hybrid;25–34;Woman;White;No;5;4;4;5;5;2;5;5;5;5;5;4;5;5;4;1;
+SYN-0368;Technology;Individual Contributor;0,5;On-site;35–44;Man;Indian/Asian;No;3;2;3;3;3;3;2;2;4;4;2;1;2;4;4;3;
+SYN-0369;Customer Service;Team Lead;9,7;Hybrid;45–54;Man;Black African;No;3;3;3;3;4;2;4;5;4;;2;2;4;4;3;2;
+SYN-0370;Operations;Team Lead;13;On-site;35–44;Woman;Indian/Asian;No;4;4;4;5;5;2;3;5;3;2;4;4;4;4;3;2;
+SYN-0371;Customer Service;Individual Contributor;2,8;Hybrid;25–34;Man;Black African;Yes;2;3;3;2;4;3;1;2;4;2;2;;3;2;3;3;
+SYN-0372;Operations;Individual Contributor;5,9;Hybrid;45–54;Woman;Prefer not to say;No;4;4;4;5;5;2;4;4;5;4;4;4;4;4;4;1;
+SYN-0373;Operations;Middle Management;5,4;On-site;25–34;Woman;Black African;No;1;3;3;3;3;3;3;1;4;2;1;2;2;3;1;4;
+SYN-0374;Customer Service;Individual Contributor;3;On-site;35–44;Man;Black African;No;5;3;5;4;2;2;5;4;3;5;3;2;1;4;4;2;Workload peaks make it difficult to switch off.
+SYN-0375;Customer Service;Individual Contributor;1,4;Hybrid;35–44;Prefer not to say;Indian/Asian;Prefer not to say;2;2;1;4;1;3;2;3;2;1;3;2;1;3;3;3;Recognition for good work would improve morale.
+SYN-0376;Technology;Middle Management;3,1;Remote;45–54;Woman;Black African;No;4;2;3;3;4;2;5;3;3;4;4;3;4;4;3;4;
+SYN-0377;Technology;Individual Contributor;7,8;Hybrid;35–44;Woman;Black African;No;3;5;3;3;3;2;3;4;4;5;4;4;1;3;5;3;
+SYN-0378;Customer Service;Middle Management;10,1;Remote;45–54;Woman;Black African;No;5;4;3;4;4;2;3;4;3;4;3;2;2;4;3;3;Flexible working has improved my wellbeing.
+SYN-0379;Human Resources;Team Lead;1,6;Remote;35–44;Man;Prefer not to say;No;2;3;2;4;3;3;3;5;2;3;4;5;2;3;3;1;
+SYN-0380;Operations;Middle Management;1,5;On-site;55+;Man;Indian/Asian;No;4;4;4;4;4;2;4;2;3;2;4;3;1;3;2;4;I appreciate my team, but workloads can be intense.
+SYN-0381;Marketing;Individual Contributor;2;Remote;35–44;Man;White;No;2;3;4;;5;4;3;2;4;3;2;4;4;3;4;3;
+SYN-0382;Customer Service;Individual Contributor;1,7;On-site;25–34;Non-binary;Black African;No;4;4;;4;3;2;5;2;5;4;5;3;3;4;4;2;
+SYN-0383;Marketing;Middle Management;4,5;Remote;25–34;Man;Coloured;No;4;5;3;4;4;2;4;5;5;4;5;5;5;4;3;1;
+SYN-0384;Human Resources;Senior Management;3,9;Hybrid;35–44;Woman;Black African;No;4;4;4;5;4;1;5;4;5;4;5;5;4;4;5;1;
+SYN-0385;Technology;Individual Contributor;4,1;Remote;35–44;Man;Black African;No;4;3;4;4;4;3;3;3;3;4;4;3;4;3;3;3;
+SYN-0386;Human Resources;Team Lead;10,4;Hybrid;35–44;Man;Black African;No;5;5;5;4;5;2;5;5;5;4;4;5;;5;5;1;
+SYN-0387;Finance;Individual Contributor;0,3;On-site;25–34;Prefer not to say;Coloured;No;4;;3;2;4;5;3;4;3;3;4;3;4;2;3;5;More transparent promotion criteria would help.
+SYN-0388;Human Resources;Middle Management;12;On-site;35–44;Woman;Coloured;No;5;4;3;5;5;4;4;3;5;4;3;4;3;5;5;2;
+SYN-0389;Sales;Middle Management;6,9;Hybrid;25–34;Woman;Black African;Yes;3;2;4;2;3;2;3;2;3;2;3;3;3;3;2;3;Managers need more training on inclusive leadership.
+SYN-0390;Human Resources;Individual Contributor;4,8;On-site;18–24;Woman;Black African;No;3;4;4;5;3;2;5;5;5;5;4;;4;4;4;1;
+SYN-0391;Customer Service;Middle Management;4,8;On-site;25–34;Man;Indian/Asian;No;4;5;4;4;3;1;4;4;3;5;3;3;3;3;3;3;
+SYN-0392;Customer Service;Individual Contributor;5,1;Hybrid;45–54;Woman;Black African;No;4;3;3;4;4;2;2;3;2;4;3;3;3;3;2;4;
+SYN-0393;Operations;Middle Management;6,2;On-site;35–44;Man;White;No;3;2;3;4;3;2;4;2;3;3;3;4;3;3;3;5;
+SYN-0394;Operations;Individual Contributor;3,4;On-site;25–34;Prefer not to say;White;No;2;3;3;1;3;3;3;2;3;3;2;4;3;1;4;5;
+SYN-0395;Technology;Individual Contributor;1,7;On-site;18–24;Man;Black African;No;5;4;3;3;3;2;3;3;3;4;3;4;3;2;5;4;
+SYN-0396;Technology;Team Lead;0,9;Hybrid;35–44;Man;Coloured;Yes;3;2;3;3;3;3;4;3;3;3;3;3;3;3;3;3;
+SYN-0397;Technology;Individual Contributor;1,7;On-site;55+;Woman;Black African;No;4;4;4;5;;1;4;5;3;3;3;5;4;3;3;4;Career development opportunities feel uneven.
+SYN-0398;Finance;Senior Management;2,7;On-site;35–44;Man;Black African;Yes;4;4;3;3;4;1;5;3;3;2;4;3;2;2;3;1;
+SYN-0399;Finance;Middle Management;4,1;On-site;55+;Man;Indian/Asian;No;5;4;5;5;5;1;3;4;4;3;5;5;5;4;5;1;
+SYN-0400;Customer Service;Individual Contributor;0,7;Hybrid;25–34;Man;Black African;No;3;4;4;3;3;4;3;4;4;3;4;3;3;2;4;2;
+SYN-0401;Finance;Individual Contributor;5,2;Remote;25–34;Man;Black African;No;2;4;3;5;2;2;3;4;;4;4;3;;3;2;3;
+SYN-0402;Customer Service;Individual Contributor;8,4;Hybrid;35–44;Man;Black African;Yes;1;5;2;4;3;4;3;4;4;5;3;3;2;4;3;3;Managers need more training on inclusive leadership.
+SYN-0403;Finance;Team Lead;1,2;On-site;35–44;Woman;Prefer not to say;No;2;3;2;4;3;3;4;3;1;3;3;3;4;3;2;5;
+SYN-0404;Marketing;Senior Management;6,7;Hybrid;18–24;Man;White;No;1;4;3;1;;4;2;3;3;2;3;5;1;2;3;3;
+SYN-0405;Customer Service;Team Lead;2,1;Remote;45–54;Man;Black African;Prefer not to say;3;3;3;3;2;3;3;3;2;2;4;3;2;3;3;3;Flexible working has improved my wellbeing.
+SYN-0406;Finance;Team Lead;2,8;On-site;25–34;Man;Indian/Asian;No;4;3;3;5;4;2;4;4;4;3;4;5;3;3;2;3;
+SYN-0407;Customer Service;Individual Contributor;10,2;On-site;25–34;Woman;Black African;No;4;4;5;4;5;3;4;3;4;4;4;3;3;4;3;2;Communication from leadership could be clearer.
+SYN-0408;Marketing;Individual Contributor;2,2;Remote;18–24;Woman;Coloured;No;2;2;3;3;2;3;3;2;3;3;3;5;2;3;3;3;
+SYN-0409;Technology;Individual Contributor;11,5;Hybrid;45–54;Woman;Black African;No;3;4;4;4;2;2;4;4;3;4;3;5;3;5;4;2;
+SYN-0410;Finance;Middle Management;0,7;Hybrid;25–34;Woman;Black African;Prefer not to say;5;4;5;4;4;2;;4;4;4;4;4;4;5;4;2;
+SYN-0411;Technology;Individual Contributor;2,5;Hybrid;25–34;Woman;White;No;5;5;4;4;5;1;4;4;4;3;3;5;5;5;4;3;Recognition for good work would improve morale.
+SYN-0412;Technology;Individual Contributor;3,7;On-site;18–24;Woman;Black African;No;2;2;2;2;1;2;1;2;5;2;1;2;1;2;2;5;My colleagues are supportive and respectful.
+SYN-0413;Sales;Individual Contributor;6,8;Hybrid;45–54;Woman;Coloured;No;2;3;4;2;4;3;2;3;2;4;3;2;3;3;1;3;
+SYN-0414;Sales;Middle Management;9,2;On-site;45–54;Woman;White;No;2;1;2;3;2;3;3;2;3;3;2;2;1;4;2;4;
+SYN-0415;Operations;Individual Contributor;6,4;On-site;55+;Woman;Coloured;No;5;4;3;4;4;2;4;3;3;3;4;3;2;2;3;3;More transparent promotion criteria would help.
+SYN-0416;Operations;Individual Contributor;12,8;On-site;55+;Woman;Coloured;No;3;3;3;2;2;3;3;2;4;;2;4;5;2;3;4;
+SYN-0417;Technology;Senior Management;8,9;Hybrid;18–24;Man;Coloured;No;4;5;5;4;4;3;5;4;3;4;3;4;4;4;5;2;Communication from leadership could be clearer.
+SYN-0418;Operations;Individual Contributor;6,7;On-site;25–34;Woman;Black African;No;4;3;2;2;3;2;3;3;3;3;3;3;4;3;1;4;
+SYN-0419;Human Resources;Team Lead;7,1;On-site;18–24;Woman;Indian/Asian;No;3;3;4;4;3;;4;2;4;3;3;5;;3;4;3;
+SYN-0420;Sales;Individual Contributor;2,2;On-site;25–34;Woman;Black African;No;2;4;4;3;3;2;5;4;4;5;4;4;4;3;2;4;
+SYN-0421;Operations;Individual Contributor;4,6;Hybrid;25–34;Woman;Black African;No;4;2;4;5;4;2;4;4;3;4;2;4;4;4;5;2;
+SYN-0422;Finance;Individual Contributor;1,5;On-site;25–34;Man;Black African;No;5;3;2;4;4;3;3;4;4;3;4;3;5;3;3;2;
+SYN-0423;Technology;Individual Contributor;15,8;Remote;35–44;Woman;White;No;3;3;2;2;1;4;2;3;2;3;1;3;3;4;3;3;
+SYN-0424;Technology;Middle Management;1,3;Hybrid;35–44;Woman;White;No;3;1;5;4;2;4;3;3;1;2;2;2;2;2;3;4;
+SYN-0425;Sales;Individual Contributor;8,3;Hybrid;25–34;Prefer not to say;White;Yes;3;1;3;3;3;4;3;3;3;4;3;3;2;2;2;4;
+SYN-0426;Customer Service;Individual Contributor;7,5;On-site;35–44;Man;Coloured;No;1;3;3;2;3;2;2;3;3;2;1;2;2;2;3;5;
+SYN-0427;Finance;Team Lead;7;Hybrid;25–34;Woman;Black African;No;3;2;4;2;2;4;3;2;3;3;2;4;3;3;4;4;
+SYN-0428;Sales;Individual Contributor;10,9;Remote;35–44;Woman;Black African;No;3;3;1;5;1;4;2;4;2;2;2;2;3;4;2;3;More transparent promotion criteria would help.
+SYN-0429;Sales;Individual Contributor;10,3;On-site;25–34;Man;White;No;4;4;4;3;3;2;2;2;3;4;4;3;4;2;2;4;
+SYN-0430;Operations;Middle Management;5,2;Hybrid;45–54;Woman;Black African;No;3;4;2;4;4;3;4;4;3;4;4;3;3;3;4;2;
+SYN-0431;Technology;Individual Contributor;5,8;On-site;25–34;Woman;Black African;Prefer not to say;2;4;3;3;4;3;4;4;3;2;3;3;3;2;4;4;
+SYN-0432;Human Resources;Individual Contributor;4,5;On-site;45–54;Woman;White;No;3;2;3;3;4;3;4;;4;3;5;5;5;4;3;1;
+SYN-0433;Sales;Individual Contributor;6,7;On-site;25–34;Woman;Indian/Asian;No;4;3;4;2;5;4;2;4;4;2;3;3;3;1;3;3;Career development opportunities feel uneven.
+SYN-0434;Finance;Middle Management;5,5;Hybrid;35–44;Prefer not to say;White;No;2;4;4;4;5;2;5;4;4;4;4;4;5;4;4;2;
+SYN-0435;Marketing;Individual Contributor;2,1;Hybrid;25–34;Woman;Black African;No;3;5;3;4;3;3;5;3;5;3;5;4;4;2;4;2;
+SYN-0436;Operations;Individual Contributor;10,2;On-site;25–34;Woman;Black African;No;4;3;;4;2;3;2;2;4;3;2;3;3;2;3;4;
+SYN-0437;Operations;Senior Management;2,3;Hybrid;35–44;Man;Coloured;No;3;5;4;5;5;3;3;3;5;4;4;4;4;4;3;1;
+SYN-0438;Operations;Individual Contributor;7,7;On-site;55+;Man;Black African;Yes;1;2;4;3;2;3;3;2;3;4;4;3;4;3;2;5;
+SYN-0439;Human Resources;Team Lead;1,7;On-site;18–24;Man;Coloured;No;4;4;3;5;4;3;2;4;;3;4;3;4;3;3;2;
+SYN-0440;Human Resources;Team Lead;9,9;Remote;55+;Non-binary;Indian/Asian;No;3;4;3;2;;2;2;3;2;2;3;3;2;2;4;3;
+SYN-0441;Operations;Middle Management;5;On-site;35–44;Woman;Black African;No;5;2;4;5;3;1;5;4;4;3;4;4;5;3;2;3;
+SYN-0442;Finance;Senior Management;0,2;Hybrid;18–24;Woman;Black African;No;4;4;4;5;4;2;3;5;4;3;3;4;3;3;4;3;
+SYN-0443;Human Resources;Individual Contributor;3,7;On-site;35–44;Man;Black African;No;5;3;3;3;2;4;4;5;4;3;2;3;4;3;2;4;Managers need more training on inclusive leadership.
+SYN-0444;Technology;Individual Contributor;4,9;Hybrid;45–54;Woman;Black African;No;3;3;2;4;3;3;3;3;3;3;2;3;4;1;3;2;
+SYN-0445;Finance;Middle Management;10,6;Remote;25–34;Man;Black African;Yes;2;2;3;4;3;4;3;4;3;5;3;2;3;4;3;3;
+SYN-0446;Operations;Individual Contributor;1,4;Hybrid;25–34;Woman;Black African;No;3;3;4;4;3;2;2;3;3;3;3;3;2;3;4;1;
+SYN-0447;Customer Service;Team Lead;3;Hybrid;25–34;Man;Indian/Asian;No;2;2;2;3;3;4;3;2;2;1;;2;2;2;2;4;Recognition for good work would improve morale.
+SYN-0448;Customer Service;Team Lead;2;Hybrid;25–34;Man;Coloured;No;2;;1;2;4;3;2;2;1;3;3;1;2;3;1;3;
+SYN-0449;Sales;Middle Management;1,9;Hybrid;25–34;Man;Black African;No;4;5;3;4;3;1;5;4;4;4;4;3;5;5;5;3;
+SYN-0450;Customer Service;Individual Contributor;15,9;Hybrid;25–34;Woman;Black African;No;3;4;4;4;3;3;3;4;3;3;4;4;3;3;3;4;My colleagues are supportive and respectful.
+SYN-0451;Sales;Individual Contributor;4,3;On-site;45–54;Non-binary;Black African;No;3;3;3;5;4;3;3;;4;3;4;2;3;2;3;3;
+SYN-0452;Sales;Middle Management;4,3;Remote;25–34;Man;Black African;No;2;3;1;2;2;3;2;3;3;2;3;1;3;3;;3;
+SYN-0453;Customer Service;Middle Management;12,3;On-site;35–44;Woman;White;Prefer not to say;3;2;3;3;2;3;3;2;2;2;2;3;4;3;3;3;
+SYN-0454;Customer Service;Individual Contributor;3,5;Hybrid;25–34;Man;Black African;No;3;3;1;1;3;3;4;3;3;4;3;5;3;2;3;2;Workload peaks make it difficult to switch off.
+SYN-0455;Human Resources;Individual Contributor;5,9;Hybrid;25–34;Woman;Black African;No;3;3;2;5;3;3;4;3;3;3;4;5;3;3;3;;
+SYN-0456;Human Resources;Team Lead;4,2;Hybrid;18–24;Man;White;No;3;4;5;4;2;2;4;;3;3;3;5;4;3;4;2;
+SYN-0457;Finance;Individual Contributor;7,4;Hybrid;45–54;Woman;Black African;No;3;4;3;3;2;2;4;4;3;4;4;5;5;4;3;3;
+SYN-0458;Customer Service;Individual Contributor;5,3;On-site;45–54;Man;Indian/Asian;No;3;3;3;2;4;3;4;3;3;2;3;3;2;1;2;4;
+SYN-0459;Customer Service;Senior Management;8,3;On-site;45–54;Woman;Black African;No;2;2;4;1;3;4;3;3;4;3;3;1;1;3;2;3;
+SYN-0460;Marketing;Middle Management;1,5;Hybrid;35–44;Man;Black African;No;4;4;3;3;4;1;3;4;4;3;4;2;4;4;5;2;
+SYN-0461;Customer Service;Middle Management;10,4;On-site;25–34;Woman;Indian/Asian;No;3;2;3;2;3;2;2;2;3;3;3;2;2;3;2;4;
+SYN-0462;Customer Service;Team Lead;2,8;On-site;25–34;Man;Indian/Asian;No;4;5;5;3;5;1;5;4;5;5;5;4;4;5;4;1;
+SYN-0463;Operations;Individual Contributor;1;Hybrid;25–34;Woman;White;No;3;2;3;3;3;2;3;3;4;4;3;;2;2;2;3;
+SYN-0464;Human Resources;Individual Contributor;0,2;Hybrid;45–54;Man;Black African;No;4;3;2;3;2;4;2;3;3;2;3;3;3;3;2;3;
+SYN-0465;Sales;Team Lead;8,1;On-site;45–54;Woman;Indian/Asian;Prefer not to say;3;3;3;2;4;2;4;4;4;3;2;2;4;2;2;5;
+SYN-0466;Technology;Senior Management;4,7;Hybrid;25–34;Man;Black African;No;2;3;3;2;3;4;2;1;2;1;3;2;2;3;1;4;Communication from leadership could be clearer.
+SYN-0467;Technology;Individual Contributor;7,3;On-site;18–24;Woman;Indian/Asian;No;3;1;2;2;3;3;4;4;3;2;2;1;2;3;2;1;
+SYN-0468;Operations;Individual Contributor;7,7;On-site;25–34;Woman;White;Yes;1;;3;2;2;3;3;3;4;4;3;2;3;4;4;2;
+SYN-0469;Finance;Individual Contributor;1,3;On-site;25–34;Man;Black African;No;3;3;2;3;3;4;4;3;2;;2;2;4;3;2;5;Workload peaks make it difficult to switch off.
+SYN-0470;Operations;Individual Contributor;4,3;On-site;25–34;Woman;Black African;No;3;3;3;2;;5;3;3;2;2;2;3;3;3;3;5;Career development opportunities feel uneven.
+SYN-0471;Operations;Individual Contributor;3,7;Hybrid;45–54;Woman;Black African;No;3;4;4;3;3;3;5;3;3;4;3;4;4;4;3;3;More transparent promotion criteria would help.
+SYN-0472;Customer Service;Individual Contributor;1,3;Hybrid;25–34;Woman;White;No;4;2;3;3;3;3;2;4;3;4;3;4;4;3;2;3;
+SYN-0473;Operations;Individual Contributor;4;On-site;35–44;Prefer not to say;Coloured;No;4;5;2;3;4;3;3;3;2;3;2;3;5;3;4;2;
+SYN-0474;Technology;Individual Contributor;14;On-site;25–34;Woman;Black African;Prefer not to say;2;2;2;2;4;5;1;2;3;3;2;3;2;2;3;3;
+SYN-0475;Technology;Individual Contributor;7,5;On-site;25–34;Woman;White;Yes;3;2;5;2;3;1;1;4;3;4;3;4;3;3;3;2;
+SYN-0476;Sales;Middle Management;2,4;On-site;25–34;Woman;Black African;No;4;4;4;3;5;3;5;4;3;4;3;2;2;3;3;3;I appreciate my team, but workloads can be intense.
+SYN-0477;Sales;Senior Management;5,4;On-site;18–24;Man;Indian/Asian;No;3;5;3;3;4;2;3;2;3;3;4;2;3;1;3;4;
+SYN-0478;Human Resources;Individual Contributor;0,8;Remote;25–34;Woman;Black African;No;3;4;3;3;4;3;3;4;4;3;4;4;4;4;3;2;
+SYN-0479;Sales;Individual Contributor;3;Hybrid;25–34;Man;Coloured;No;3;2;2;5;4;2;5;3;3;4;4;5;3;2;3;3;
+SYN-0480;Marketing;Team Lead;2,8;On-site;25–34;Man;Black African;No;4;3;3;3;3;3;3;4;3;3;3;4;1;3;4;2;
+SYN-0481;Customer Service;Team Lead;3,5;On-site;25–34;Woman;Indian/Asian;No;4;3;2;4;3;1;3;3;3;3;4;2;4;4;3;4;My colleagues are supportive and respectful.
+SYN-0482;Finance;Individual Contributor;4,7;On-site;45–54;Prefer not to say;Indian/Asian;No;4;3;1;3;3;3;4;4;4;4;3;3;2;3;3;5;Workload peaks make it difficult to switch off.
+SYN-0483;Technology;Team Lead;4,2;On-site;45–54;Man;White;Yes;;3;5;4;3;1;4;3;4;5;5;3;3;2;3;1;Flexible working has improved my wellbeing.
+SYN-0484;Technology;Middle Management;0,3;On-site;25–34;Man;Black African;No;4;3;5;5;3;4;5;5;4;4;4;3;4;4;2;3;
+SYN-0485;Technology;Middle Management;3,5;Hybrid;35–44;Woman;Indian/Asian;No;5;4;5;5;4;2;4;4;4;3;5;4;3;2;4;1;
+SYN-0486;Marketing;Individual Contributor;3,4;Remote;55+;Woman;Coloured;No;2;2;3;2;1;3;2;3;3;2;2;2;2;2;4;4;
+SYN-0487;Sales;Middle Management;5,1;Remote;18–24;Man;Coloured;Prefer not to say;3;4;2;4;2;3;4;4;5;4;4;4;3;5;4;2;
+SYN-0488;Human Resources;Individual Contributor;0,2;On-site;25–34;Non-binary;Black African;Yes;2;3;3;3;3;3;4;5;4;3;5;4;2;4;4;4;
+SYN-0489;Operations;Individual Contributor;3,1;Hybrid;45–54;Woman;Black African;No;2;3;2;2;3;4;2;4;2;3;4;2;3;1;4;4;
+SYN-0490;Operations;Team Lead;3,9;Hybrid;25–34;Woman;White;No;3;3;3;2;2;4;2;2;4;2;4;3;3;1;2;5;
+SYN-0491;Marketing;Individual Contributor;2,8;On-site;25–34;Man;Black African;No;3;5;5;5;4;;3;3;5;4;4;3;4;3;3;3;
+SYN-0492;Sales;Middle Management;1,2;On-site;25–34;Man;Black African;No;4;4;4;4;3;2;5;4;4;3;4;3;3;2;4;4;
+SYN-0493;Finance;Individual Contributor;1,2;Hybrid;18–24;Woman;Indian/Asian;No;4;3;3;2;1;3;3;4;2;2;1;3;3;3;4;2;
+SYN-0494;Finance;Senior Management;6,4;Remote;25–34;Woman;Black African;No;5;3;5;4;5;2;5;5;4;4;5;5;5;4;4;2;
+SYN-0495;Technology;Middle Management;2,6;Remote;25–34;Man;White;No;;3;5;5;3;2;4;5;4;4;5;4;4;3;5;1;
+SYN-0496;Technology;Individual Contributor;3,9;Hybrid;45–54;Woman;Indian/Asian;No;3;2;2;3;2;4;4;3;3;3;3;3;4;2;2;3;
+SYN-0497;Sales;Individual Contributor;12,7;Hybrid;25–34;Man;Coloured;No;4;4;4;5;2;;4;4;4;4;4;3;3;5;4;3;
+SYN-0498;Operations;Team Lead;5,2;Hybrid;25–34;Man;Black African;No;2;3;5;2;2;3;4;3;4;5;5;4;3;3;2;4;
+SYN-0499;Operations;Individual Contributor;4,4;On-site;45–54;Man;Black African;Yes;3;3;4;3;4;2;3;4;3;3;2;2;2;;4;3;
+SYN-0500;Operations;Individual Contributor;2,1;Hybrid;25–34;Woman;Black African;No;2;5;3;3;3;3;2;4;2;2;2;4;5;1;2;3;Career development opportunities feel uneven.

@@ -128,13 +128,25 @@
 
     if (g && /woman|female/i.test(g)) {
       const rep = a.representation(ds.sem.gender, g, scope);
-      if (rep && rep.mgmtShare != null) out.push({ kind: 'data', text: `Women are ${pct(rep.overall)} of ${placeName === 'Kumo' ? 'the workforce' : placeName}, but ${pct(rep.mgmtShare)} of its managers.`, rep, attr: 'Women' });
+      // Only state it when the headcount actually contains women; "but" only when managers really are fewer (round 4).
+      if (rep && rep.mgmtShare != null && rep.overall > 0) {
+        const where = placeName === 'Kumo' ? 'the workforce' : placeName;
+        const text = rep.mgmtShare < rep.overall - 0.05 ? `Women are ${pct(rep.overall)} of ${where}, but only ${pct(rep.mgmtShare)} of its managers.` : `Women are ${pct(rep.overall)} of ${where} and ${pct(rep.mgmtShare)} of its managers.`;
+        out.push({ kind: 'data', text, rep, attr: 'Women' });
+      }
     }
     if (r && /african|coloured|indian|black/i.test(r)) {
       const rep = a.representation(ds.sem.race, r, scope);
-      if (rep) {
-        const low = rep.rows[rep.rows.length - 1], top = rep.rows[0];
-        out.push({ kind: 'data', text: `${r} employees hold ${pct(low.share)} of ${low.level.toLowerCase()} roles, but ${pct(top.share)} of ${top.level.toLowerCase()} roles.`, rep, attr: `${r} employees` });
+      // Skipped when nobody in the headcount has this label (e.g. "African" vs "Black African"): a box of 0% would be wrong, not informative.
+      // Compares the most and least senior levels with enough people to show, and says "but only" only when there is a real gap.
+      const shown = rep ? rep.rows.filter((x) => !x.hidden) : [];
+      if (rep && rep.overall > 0 && shown.length >= 2) {
+        const top = shown[0], low = shown[shown.length - 1];
+        const T = `${top.level.toLowerCase()} roles`, L = `${low.level.toLowerCase()} roles`;
+        const text = top.share < low.share - 0.05 ? `${r} employees make up ${pct(low.share)} of ${L}, but only ${pct(top.share)} of ${T}.`
+          : top.share > low.share + 0.05 ? `${r} employees make up ${pct(top.share)} of ${T} and ${pct(low.share)} of ${L}.`
+          : `${r} employees make up a similar share of ${T} (${pct(top.share)}) and ${L} (${pct(low.share)}).`;
+        out.push({ kind: 'data', text, rep, attr: `${r} employees` });
       }
     }
     const H = [];

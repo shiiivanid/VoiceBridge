@@ -1,0 +1,141 @@
+Response ID,Department,Gender,Q1 [Belonging] I feel I belong here,Q2 [Belonging] I am respected,Q3 [Voice] I can speak up,Q4 [Voice] My views count,Q5 [Growth] I can grow here,Comments
+S0,Finance,Female,5,5,5,4,4,
+S1,Sales,Female,5,5,5,5,5,
+S2,Sales,Male,6,6,6,5,6,Good place
+S3,Operations,Female,2,2,3,2,2,
+S4,HR,Male,5,6,5,5,6,
+S5,Sales,Male,3,3,3,4,3,More training please
+S6,Operations,Male,7,7,6,6,5,Good place
+S7,Finance,Male,4,3,4,5,4,
+S8,Sales,Male,2,4,3,3,4,
+S9,HR,Male,6,7,6,6,6,More training please
+S10,HR,Female,6,6,6,5,6,More training please
+S11,Finance,Male,6,6,6,6,7,
+S12,Finance,Male,6,6,7,7,6,
+S13,HR,Male,5,4,4,5,6,More training please
+S14,Operations,Female,3,4,3,4,4,
+S15,Sales,Female,5,5,5,5,5,More training please
+S16,HR,Male,5,5,5,5,6,
+S17,Sales,Female,6,7,7,7,7,
+S18,Finance,Male,6,6,7,5,6,
+S19,Operations,Male,5,5,5,5,5,Good place
+S20,HR,Male,7,5,7,6,5,Good place
+S21,Sales,Female,7,6,7,7,6,
+S22,HR,Male,5,5,4,6,4,More training please
+S23,Operations,Male,5,6,4,5,6,
+S24,Operations,Female,4,3,3,3,3,More training please
+S25,Finance,Female,5,7,5,4,4,
+S26,HR,Female,5,6,6,6,6,Good place
+S27,HR,Female,7,7,6,7,6,
+S28,Operations,Female,4,4,4,5,5,
+S29,Sales,Male,4,3,5,5,5,
+S30,Finance,Female,5,4,5,6,5,
+S31,Finance,Male,3,3,3,2,3,Good place
+S32,Operations,Male,6,5,6,6,6,Good place
+S33,Sales,Female,6,6,7,7,7,
+S34,HR,Male,7,6,7,7,6,More training please
+S35,Operations,Male,6,5,5,4,5,Good place
+S36,Finance,Female,7,7,7,7,7,
+S37,Finance,Female,5,5,5,5,7,More training please
+S38,Finance,Female,6,5,6,5,5,
+S39,Finance,Female,4,5,5,7,5,More training please
+S40,Finance,Female,7,7,6,7,7,Good place
+S41,Finance,Female,6,5,5,5,5,
+S42,Sales,Female,4,3,5,4,4,More training please
+S43,Finance,Female,6,7,5,6,6,Good place
+S44,Sales,Female,7,7,6,7,7,More training please
+S45,Finance,Female,5,5,6,6,5,Good place
+S46,Finance,Female,7,7,7,7,7,Good place
+S47,Operations,Female,3,3,4,3,3,
+S48,Finance,Male,5,6,5,6,6,More training please
+S49,Finance,Male,7,6,6,7,5,More training please
+S50,Operations,Female,3,5,3,4,4,
+S51,Sales,Female,2,3,4,4,4,
+S52,HR,Male,7,7,6,6,7,
+S53,HR,Male,5,6,7,6,7,More training please
+S54,HR,Male,7,7,7,7,7,
+S55,Finance,Male,3,4,4,4,4,
+S56,Operations,Male,6,4,5,6,6,
+S57,Finance,Female,5,4,6,6,5,Good place
+S58,HR,Female,6,7,7,7,7,Good place
+S59,Operations,Male,6,7,7,6,6,
+S60,HR,Male,4,3,4,4,4,Good place
+S61,Finance,Male,7,7,5,7,7,More training please
+S62,HR,Female,5,4,5,6,5,Good place
+S63,Operations,Female,4,4,6,5,4,
+S64,HR,Female,5,5,4,5,4,Good place
+S65,HR,Female,6,7,7,6,7,Good place
+S66,HR,Female,6,4,5,5,5,More training please
+S67,Operations,Male,7,7,7,7,7,Good place
+S68,Sales,Male,6,4,5,5,5,More training please
+S69,Operations,Male,6,4,5,4,6,
+S70,Sales,Male,6,6,5,5,7,
+S71,Operations,Female,2,3,1,2,2,More training please
+S72,HR,Female,5,6,7,6,6,More training please
+S73,Sales,Female,6,6,6,5,4,Good place
+S74,HR,Female,6,6,6,6,7,
+S75,Sales,Male,6,5,7,6,7,
+S76,Sales,Male,4,6,5,5,4,Good place
+S77,Operations,Male,6,6,6,5,6,
+S78,Sales,Male,4,6,7,5,6,
+S79,HR,Female,6,6,6,4,4,More training please
+S80,HR,Female,6,5,6,6,6,
+S81,Sales,Female,4,4,3,5,3,Good place
+S82,Operations,Female,2,2,3,2,1,Good place
+S83,HR,Female,6,6,6,6,5,
+S84,HR,Male,5,5,5,5,5,More training please
+S85,Operations,Male,5,5,4,4,3,
+S86,HR,Female,4,4,4,4,4,Good place
+S87,Finance,Male,6,6,7,6,7,
+S88,Sales,Female,5,5,5,6,4,More training please
+S89,HR,Female,6,6,5,6,5,
+S90,Finance,Male,4,3,3,3,4,More training please
+S91,Sales,Female,4,4,5,4,4,
+S92,Operations,Female,2,1,1,1,1,
+S93,Sales,Male,6,4,6,5,5,
+S94,Operations,Female,4,3,3,3,3,
+S95,Sales,Male,6,4,6,7,4,
+S96,Finance,Female,6,7,6,6,5,
+S97,HR,Male,4,6,5,5,5,
+S98,Finance,Male,6,6,7,5,5,
+S99,Finance,Male,5,5,5,5,4,
+S100,HR,Female,5,6,6,5,5,Good place
+S101,HR,Male,4,6,5,5,4,
+S102,Finance,Female,5,5,4,5,5,
+S103,HR,Male,5,6,5,4,3,
+S104,Finance,Female,6,4,5,6,6,
+S105,Finance,Female,5,6,5,5,5,
+S106,Operations,Female,2,3,3,2,2,
+S107,HR,Male,6,6,4,7,6,
+S108,Finance,Female,5,5,3,4,4,
+S109,HR,Male,4,4,5,4,4,
+S110,HR,Male,5,6,6,6,7,More training please
+S111,Sales,Female,5,5,4,5,5,More training please
+S112,Operations,Female,4,5,4,6,7,More training please
+S113,Finance,Female,4,5,6,4,4,Good place
+S114,Finance,Male,7,6,6,6,7,Good place
+S115,Finance,Female,6,5,5,5,6,Good place
+S116,Sales,Female,4,5,4,3,4,
+S117,Finance,Male,4,5,6,6,6,
+S118,HR,Female,7,7,6,6,7,Good place
+S119,Sales,Female,6,5,5,5,6,More training please
+S120,Operations,Female,3,3,4,3,4,Good place
+S121,Operations,Female,3,2,2,2,1,More training please
+S122,Sales,Female,3,4,3,4,4,Good place
+S123,HR,Male,7,6,5,5,6,
+S124,Sales,Female,3,4,5,3,4,More training please
+S125,Operations,Male,7,7,6,6,7,More training please
+S126,HR,Male,7,7,7,6,7,
+S127,Finance,Male,4,4,5,5,4,Good place
+S128,Finance,Female,7,7,7,6,6,
+S129,Finance,Female,5,6,7,5,5,More training please
+S130,HR,Female,5,6,5,6,6,
+S131,Operations,Female,4,4,4,5,4,
+S132,Sales,Female,4,4,4,6,5,Good place
+S133,Operations,Female,4,4,4,5,5,
+S134,Sales,Female,5,6,6,7,7,
+S135,Finance,Male,5,4,6,6,5,Good place
+S136,HR,Male,5,4,5,5,4,
+S137,Operations,Female,2,2,3,2,4,
+S138,Sales,Male,4,4,4,3,4,Good place
+S139,Operations,Male,5,6,7,7,6,More training please

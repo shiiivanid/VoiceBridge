@@ -2,6 +2,8 @@
 
 Turn an employee survey export into findings people act on.
 
+**Live app:** https://shiiivanid.github.io/VoiceBridge/ (opens in any browser; the survey file is read on your own computer and never uploaded).
+
 VoiceBridge reads a survey export (plus an optional headcount file). It finds the few things that matter most and shows how sure you can be about each one. It then releases the results to every audience at the same moment and tracks each leader's public response.
 
 It is built for the in-house HR or People & Culture lead who runs the annual survey and has to turn it into something that changes anything.
@@ -22,15 +24,22 @@ Click **Try it with Kumo Logistics** to load the sample organisation. Kumo is fi
 ## Test it
 
 ```bash
-node test/validate.mjs
+node test/validate.mjs   # 30 original checks (Kumo sample and other survey formats)
+node test/stress.mjs     # 42 checks from the Masakhane stress test (17 October 2026)
+node test/snapshot.mjs   # prints every result for 7 test files, to compare before and after a change
 ```
 
-The 23 checks cover four areas:
+The 30 original checks cover:
 
 - **Known answers:** the eight patterns planted in the synthetic data are all recovered.
 - **Bad input:** empty files, files with no rating questions, tiny surveys, a missing headcount.
 - **Fairness:** swapping gender labels swaps the finding and nothing else; renaming race labels changes no number.
 - **Consistency:** the same file always gives the same result, whatever the row order.
+- **Other formats:** semicolons, underscore headers, theme prefixes, reverse-scored items, numeric tenure.
+
+The 42 stress-test checks use a second fictional company, Masakhane Retail, and five awkward files
+(see `test/fixtures` and `CHANGES.md`): personal details in comments, duplicate and empty responses,
+"Total" rows, headcount files with different labels, and wording.
 
 ## The journey
 

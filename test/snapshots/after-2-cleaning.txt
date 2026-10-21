@@ -1,0 +1,395 @@
+===== kumo
+removed rows {"summary":0,"duplicates":0,"empty":0}
+col ignore Response ID  Response ID
+col pii Email addresses  Email
+col ignore Date or time  Submitted
+col group department  Department
+col group division  Division
+col group team  Team
+col group gender  Gender
+col group race  Race
+col group level  Occupational level
+col group tenure  Length of service
+col rating Fairness & advancement  F1 [Fairness & advancement] Promotions here go to the people
+col rating Fairness & advancement  F2 [Fairness & advancement] I have the same chance to advanc
+col rating Fairness & advancement  F3 [Fairness & advancement] Pay decisions here are fair and 
+col rating Belonging & respect  B1 [Belonging & respect] I can be myself at work
+col rating Belonging & respect  B2 [Belonging & respect] People here treat me with respect, 
+col rating Belonging & respect  B3 [Belonging & respect] People in my team help each other
+col rating Voice & safety  V1 [Voice & safety] I can raise a concern without fear of co
+col rating Voice & safety  V2 [Voice & safety] When I speak up, my input is taken serio
+col rating My manager  M1 [My manager] My manager treats everyone in the team fairl
+col rating My manager  M2 [My manager] My manager supports my development
+col rating My manager  M3 [My manager] My manager speaks to me with respect
+col rating Growth  G1 [Growth] In the last six months someone has talked with m
+col rating Growth  G2 [Growth] I can see a future for myself here
+col rating Trust in follow-through  T1 [Trust in follow-through] I believe action will be taken 
+col rating Trust in follow-through  T2 [Trust in follow-through] Last year’s survey led to chang
+col comment   What is one thing that would make Kumo a better place to wor
+col comment   Is there anything else you want leadership to hear?
+responded 388 N 600 rr 65% moe 3%
+headline People trust their teams. They don’t yet trust the system.
+theme Fairness & advancement 56% 388 F1:56% F2:56% F3:54%
+theme Belonging & respect 79% 388 B1:68% B2:68% B3:88%
+theme Voice & safety 59% 388 V1:48% V2:54%
+theme My manager 72% 388 M1:69% M2:65% M3:75%
+theme Growth 47% 388 G1:35% G2:44%
+theme Trust in follow-through 29% 388 T1:25% T2:23%
+FOCUS Women in Operations don’t see a fair path to promotion. 20% vs 62% n 49 Clear difference sil 26/87 30%-74% true also trust  quotes 3
+FOCUS African employees in semi-skilled roles aren’t being developed. 18% vs 60% n 122 Clear difference sil 83/202 41%-81% true also   quotes 3
+FOCUS Most people don’t believe this survey will change anything. 29% vs - n 388 Organisation-wide sil 215/600 36%-71% true also   quotes 3
+WATCH African employees with 5+ years of service don’t believe this survey will change anything. 11% vs 34% n 81 Clear difference sil 57/136 42%-82% true also   quotes 3
+WATCH Women with 5+ years of service aren’t being developed. 29% vs 50% n 56 Likely difference sil 31/87 36%-71% true also   quotes 3
+WATCH Coloured employees with 5+ years of service don’t see a fair path to promotion. 28% vs 58% n 18 Likely difference sil 7/31 23%-65% true also belong  quotes 2
+WATCH Coloured women don’t feel safe speaking up. 31% vs 60% n 16 Likely difference sil 7/33 21%-73% true also   quotes 1
+EARLY People in Technology don’t feel safe speaking up. 20% vs 61% n 20 Clear difference sil 10/55 18%-82% false also  response quotes 3
+EARLY African employees in Operations (Durban) don’t feel their manager treats them fairly. 60% vs 73% n 42 Possible difference sil 6/91 7%-60% false also  response quotes 1
+EARLY African employees in Operations (Johannesburg) don’t see a fair path to promotion. 48% vs 59% n 84 Possible difference sil 15/125 12%-45% false also trust chance quotes 3
+STRENGTH 88% agree: “People in my team help each other” 88% - 388 quotes 2
+STRENGTH People in Finance feel safe to speak up 76% 57% 41 quotes 0
+STRENGTH People in Customer Service rate their manager highly 86% 68% 71 quotes 2
+SIGNAL DBN Shift B Gender Woman fewer than 10 voice 0%/59%/58% mgr 0%/53%/74%
+perception Senior management 88% / Semi-skilled 52%
+hidden 12 groups tested 140 lenses Department|Division|Gender|Race|Occupational level|Length of service
+rates Customer Service 71/90 | Finance 41/45 | Operations (Durban) 79/150 | Operations (Johannesburg) 115/170 | People & Culture 20/20 | Sales 42/70 | Technology 20/55
+comments 245 {"email":1,"phone":1,"name":1,"id":0} team:56 followthrough:49 development:42 pay:26 inclusion:26 voice:23 promotion:18 workload:12 facilities:3 shifts:2 treatment:2
+  c Women on the floor are seen as admin help, not future team leaders.
+  c The people in my team are like family.
+  c Please just tell us what the results were this time.
+  c Call me on [number removed] if you want to know why people on the floor keep leaving. Nobody develops us.
+  c You can email me on [email removed] about the training. I want to study further.
+  c My supervisor [name] shouts at us in front of everyone and nobody does anything.
+
+===== kumo-no-headcount
+removed rows {"summary":0,"duplicates":0,"empty":0}
+col ignore Response ID  Response ID
+col pii Email addresses  Email
+col ignore Date or time  Submitted
+col group department  Department
+col group division  Division
+col group team  Team
+col group gender  Gender
+col group race  Race
+col group level  Occupational level
+col group tenure  Length of service
+col rating Fairness & advancement  F1 [Fairness & advancement] Promotions here go to the people
+col rating Fairness & advancement  F2 [Fairness & advancement] I have the same chance to advanc
+col rating Fairness & advancement  F3 [Fairness & advancement] Pay decisions here are fair and 
+col rating Belonging & respect  B1 [Belonging & respect] I can be myself at work
+col rating Belonging & respect  B2 [Belonging & respect] People here treat me with respect, 
+col rating Belonging & respect  B3 [Belonging & respect] People in my team help each other
+col rating Voice & safety  V1 [Voice & safety] I can raise a concern without fear of co
+col rating Voice & safety  V2 [Voice & safety] When I speak up, my input is taken serio
+col rating My manager  M1 [My manager] My manager treats everyone in the team fairl
+col rating My manager  M2 [My manager] My manager supports my development
+col rating My manager  M3 [My manager] My manager speaks to me with respect
+col rating Growth  G1 [Growth] In the last six months someone has talked with m
+col rating Growth  G2 [Growth] I can see a future for myself here
+col rating Trust in follow-through  T1 [Trust in follow-through] I believe action will be taken 
+col rating Trust in follow-through  T2 [Trust in follow-through] Last year’s survey led to chang
+col comment   What is one thing that would make Kumo a better place to wor
+col comment   Is there anything else you want leadership to hear?
+responded 388 N  rr - moe 5%
+headline People trust their teams. They don’t yet trust the system.
+theme Fairness & advancement 56% 388 F1:56% F2:56% F3:54%
+theme Belonging & respect 79% 388 B1:68% B2:68% B3:88%
+theme Voice & safety 59% 388 V1:48% V2:54%
+theme My manager 72% 388 M1:69% M2:65% M3:75%
+theme Growth 47% 388 G1:35% G2:44%
+theme Trust in follow-through 29% 388 T1:25% T2:23%
+FOCUS Women in Operations don’t see a fair path to promotion. 20% vs 62% n 49 Clear difference nosil also trust  quotes 3
+FOCUS African employees in semi-skilled roles aren’t being developed. 18% vs 60% n 122 Clear difference nosil also   quotes 3
+FOCUS Most people don’t believe this survey will change anything. 29% vs - n 388 Organisation-wide nosil also   quotes 3
+WATCH People in Technology don’t feel safe speaking up. 20% vs 61% n 20 Clear difference nosil also   quotes 3
+WATCH African employees with 5+ years of service don’t believe this survey will change anything. 11% vs 34% n 81 Clear difference nosil also   quotes 3
+WATCH Women with 5+ years of service aren’t being developed. 29% vs 50% n 56 Likely difference nosil also   quotes 3
+WATCH African employees in their first year don’t feel their manager treats them fairly. 52% vs 74% n 33 Likely difference nosil also   quotes 1
+EARLY African employees in Operations (Durban) don’t feel their manager treats them fairly. 60% vs 73% n 42 Possible difference nosil also  chance quotes 1
+EARLY African employees in Operations (Johannesburg) don’t see a fair path to promotion. 48% vs 59% n 84 Possible difference nosil also trust chance quotes 3
+EARLY Indian employees in Operations don’t feel their manager treats them fairly. 53% vs 73% n 19 Possible difference nosil also  chance quotes 3
+STRENGTH 88% agree: “People in my team help each other” 88% - 388 quotes 2
+STRENGTH People in Finance feel safe to speak up 76% 57% 41 quotes 0
+STRENGTH People in Customer Service rate their manager highly 86% 68% 71 quotes 2
+SIGNAL DBN Shift B Gender Woman fewer than 10 voice 0%/59%/58% mgr 0%/53%/74%
+perception Senior management 88% / Semi-skilled 52%
+hidden 12 groups tested 140 lenses Department|Division|Gender|Race|Occupational level|Length of service
+rates Customer Service 71/null | Finance 41/null | Operations (Durban) 79/null | Operations (Johannesburg) 115/null | People & Culture 20/null | Sales 42/null | Technology 20/null
+comments 245 {"email":1,"phone":1,"name":1,"id":0} team:56 followthrough:49 development:42 pay:26 inclusion:26 voice:23 promotion:18 workload:12 facilities:3 shifts:2 treatment:2
+  c Women on the floor are seen as admin help, not future team leaders.
+  c The people in my team are like family.
+  c Please just tell us what the results were this time.
+  c Call me on [number removed] if you want to know why people on the floor keep leaving. Nobody develops us.
+  c You can email me on [email removed] about the training. I want to study further.
+  c My supervisor [name] shouts at us in front of everyone and nobody does anything.
+
+===== shivani-dei
+removed rows {"summary":0,"duplicates":0,"empty":0}
+col pii Personal identifier  Employee_ID
+col group department  Department
+col group level  Job_Level
+col group tenure  Tenure_Years
+col group other  Work_Arrangement
+col group age  Age_Band
+col group gender  Gender
+col group race  Race_Group
+col group disability  Disability_Status
+col rating DEI  DEI_Belonging
+col rating DEI  DEI_Respect
+col rating DEI  DEI_Fairness
+col rating DEI  DEI_Voice
+col rating DEI  DEI_Inclusive_Leadership
+col rating DEI REV DEI_Discrimination_Concern
+col rating Culture  Culture_Trust
+col rating Culture  Culture_Communication
+col rating Culture  Culture_Recognition
+col rating Culture  Culture_Collaboration
+col rating Culture  Culture_Growth
+col rating Wellbeing  Wellbeing_Workload
+col rating Wellbeing  Wellbeing_Work_Life
+col rating Wellbeing  Wellbeing_Support
+col rating Wellbeing  Wellbeing_Energy
+col rating Wellbeing REV Wellbeing_Burnout
+col comment   Overall_Comment
+responded 500 N  rr - moe 4%
+headline People value parts of working here. Some groups are having a very different experience.
+theme DEI 43% 500 Q1:44% Q2:42% Q3:40% Q4:44% Q5:41% Q6:43%
+theme Culture 42% 500 Q7:45% Q8:45% Q9:42% Q10:44% Q11:42%
+theme Wellbeing 35% 500 Q12:40% Q13:43% Q14:35% Q15:39% Q16:39%
+FOCUS Many people aren’t positive about wellbeing. 35% vs - n 500 Organisation-wide nosil also   quotes 0
+FOCUS People (Work arrangement: Remote) aren’t positive about DEI. 24% vs 46% n 66 Clear difference nosil also culture  quotes 0
+FOCUS Men in Customer Service aren’t positive about wellbeing. 17% vs 37% n 46 Likely difference nosil also   quotes 0
+WATCH Black African employees in Operations aren’t positive about wellbeing. 18% vs 37% n 51 Likely difference nosil also   quotes 0
+WATCH Women in Customer Service aren’t positive about wellbeing. 18% vs 37% n 39 Likely difference nosil also   quotes 0
+WATCH Many people aren’t positive about culture. 42% vs - n 500 Organisation-wide nosil also   quotes 0
+WATCH Women in Operations aren’t positive about culture. 27% vs 44% n 62 Likely difference nosil also   quotes 0
+EARLY Coloured women aren’t positive about wellbeing. 21% vs 36% n 34 Possible difference nosil also  chance quotes 0
+EARLY Indian/Asian women aren’t positive about culture. 30% vs 43% n 47 Possible difference nosil also  chance quotes 0
+EARLY People aged 18–24 aren’t positive about culture. 30% vs 43% n 50 Possible difference nosil also  chance quotes 0
+perception Senior Management 54% / Team Lead 32%
+hidden 30 groups tested 227 lenses Department|Job_Level|Tenure_Years|Work_Arrangement|Age_Band|Gender|Race_Group|Disability_Status
+rates Customer Service 90/null | Finance 65/null | Human Resources 48/null | Marketing 32/null | Operations 104/null | Sales 81/null | Technology 80/null
+comments 115 {"email":0,"phone":0,"name":0,"id":0} other:42 workload:27 development:26 team:22 promotion:11
+  c Communication from leadership could be clearer.
+  c I appreciate my team, but workloads can be intense.
+  c I appreciate my team, but workloads can be intense.
+
+===== masakhane
+removed rows {"summary":0,"duplicates":1,"empty":3}
+col ignore Response ID  Response ID
+col ignore Date or time  Start time
+col pii Email addresses  Email
+col pii Personal identifier  Name
+col group department  Department
+col group division  Region
+col group team  Team
+col group gender  Gender
+col group race  Race
+col group level  Job level
+col group age  Age
+col group tenure  Years of service
+col group disability  Do you have a disability?
+col rating Inclusion & belonging  IB1 [Inclusion & belonging] I feel I belong at Masakhane
+col rating Inclusion & belonging  IB2 [Inclusion & belonging] I can be myself at work without 
+col rating Inclusion & belonging  IB3 [Inclusion & belonging] People here are treated with res
+col rating Fair treatment  FT1 [Fair treatment] Rules and policies are applied consiste
+col rating Fair treatment  FT2 [Fair treatment] Shifts and leave are allocated fairly
+col rating Fair treatment  FT3 [Fair treatment] I am paid fairly compared with others d
+col rating Voice  VO1 [Voice] I can raise a problem without fear of being vict
+col rating Voice  VO2 [Voice] My ideas are listened to
+col rating Line manager  LM1 [Line manager] My line manager treats me with dignity
+col rating Line manager  LM2 [Line manager] My line manager gives me useful feedback
+col rating Line manager  LM3 [Line manager] My line manager is approachable
+col rating Growth  GR1 [Growth] I have had training in the last year that helps
+col rating Growth  GR2 [Growth] I can see a way to move up at Masakhane
+col rating Wellbeing  WB1 [Wellbeing] My workload is manageable
+col rating Wellbeing REV WB2 [Wellbeing] I often feel burnt out at work
+col rating Wellbeing  WB3 [Wellbeing] I can take leave when I need it
+col comment   What one thing would make Masakhane a better place to work?
+col comment   Anything else you would like to share?
+responded 295 N 450 rr 66% moe 3%
+headline People value their managers. Some groups are having a very different experience.
+theme Inclusion & belonging 70% 295 IB1:66% IB2:64% IB3:63%
+theme Fair treatment 68% 295 FT1:66% FT2:66% FT3:64%
+theme Voice 79% 295 VO1:64% VO2:70%
+theme Line manager 76% 295 LM1:71% LM2:68% LM3:71%
+theme Growth 68% 295 GR1:59% GR2:62%
+theme Wellbeing 68% 295 WB1:66% WB2:65% WB3:64%
+FOCUS People aged under 25 aren’t being developed. 34% vs 76% n 53 Clear difference sil 19/77 25%-56% true also   quotes 1
+FOCUS People (Do you have a disability?: Yes) don’t feel respected or able to be themselves. 19% vs 74% n 21 Clear difference sil 10/26 38%-58% true also   quotes 1
+EARLY People in Customer Contact Centre aren’t positive about wellbeing. 24% vs 71% n 17 Clear difference sil 5/40 13%-70% false also  response quotes 0
+EARLY Black African employees with 3–5 years of service don’t feel respected or able to be themselves. 58% vs 72% n 50 Possible difference sil 5/75 7%-40% false also  chance quotes 2
+EARLY People in unskilled roles don’t feel their manager treats them fairly. 66% vs 78% n 53 Possible difference sil 5/79 6%-39% false also  chance quotes 1
+STRENGTH People with more than 10 years of service rate their manager highly 95% 73% 37 quotes 2
+STRENGTH People in Western Cape feel they are treated fairly 82% 66% 44 quotes 0
+STRENGTH Most people feel safe to speak up 79% - 295 quotes 0
+SIGNAL JHB Store 4 Race Black African fewer than 10 voice 22%/75%/78% mgr 22%/75%/73%
+perception Senior management 80% / Unskilled 64%
+hidden 59 groups tested 259 lenses Department|Region|Gender|Race|Job level|Age|Years of service|Do you have a disability?
+rates Customer Contact Centre 17/40 | Distribution Centre 55/90 | Head Office - Finance 19/30 | Head Office - IT 24/31 | Head Office - Marketing 22/25 | Legal 4/4 | Store Operations 154/230
+comments 182 {"email":1,"phone":2,"name":3,"id":1} other:79 team:36 pay:25 development:22 facilities:12 workload:11 promotion:6 shifts:4 voice:1 treatment:1
+  c As a young person there is no clear way to grow here.
+  c I have been a cashier for three years and nobody talks about the next step.
+  c The pressure on the phones is too much, people are burning out.
+  c My ID is [ID number removed], check my file and you will see they skipped me.
+  c Phone the DC office on [number removed] and ask about the night shift.
+  c Contact me at [email removed], I am not scared.
+  c You can call me on [number removed] if you want details.
+  c Supervisor [name] keeps changing my hours.
+  c Please speak to [name] in HR, she knows the full story.
+  c My manager Mr [name] is the problem, everyone knows it.
+
+===== masakhane-mismatched-hc
+removed rows {"summary":0,"duplicates":1,"empty":3}
+col ignore Response ID  Response ID
+col ignore Date or time  Start time
+col pii Email addresses  Email
+col pii Personal identifier  Name
+col group department  Department
+col group division  Region
+col group team  Team
+col group gender  Gender
+col group race  Race
+col group level  Job level
+col group age  Age
+col group tenure  Years of service
+col group disability  Do you have a disability?
+col rating Inclusion & belonging  IB1 [Inclusion & belonging] I feel I belong at Masakhane
+col rating Inclusion & belonging  IB2 [Inclusion & belonging] I can be myself at work without 
+col rating Inclusion & belonging  IB3 [Inclusion & belonging] People here are treated with res
+col rating Fair treatment  FT1 [Fair treatment] Rules and policies are applied consiste
+col rating Fair treatment  FT2 [Fair treatment] Shifts and leave are allocated fairly
+col rating Fair treatment  FT3 [Fair treatment] I am paid fairly compared with others d
+col rating Voice  VO1 [Voice] I can raise a problem without fear of being vict
+col rating Voice  VO2 [Voice] My ideas are listened to
+col rating Line manager  LM1 [Line manager] My line manager treats me with dignity
+col rating Line manager  LM2 [Line manager] My line manager gives me useful feedback
+col rating Line manager  LM3 [Line manager] My line manager is approachable
+col rating Growth  GR1 [Growth] I have had training in the last year that helps
+col rating Growth  GR2 [Growth] I can see a way to move up at Masakhane
+col rating Wellbeing  WB1 [Wellbeing] My workload is manageable
+col rating Wellbeing REV WB2 [Wellbeing] I often feel burnt out at work
+col rating Wellbeing  WB3 [Wellbeing] I can take leave when I need it
+col comment   What one thing would make Masakhane a better place to work?
+col comment   Anything else you would like to share?
+responded 295 N 417 rr 71% moe 3%
+headline People value their managers. Not everyone feels safe to say so.
+theme Inclusion & belonging 70% 295 IB1:66% IB2:64% IB3:63%
+theme Fair treatment 68% 295 FT1:66% FT2:66% FT3:64%
+theme Voice 79% 295 VO1:64% VO2:70%
+theme Line manager 76% 295 LM1:71% LM2:68% LM3:71%
+theme Growth 68% 295 GR1:59% GR2:62%
+theme Wellbeing 68% 295 WB1:66% WB2:65% WB3:64%
+FOCUS People aged under 25 aren’t being developed. 34% vs 76% n 53 Clear difference sil 19/71 27%-52% true also   quotes 1
+FOCUS People (Do you have a disability?: Yes) don’t feel respected or able to be themselves. 19% vs 74% n 21 Clear difference sil 10/24 42%-54% true also   quotes 1
+FOCUS Black African employees in Gauteng don’t feel their manager treats them fairly. 62% vs 84% n 107 Clear difference nosil also voice  quotes 1
+WATCH Black African employees in Distribution Centre don’t see a fair path to promotion. 43% vs 71% n 30 Clear difference nosil also   quotes 3
+WATCH Black African employees in unskilled roles don’t feel respected or able to be themselves. 44% vs 73% n 32 Clear difference nosil also growth  quotes 2
+WATCH Men in skilled roles don’t feel respected or able to be themselves. 47% vs 73% n 32 Likely difference nosil also   quotes 0
+WATCH People in Customer Contact Centre aren’t positive about wellbeing. 24% vs 71% n 17 Clear difference nosil also   quotes 0
+EARLY Black African employees with 3–5 years of service don’t feel respected or able to be themselves. 58% vs 72% n 50 Possible difference nosil also  chance quotes 2
+EARLY People in unskilled roles don’t feel their manager treats them fairly. 66% vs 78% n 53 Possible difference sil 5/72 7%-33% false also  chance quotes 1
+EARLY Men with 1–2 years of service don’t feel respected or able to be themselves. 58% vs 71% n 33 Possible difference nosil also  chance quotes 0
+STRENGTH People with more than 10 years of service rate their manager highly 95% 73% 37 quotes 2
+STRENGTH People in Western Cape feel they are treated fairly 82% 66% 44 quotes 0
+STRENGTH Most people feel safe to speak up 79% - 295 quotes 0
+SIGNAL JHB Store 4 Race Black African fewer than 10 voice 22%/75%/78% mgr 22%/75%/73%
+perception Senior management 80% / Unskilled 64%
+hidden 59 groups tested 259 lenses Department|Region|Gender|Race|Job level|Age|Years of service|Do you have a disability?
+rates Customer Contact Centre 17/0 | Distribution Centre 55/0 | Head Office - Finance 19/30 | Head Office - IT 24/31 | Head Office - Marketing 22/25 | Legal 4/4 | Store Operations 154/197
+comments 182 {"email":1,"phone":2,"name":3,"id":1} other:79 team:36 pay:25 development:22 facilities:12 workload:11 promotion:6 shifts:4 voice:1 treatment:1
+  c As a young person there is no clear way to grow here.
+  c I have been a cashier for three years and nobody talks about the next step.
+  c The pressure on the phones is too much, people are burning out.
+  c My ID is [ID number removed], check my file and you will see they skipped me.
+  c Phone the DC office on [number removed] and ask about the night shift.
+  c Contact me at [email removed], I am not scared.
+  c You can call me on [number removed] if you want details.
+  c Supervisor [name] keeps changing my hours.
+  c Please speak to [name] in HR, she knows the full story.
+  c My manager Mr [name] is the problem, everyone knows it.
+
+===== edge1-forms
+removed rows {"summary":0,"duplicates":0,"empty":3}
+col ignore Response ID  ID
+col ignore Date or time  Start time
+col ignore Date or time  Completion time
+col pii Email addresses  Email
+col pii Personal identifier  Name
+col group department  Department
+col group division  Region
+col group team  Team
+col group gender  Gender
+col group race  Race
+col group level  Job level
+col group age  Age
+col group tenure  Years of service
+col group disability  Do you have a disability?
+col rating Belonging & respect  I feel I belong at Masakhane
+col rating General  I can be myself at work without worrying how I will be judge
+col rating Belonging & respect  People here are treated with respect regardless of backgroun
+col rating General  Rules and policies are applied consistently to everyone
+col rating Fairness & advancement  Shifts and leave are allocated fairly
+col rating Fairness & advancement  I am paid fairly compared with others doing similar work
+col rating General  I can raise a problem without fear of being victimised
+col rating General  My ideas are listened to
+col rating My manager  My line manager treats me with dignity
+col rating My manager  My line manager gives me useful feedback
+col rating My manager  My line manager is approachable
+col rating General  I have had training in the last year that helps me do my job
+col rating General  I can see a way to move up at Masakhane
+col rating Wellbeing  My workload is manageable
+col rating General REV I often feel burnt out at work
+col rating General  I can take leave when I need it
+col comment   What one thing would make Masakhane a better place to work?
+col comment   Anything else you would like to share?
+responded 296 N 450 rr 66% moe 3%
+headline People value their managers. Some groups are having a very different experience.
+theme Belonging & respect 74% 295 Q1:66% Q3:63%
+theme General 71% 296 Q2:64% Q4:65% Q7:64% Q8:70% Q12:59% Q13:63% Q15:65% Q16:64%
+theme Fairness & advancement 77% 296 Q5:66% Q6:64%
+theme My manager 76% 296 Q9:71% Q10:68% Q11:71%
+theme Wellbeing 66% 285 Q14:66%
+FOCUS People (Do you have a disability?: Yes) don’t feel respected or able to be themselves. 24% vs 78% n 21 Clear difference sil 11/26 42%-62% true also   quotes 1
+FOCUS Women in unskilled roles don’t see a fair path to promotion. 50% vs 79% n 20 Likely difference sil 7/29 24%-55% true also   quotes 3
+EARLY People in Customer Contact Centre aren’t positive about wellbeing. 25% vs 68% n 16 Clear difference sil 7/40 18%-75% false also  response quotes 0
+EARLY Men in Distribution Centre aren’t positive about wellbeing. 53% vs 68% n 38 Possible difference sil 3/64 5%-42% false also  chance quotes 0
+EARLY People in unskilled roles don’t feel their manager treats them fairly. 66% vs 78% n 53 Possible difference sil 5/79 6%-39% false also  chance quotes 1
+STRENGTH People with more than 10 years of service rate their manager highly 95% 73% 37 quotes 2
+STRENGTH Most people feel they are treated fairly 77% - 296 quotes 0
+STRENGTH Most people feel respected and able to be themselves 74% - 295 quotes 2
+perception none
+hidden 62 groups tested 259 lenses Department|Region|Gender|Race|Job level|Age|Years of service|Do you have a disability?
+rates Customer Contact Centre 17/40 | Distribution Centre 55/90 | Head Office - Finance 20/30 | Head Office - IT 24/31 | Head Office - Marketing 22/25 | Legal 4/4 | Store Operations 154/230
+comments 182 {"email":1,"phone":2,"name":3,"id":1} other:79 team:36 pay:25 development:22 facilities:12 workload:11 promotion:6 shifts:4 voice:1 treatment:1
+  c As a young person there is no clear way to grow here.
+  c I have been a cashier for three years and nobody talks about the next step.
+  c The pressure on the phones is too much, people are burning out.
+  c My ID is [ID number removed], check my file and you will see they skipped me.
+  c Phone the DC office on [number removed] and ask about the night shift.
+  c Contact me at [email removed], I am not scared.
+  c You can call me on [number removed] if you want details.
+  c Supervisor [name] keeps changing my hours.
+  c Please speak to [name] in HR, she knows the full story.
+  c My manager Mr [name] is the problem, everyone knows it.
+
+===== edge4-tiny
+removed rows {"summary":1,"duplicates":0,"empty":1}
+col ignore Response ID  Respondent
+col group department  Department
+col group gender  Gender
+col rating Belonging  B1 [Belonging] I feel I belong here
+col rating Belonging  B2 [Belonging] I am respected
+col rating Voice  V1 [Voice] I can speak up
+col comment   Comment
+responded 8 N  rr - moe 35%
+headline People feel they belong. Nothing stands out strongly enough to act on yet.
+theme Belonging 75% 8 B1:63% B2:75%
+theme Voice 57% 7 V1:57%
+STRENGTH 75% agree: “I am respected” 75% - 8 quotes 1
+perception none
+hidden 9 groups tested 11 lenses Department|Gender
+rates Finance 3/null | HR 1/null | Sales 4/null
+comments 4 {"email":0,"phone":0,"name":0,"id":0} other:3 team:1
+  c Fine
+  c Nobody listens; ever
+  c HR is great

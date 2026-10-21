@@ -103,7 +103,22 @@
     return n > 2 && d ? (n * sxy - sx * sy) / d : 0;
   }
 
-  function detect(headers, rows) {
+  // Keywords for placing an untagged question in a theme, matched against the question's own wording.
+  // Kept separate from DIM_KEYS (which reads theme *names*) so tagged surveys are unaffected.
+  // Order matters: the first match wins (e.g. "My manager treats everyone fairly" is about the manager).
+  // Broadened after the stress test (17 Oct 2026): a plain Microsoft Forms export put 8 of 16 questions in "General".
+  const QUESTION_KEYS = [
+    ['Wellbeing', /well-?being|stress|workload|burn ?out|burnt out|exhaust|take leave|work-life|work life|balance|overwhelm|\bhealth/i],
+    ['My manager', /manager|supervis|team leader|\bboss\b|line manager/i],
+    ['Voice & safety', /\bvoice|speak|raise (a |my )?(problem|concern|issue)|victimi[sz]|ideas are|listened to|\bheard\b|without fear|safe to/i],
+    ['Growth', /growth|develop|career|learn|training|trained|move up|progress|future (for myself|here)|skills|study/i],
+    ['Fairness & advancement', /fair|advance|promot|equit|consistent|applied (equally|to everyone)|\bpaid\b|\bpay\b|bias|same chance/i],
+    ['Belonging & respect', /belong|respect|inclusi|be myself|valued|accepted|judged|regardless of|fit in/i],
+    ['Trust in follow-through', /follow|this survey|action will|changes i could see|results of/i],
+    ['Engagement', /engage|proud|recommend|motivat|enjoy|committed/i],
+  ];
+
+  function detect(headers, rows, opts = {}) {
     const cols = headers.map((h) => {
       const w = words(h);
       const vals = rows.map((r) => r[h]).filter((v) => v !== '' && v != null);
@@ -167,10 +182,57 @@
     }
     // Anything still without a theme is grouped by keyword, or as "General".
     cols.filter((c) => c.role === 'rating' && !c.theme).forEach((c) => {
-      const k = DIM_KEYS.find(([, re]) => re.test(c.text));
-      c.theme = k ? { fair: 'Fairness & advancement', belong: 'Belonging & respect', voice: 'Voice & safety', mgr: 'My manager', growth: 'Growth', trust: 'Trust in follow-through', wellbeing: 'Wellbeing', engagement: 'Engagement' }[k[0]] : 'General';
+      const k = QUESTION_KEYS.find(([, re]) => re.test(c.text));
+      c.theme = k ? k[0] : 'General';
+      c.themeGuessed = true;
     });
+    // Themes chosen by the user on the Check screen always win.
+    const chosen = opts.themes || {};
+    cols.forEach((c) => { if (c.role === 'rating' && chosen[c.header]) { c.theme = chosen[c.header]; c.themeChosen = true; } });
     return cols;
+  }
+
+  // ---------------------------------------------------------------- Cleaning
+  // Rows that aren't real answers are removed before anything is counted, and the Check screen says how many:
+  //  - summary rows typed into Excel at the bottom ("Total", "Average") — one of these used to hide every rating question;
+  //  - exact duplicates (the same submission exported twice);
+  //  - empty responses (someone opened the survey but answered no rating question), including blank lines.
+  // Found by the Masakhane stress test (17 Oct 2026): 299 rows were counted as 299 responses, but only 295 were real.
+  const SUMMARY_ROW = /^(total|totals|grand total|sub-?total|average|mean|sum|count|n)$/i;
+  function cleanRows(headers, rows) {
+    const removed = { summary: 0, duplicates: 0, empty: 0 };
+    const seen = new Set();
+    let kept = rows.filter((r) => {
+      const vals = headers.map((h) => r[h] ?? '');
+      if (vals.every((v) => v === '')) { removed.empty++; return false; }
+      const first = vals.find((v) => v !== '');
+      if (SUMMARY_ROW.test(first)) { removed.summary++; return false; }
+      const key = JSON.stringify(vals);
+      if (seen.has(key)) { removed.duplicates++; return false; }
+      seen.add(key);
+      return true;
+    });
+    const ratingCols = detect(headers, kept).filter((c) => c.role === 'rating').map((c) => c.header);
+    if (ratingCols.length) {
+      kept = kept.filter((r) => {
+        if (ratingCols.some((h) => likert(r[h]) != null)) return true;
+        removed.empty++; return false;
+      });
+    }
+    return { rows: kept, removed, total: removed.summary + removed.duplicates + removed.empty };
+  }
+
+  // ---------------------------------------------------------------- Readiness
+  // Problems serious enough that VoiceBridge refuses to produce a report until they are fixed.
+  // Shivani's decision after the stress test (17 Oct 2026): a warning is too easy to ignore, so a mismatched
+  // headcount or a very small survey blocks the analysis instead of producing results that look trustworthy but aren't.
+  const MIN_RESPONSES = 20; // below 20, the organisation-wide margin of error is wider than ±22 points
+  function blockers(ds) {
+    const out = [];
+    const n = ds.respondents.length;
+    if (n < MIN_RESPONSES) out.push({ kind: 'too-few', n, min: MIN_RESPONSES });
+    if (ds.population && ds.population.issues && ds.population.issues.length) out.push({ kind: 'headcount', issues: ds.population.issues });
+    return out;
   }
 
   // ---------------------------------------------------------------- Dataset
@@ -220,12 +282,40 @@
           || hcHeaders.find((x) => (SEMANTICS.find(([s, re]) => s === g.semantic && re.test(x))));
         if (h) map[g.header] = h;
       });
+      // Check that the headcount uses the same labels as the survey before trusting it.
+      // Found by the Masakhane stress test (17 Oct 2026): a headcount saying "F"/"M" and "African" while the survey
+      // said "Female" and "Black African" gave groups a headcount of 0, which quietly switched off the silence test.
+      // Now: labels that differ only in capitals or spaces are matched; any other mismatch is reported on the
+      // Check screen and that column is not used for headcounts (rather than producing wrong response rates).
+      const norm = (v) => String(v ?? '').trim().replace(/\s+/g, ' ').toLowerCase();
+      const issues = [];
+      const canon = {};
+      Object.entries(map).forEach(([g, h]) => {
+        const col = groupCols.find((c) => c.header === g);
+        const surveyVals = [...new Set(respondents.map((r) => r.groups[g]))].filter((v) => v && !PREFER_NOT.test(v));
+        const byNorm = new Map(surveyVals.map((v) => [norm(v), v]));
+        const hcVals = [...new Set(headcountRows.map((p) => groupValue(col, String(p[h] ?? '').trim())))].filter((v) => v && !PREFER_NOT.test(v));
+        const hcNorm = new Set(hcVals.map(norm));
+        const missing = surveyVals.filter((v) => !hcNorm.has(norm(v)));
+        const hcOnly = hcVals.filter((v) => !byNorm.has(norm(v)));
+        canon[g] = (v) => byNorm.get(norm(v)) ?? v;
+        if (missing.length) { issues.push({ col: g, hcCol: h, kind: 'labels', missing, hcOnly: hcOnly.slice(0, 8) }); return; }
+        // More responses than people in a group means the headcount is incomplete or labelled differently.
+        const over = surveyVals.map((v) => ({
+          value: v,
+          responded: respondents.filter((r) => r.groups[g] === v).length,
+          headcount: headcountRows.filter((p) => norm(groupValue(col, String(p[h] ?? '').trim())) === norm(v)).length,
+        })).filter((x) => x.responded > x.headcount);
+        if (over.length) issues.push({ col: g, hcCol: h, kind: 'count', over });
+      });
+      issues.forEach((i) => { delete map[i.col]; });
       population = headcountRows.map((p) => {
         const groups = {};
-        Object.entries(map).forEach(([g, h]) => { groups[g] = groupValue(groupCols.find((c) => c.header === g), p[h]); });
+        Object.entries(map).forEach(([g, h]) => { groups[g] = canon[g](groupValue(groupCols.find((c) => c.header === g), String(p[h] ?? '').trim())); });
         return { groups };
       });
       population.mapped = Object.keys(map);
+      population.issues = issues;
     }
 
     const bySem = (s) => groupCols.find((g) => g.semantic === s);
@@ -234,7 +324,7 @@
       sem: {
         gender: bySem('gender')?.header, race: bySem('race')?.header, level: bySem('level')?.header,
         tenure: bySem('tenure')?.header, team: bySem('team')?.header, department: bySem('department')?.header,
-        division: bySem('division')?.header, age: bySem('age')?.header,
+        division: bySem('division')?.header, age: bySem('age')?.header, disability: bySem('disability')?.header,
       },
     };
   }
@@ -282,8 +372,11 @@
     const get = (s) => parts.find(([h]) => ds.sem[s] === h);
     const g = get('gender'), r = get('race'), l = get('level'), t = get('tenure');
     const places = parts.filter(([h]) => [ds.sem.department, ds.sem.division, ds.sem.team].includes(h));
-    const others = parts.filter(([h]) => ![ds.sem.gender, ds.sem.race, ds.sem.level, ds.sem.tenure, ds.sem.department, ds.sem.division, ds.sem.team, ds.sem.age].includes(h));
     const age = get('age');
+    // Disability reads as "with a disability" instead of "(Do you have a disability?: Yes)" (stress test, log row 6).
+    const dis = get('disability');
+    const disPhrase = dis ? (/^(yes|y|true|1)$/i.test(dis[1]) ? ' with a disability' : /^(no|n|false|0)$/i.test(dis[1]) ? ' without a disability' : null) : null;
+    const others = parts.filter(([h]) => ![ds.sem.gender, ds.sem.race, ds.sem.level, ds.sem.tenure, ds.sem.department, ds.sem.division, ds.sem.team, ds.sem.age, disPhrase ? ds.sem.disability : null].includes(h));
     let noun;
     if (g && r) noun = `${r[1]} ${PLURAL[g[1].toLowerCase()] || g[1]}`;
     else if (g) noun = cap(PLURAL[g[1].toLowerCase()] || g[1] + ' respondents');
@@ -292,7 +385,7 @@
     else if (t && !places.length) noun = t[1] === 'Under 1 year' ? 'People in their first year' : `People with ${t[1].toLowerCase()} of service`;
     else if (places.length) noun = `People in ${places[0][1]}`;
     else noun = 'People';
-    let tail = '';
+    let tail = disPhrase || '';
     if ((g || r) && l) tail += ` in ${l[1].toLowerCase()} roles`;
     if ((g || r || l || t) && places.length) tail += ` in ${places[0][1]}`;
     if ((g || r) && t) tail += t[1] === 'Under 1 year' ? ' in their first year' : ` with ${t[1].toLowerCase()} of service`;
@@ -324,29 +417,63 @@
   function strengthText(dim) { return STRENGTH[dim.key] || `are positive about ${topicOf(dim)}`; }
 
   // ---------------------------------------------------------------- Comments
-  const NAMES = /\b(Thandi|Sipho|Lerato|Pieter|Ayesha|Kagiso|Nomvula|Ravi|Johan|Zanele|Bongani|Priya|Megan|Tshepo|Fatima|Lwazi|Themba|Mandla|Naledi|Andile|Hendrik|Sarah|John|David|Michael|Thabo|Palesa|Riaan|Charl|Kobus|Nadia|Ashwin)\b/g;
+  // Common South African first names. Names that are also everyday words (Grace, Hope, Gift, Patience, Lucky…)
+  // are left out on purpose: removing them would also remove ordinary words from comments.
+  // No list can be complete, so the Check screen tells the user to read quotes before release.
+  const NAMES = new RegExp('\\b(' + [
+    'Thandi', 'Sipho', 'Lerato', 'Pieter', 'Ayesha', 'Kagiso', 'Nomvula', 'Ravi', 'Johan', 'Zanele', 'Bongani', 'Priya', 'Megan', 'Tshepo', 'Fatima',
+    'Lwazi', 'Themba', 'Mandla', 'Naledi', 'Andile', 'Hendrik', 'Sarah', 'John', 'David', 'Michael', 'Thabo', 'Palesa', 'Riaan', 'Charl', 'Kobus', 'Nadia', 'Ashwin',
+    // added after the Masakhane stress test (17 Oct 2026), which showed names outside this list slipping through
+    'Lindiwe', 'Thembi', 'Nokuthula', 'Sibusiso', 'Siyabonga', 'Sizwe', 'Ayanda', 'Lungile', 'Lungelo', 'Nandi', 'Thandeka', 'Zodwa', 'Zinhle', 'Busisiwe', 'Nompumelelo',
+    'Khanyisile', 'Ntombi', 'Nonhlanhla', 'Mbali', 'Sibongile', 'Phumzile', 'Lindani', 'Mthunzi', 'Musa', 'Mpho', 'Tumi', 'Tumelo', 'Kabelo', 'Karabo', 'Katlego',
+    'Lebogang', 'Lesego', 'Neo', 'Refilwe', 'Dineo', 'Boitumelo', 'Kgomotso', 'Masego', 'Onalenna', 'Tebogo', 'Thato', 'Bheki', 'Jabulani', 'Mlungisi', 'Vusi',
+    'Xolani', 'Zola', 'Zukisa', 'Anele', 'Asanda', 'Babalwa', 'Lulama', 'Nosipho', 'Siphesihle', 'Unathi', 'Vuyo', 'Yonela', 'Thulani', 'Nkosinathi',
+    'Reshma', 'Kavitha', 'Anisha', 'Sunil', 'Pravin', 'Kumar', 'Yusuf', 'Zaid', 'Aisha', 'Shabnam', 'Rashied', 'Waleed', 'Fadiel', 'Tasneem', 'Shireen',
+    'Marike', 'Annelie', 'Elmarie', 'Liezl', 'Marelize', 'Wilma', 'Jaco', 'Gerhard', 'Francois', 'Wikus', 'Henk', 'Danie', 'Ruan', 'Werner', 'Andries', 'Petrus',
+    'Kayla', 'Shaun', 'Jason', 'Kyle', 'Chantal', 'Lizelle', 'Natasha', 'Candice', 'Ashley', 'Bianca', 'Jessica', 'Nicole', 'Lauren', 'Ryan', 'Brandon', 'Dylan',
+    'Peter', 'Paul', 'James', 'Mark', 'Thomas', 'Joseph', 'Daniel', 'Mary', 'Elizabeth', 'Susan', 'Linda', 'Karen', 'Lisa', 'Emma', 'Anna',
+  ].join('|') + ')\\b', 'g');
+  const TITLE = '(?:Mr|Mrs|Ms|Miss|Dr|Prof|Mnr|Mev|Sisi|Bab[ae])';
   function redact(text, log) {
     let t = text;
+    if (log.id == null) log.id = 0;
     t = t.replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, () => { log.email++; return '[email removed]'; });
-    t = t.replace(/(\+27|\b0)\s?\d{2}[\s-]?\d{3}[\s-]?\d{4}\b/g, () => { log.phone++; return '[number removed]'; });
-    t = t.replace(/\b(supervisor|manager|boss|team leader|HOD|colleague)\s+([A-Z][a-z]+)\b/g, (m, role) => { log.name++; return `${role} [name]`; });
+    // South African ID numbers are 13 digits; any other long run of digits (account numbers etc.) is removed too.
+    t = t.replace(/\b\d{13}\b/g, () => { log.id++; return '[ID number removed]'; });
+    // Phone numbers: +27 82 555 0199, 082-555-0199, 0825550199, and landlines written as (011) 555 1234.
+    t = t.replace(/(\+27\s?\(?0?|\(0|\b0)\d{2}\)?[\s-]?\d{3}[\s-]?\d{4}\b/g, () => { log.phone++; return '[number removed]'; });
+    t = t.replace(/\b\d{9,}\b/g, () => { log.id++; return '[number removed]'; });
+    // A title followed by a name: "Mr Naidoo", "Dr. Pillay". The title stays so the sentence still reads.
+    t = t.replace(new RegExp(`\\b(${TITLE})\\.?\\s+[A-Z][a-zA-Z'’-]+`, 'g'), (m, title) => { log.name++; return `${title} [name]`; });
+    // A role followed by a name: "manager Thabo", "Supervisor Johan". Skips titles already handled above.
+    t = t.replace(new RegExp(`\\b(supervisor|manager|boss|team leader|HOD|colleague)\\s+(?!${TITLE}\\b)([A-Z][a-z]+)\\b`, 'gi'),
+      (m, role, name) => (/^[A-Z][a-z]+$/.test(name) && !/^(Is|Was|And|The|In|At|Of|Has|Had|Who|Does|Did|Will|Can|Should|Never|Always)$/.test(name) ? (log.name++, `${role} [name]`) : m));
     t = t.replace(NAMES, () => { log.name++; return '[name]'; });
     return t;
   }
+  // Comment themes from keyword rules. The first set of phrases was written for the Kumo sample; the stress test
+  // (17 Oct 2026) showed 43% of another company's comments landing in "Other", so each theme now also has general
+  // workplace wording, and five themes were added. The Kumo phrases are kept so the sample reads the same.
+  // These rules are still crude: for real data, the optional Claude theming reads comments properly.
   const THEMES = [
-    { key: 'promotion', label: 'Promotion and career paths', re: /promot|team leader post|supervisor post|criteria|career path|acting supervisor|to apply|what ready means|braai|trained three|future team leaders/i, dims: ['fair'] },
-    { key: 'shifts', label: 'Shifts, overtime and transport', re: /night shift|transport|overtime|late shifts?|after 10pm/i, dims: ['fair', 'belong'] },
-    { key: 'followthrough', label: 'Whether anything will change', re: /survey|nothing changed|never shared|believe it|hear back|box-ticking|the results|same problems/i, dims: ['trust'] },
-    { key: 'voice', label: 'Speaking up', re: /keep quiet|raise something|speak up|scared|decisions are made|just told|input is asked|raising concerns/i, dims: ['voice', 'mgr'] },
-    { key: 'treatment', label: 'How supervisors treat people', re: /speak to women|shouts?|safe raising problems|labelled as difficult|comments are made|laughs it off|nobody does anything/i, dims: ['mgr', 'voice', 'belong'] },
-    { key: 'development', label: 'Development and training', re: /develop|training|study further|learnership|courses|same position/i, dims: ['growth'] },
-    { key: 'pay', label: 'Pay and increases', re: /salary|\bpay\b|increase|grades|earn/i, dims: ['fair'] },
-    { key: 'workload', label: 'Workload and pressure', re: /peak season|short-staffed|after hours|too many systems|workload/i, dims: [] },
-    { key: 'inclusion', label: 'Inclusion, language and culture', re: /afrikaans|left out|two different companies|mould|culture|be myself|heritage/i, dims: ['belong'] },
-    { key: 'team', label: 'Team and colleagues', re: /my team|colleagues|family|support each other|makes time|approachable|listens|trusted to/i, dims: ['belong', 'mgr'] },
-    { key: 'facilities', label: 'Facilities', re: /canteen|parking/i, dims: [] },
+    { key: 'promotion', label: 'Promotion and career paths', re: /promot|team leader post|supervisor post|criteria|career path|acting supervisor|to apply|what ready means|braai|trained three|future team leaders|next step|move up|no clear way|skipped (me|over)|passed over|opportunit/i, dims: ['fair'] },
+    { key: 'shifts', label: 'Shifts, overtime and transport', re: /night shift|transport|overtime|late shifts?|after 10pm|\bshifts?\b|roster/i, dims: ['fair', 'belong'] },
+    { key: 'followthrough', label: 'Whether anything will change', re: /survey|nothing changed|never shared|believe it|hear back|box-ticking|the results|same problems|no change|nothing (ever )?changes|same as last year|shintsh/i, dims: ['trust'] },
+    { key: 'voice', label: 'Speaking up', re: /keep quiet|raise something|speak up|scared|decisions are made|just told|input is asked|raising concerns|nobody listens|not listened|not heard|niemand luister|gehoor|complain|victimi[sz]|don.t say anything|afraid/i, dims: ['voice', 'mgr'] },
+    { key: 'treatment', label: 'How supervisors treat people', re: /speak to women|shouts?|safe raising problems|labelled as difficult|comments are made|laughs it off|nobody does anything|talks to us like|like (we are )?children|disrespect|rude|humiliat|bull(y|ied|ying)|you people/i, dims: ['mgr', 'voice', 'belong'] },
+    { key: 'development', label: 'Development and training', re: /develop|training|study further|learnership|courses|same position|\bgrow\b|skills|mentor/i, dims: ['growth'] },
+    { key: 'pay', label: 'Pay and increases', re: /salary|\bpay\b|increase|grades|earn|inflation|bonus|wages?/i, dims: ['fair'] },
+    { key: 'workload', label: 'Workload and pressure', re: /peak season|short-staffed|after hours|too many systems|workload|exhausted|burn(ing|t)? ?out|pressure|targets|too much|tired|stress|khathele/i, dims: ['wellbeing'] },
+    { key: 'leave', label: 'Leave and time off', re: /\bleave\b|time off|days off|annual leave|sick leave/i, dims: ['wellbeing', 'fair'] },
+    { key: 'equity', label: 'Unequal treatment of groups', re: /\bwom[ae]n\b|ladies|the guys|men get|racis|discriminat|favouritism|favourites|treated differently|twice as hard/i, dims: ['fair', 'belong'] },
+    { key: 'access', label: 'Disability and accessibility', re: /wheelchair|accessib|disabilit|\bramps?\b|assistive|what i need to do my job/i, dims: ['belong'] },
+    { key: 'inclusion', label: 'Inclusion, language and culture', re: /afrikaans|left out|two different companies|mould|culture|be myself|heritage|invisible|a burden|don.t belong|language/i, dims: ['belong'] },
+    { key: 'team', label: 'Team and colleagues', re: /my team|colleagues|family|support each other|makes time|approachable|listens|trusted to|die span|my store/i, dims: ['belong', 'mgr'] },
+    { key: 'recognition', label: 'Recognition', re: /recogni[sz]|appreciat|thank|long service|noticed/i, dims: [] },
+    { key: 'communication', label: 'Communication from leadership', re: /communicat|not informed|nobody tells|no updates|kept in the dark/i, dims: ['trust'] },
+    { key: 'facilities', label: 'Facilities and systems', re: /canteen|parking|toilets?|equipment|aircon|uniforms?|systems|log ?in|computers?/i, dims: [] },
   ];
-  const POSITIVE = /has my back|like family|good colleagues|support each other|approachable|listens|trusted|appreciate|best one|improved|can be myself here|makes time|could not ask/i;
+  const POSITIVE = /has my back|like family|good colleagues|support each other|approachable|listens|trusted|appreciate|best one|improved|can be myself here|makes time|could not ask|lekker|helped me|span is goed/i;
 
   function codeComments(ds) {
     const log = { email: 0, phone: 0, name: 0 };
@@ -366,9 +493,53 @@
     return { all, themes, log };
   }
 
+  // ---------------------------------------------------------------- Similar comments
+  // Groups comments that say much the same thing in similar words, so "N people wrote something similar" is true.
+  // Deliberately cautious: comments join a group only if most of their meaningful words match, and a comment with
+  // "not/never/no" is never grouped with one without (so "my manager listens" and "my manager never listens" stay apart).
+  // It does not understand meaning; that is what "See all" is for: a person checks the grouping by eye.
+  const STOP = new Set('a an the and or but if so to of in on at for with by from as is are was were be been being am i me my we us our you your they them their it its this that these those there here what which who whom when where why how do does did done have has had having will would should could can may might must shall just very really also too more most much many some any all each every than then still even only about into over under again please get got make made'.split(' '));
+  const NEG = /^(not|no|never|nothing|nobody|none|cannot|without)$/;
+  function commentWords(text) {
+    const t = String(text).toLowerCase().replace(/[’']/g, "'").replace(/\bcan't\b/g, 'can not').replace(/n't\b/g, ' not');
+    const out = new Set();
+    t.split(/[^a-z]+/).forEach((w) => {
+      if (!w || STOP.has(w)) return;
+      if (NEG.test(w)) { out.add('not'); return; }
+      if (w.length < 3) return;
+      out.add(w.length > 5 ? w.replace(/(ing|ed|es|s)$/, '') : w.replace(/s$/, ''));
+    });
+    return out;
+  }
+  function commentsSimilar(A, B) {
+    if (A.has('not') !== B.has('not')) return false;
+    let inter = 0; A.forEach((w) => { if (B.has(w)) inter++; });
+    const content = inter - (A.has('not') ? 1 : 0);
+    if (content < 2) return false;
+    const union = A.size + B.size - inter, small = Math.min(A.size, B.size), large = Math.max(A.size, B.size);
+    // A short comment can't be swallowed by a much longer one that merely mentions the same words.
+    return inter / union >= 0.5 || (small >= 3 && small / large >= 0.6 && inter / small >= 0.8);
+  }
+  // items: [{ text, ... }]. Returns groups, largest first: { text (the most common wording), items: [...] }.
+  function similarGroups(items) {
+    const exact = new Map();
+    items.forEach((it) => { const k = String(it.text).trim(); if (!exact.has(k)) exact.set(k, []); exact.get(k).push(it); });
+    const uniq = [...exact.entries()].sort((x, y) => y[1].length - x[1].length || x[0].length - y[0].length);
+    const groups = [];
+    uniq.forEach(([text, its]) => {
+      const W = commentWords(text);
+      const g = groups.find((gr) => commentsSimilar(gr.words, W));
+      if (g) g.items.push(...its); else groups.push({ text, words: W, items: [...its] });
+    });
+    groups.sort((x, y) => y.items.length - x.items.length);
+    return groups.map((g) => ({ text: g.text, items: g.items }));
+  }
+
   function pickQuotes(comments, members, dimKey, n = 3) {
     const set = new Set(members);
-    const themeKeys = THEMES.filter((t) => t.dims.includes(dimKey)).map((t) => t.key);
+    // Themes mainly about this topic come first (e.g. accessibility before shifts for belonging), so the first quote fits best.
+    const linked = THEMES.filter((t) => t.dims.includes(dimKey));
+    const themeKeys = [...linked.filter((t) => t.dims[0] === dimKey), ...linked.filter((t) => t.dims[0] !== dimKey)].map((t) => t.key);
     const pool = comments.all.filter((c) => set.has(c.r) && !c.positive && c.themes.some((t) => themeKeys.includes(t)));
     const seen = new Set(); const out = [];
     // Prefer one quote per theme, then fill.
@@ -486,6 +657,18 @@
       const responded = c.kind === 'org' ? R.length : c.members.length;
       const conf = c.kind === 'org' ? { key: 'clear', label: 'Organisation-wide' } : confidence(c.z);
       let silence = null;
+      // When the silence test can't be run, say why instead of leaving it out silently.
+      let silenceNote = null;
+      if (!hc) {
+        if (!N) silenceNote = 'No headcount was added, so the silence test couldn’t be run for this finding.';
+        else if (ds.population) {
+          const cols = Object.keys(c.filter).filter((h) => !ds.population.mapped.includes(h));
+          const bad = cols.filter((h) => (ds.population.issues || []).some((i) => i.col === h));
+          silenceNote = bad.length
+            ? `The headcount’s ${bad.join(' and ')} labels don’t match the survey, so the silence test couldn’t be run for this group. Fix the headcount file and run it again.`
+            : `The headcount has no ${cols.join(' or ')} column, so the silence test couldn’t be run for this group.`;
+        }
+      }
       if (hc) {
         const nonresp = Math.max(0, hc - responded);
         silence = {
@@ -508,7 +691,7 @@
         label, headline: `${label} ${ct.plural}.`, ct,
         g: c.g, o: c.o, diff: c.diff, z: c.z, confidence: conf, score: c.score,
         ciG: wilson(c.g.fav, c.g.n), ciO: c.o ? wilson(c.o.fav, c.o.n) : null,
-        silence, items, ownerScope,
+        silence, silenceNote, items, ownerScope,
         quotes: c.members.length >= k ? pickQuotes(comments, c.members, c.dim.key) : [],
         breakdown: breakdown(ds, c, R, k),
       };
@@ -609,7 +792,17 @@
       if (stats.length >= 2) {
         const top = stats[0], bottom = stats[stats.length - 1];
         const gap = top.avg - bottom.avg;
-        if (gap >= 0.15) perception = { top, bottom, gap, dims: ds.dims.map((d, i) => ({ dim: d, top: top.per[i].p, bottom: bottom.per[i].p })) };
+        // The gap must also be more than chance: compare the share of people who are positive overall
+        // (their average across all themes is 3.5 or more) at the top and bottom levels with the same z-test
+        // used for findings. Stress test (17 Oct 2026): a 10-person senior group triggered a gap that wasn't there.
+        const overallPos = (list) => {
+          let n = 0, fav = 0;
+          list.forEach((r) => { const vs = ds.dims.map((d) => r.scores[d.key]).filter((v) => v != null); if (vs.length) { n++; if (vs.reduce((a2, b2) => a2 + b2, 0) / vs.length >= FAV) fav++; } });
+          return { n, fav };
+        };
+        const t = overallPos(members({ [ds.sem.level]: top.v })), b = overallPos(members({ [ds.sem.level]: bottom.v }));
+        const z = ztest(t.fav, t.n, b.fav, b.n);
+        if (gap >= 0.15 && z >= 2) perception = { top, bottom, gap, z, dims: ds.dims.map((d, i) => ({ dim: d, top: top.per[i].p, bottom: bottom.per[i].p })) };
       }
     }
 
@@ -637,8 +830,9 @@
       cell: (filter, dimKey) => { const mem = members(filter); const t = tally(mem, dimKey); return { ...t, members: mem, suppressed: t.n < k }; },
       itemCell: (filter, itemId) => itemFav(members(filter), itemId),
       headcount,
-      representation: (attr, val, scope) => representation(ds, attr, val, scope),
-      quotesFor: (mem, dimKey) => (mem.length >= k ? pickQuotes(comments, mem, dimKey) : []),
+      representation: (attr, val, scope) => representation(ds, attr, val, scope, k),
+      // n: how many different comments to return (3 by default; "See all" asks for every one).
+      quotesFor: (mem, dimKey, n) => (mem.length >= k ? pickQuotes(comments, mem, dimKey, n || 3) : []),
     };
 
     function itemFav(list, id) {
@@ -673,17 +867,21 @@
     return rows;
   }
 
-  function representation(ds, attr, val, scope) {
+  function representation(ds, attr, val, scope, k = 5) {
     if (!ds.population || !ds.population.mapped.includes(attr) || !ds.sem.level) return null;
     const lvlCol = ds.sem.level;
     let pop = ds.population;
     if (scope) pop = pop.filter((p) => Object.entries(scope).every(([h, v]) => p.groups[h] === v));
-    const levels = [...new Set(pop.map((p) => p.groups[lvlCol]))];
+    if (!pop.length) return null;
+    const levels = [...new Set(pop.map((p) => p.groups[lvlCol]))].filter(Boolean);
+    // Who counts as a manager (unchanged), and a finer order for display: top, senior, middle, junior, skilled, semi-skilled, unskilled.
     const order = (s) => (/senior|executive|top/i.test(s) ? 0 : /middle|manage|professional/i.test(s) ? 1 : /semi|unskilled|general/i.test(s) ? 3 : 2);
-    levels.sort((a, b) => order(a) - order(b));
+    const rank = (s) => (/top|executive|c-suite|board/i.test(s) ? 0 : /senior/i.test(s) ? 1 : /middle/i.test(s) ? 2 : /junior|manage|supervis|professional/i.test(s) ? 3 : /semi/i.test(s) ? 5 : /unskilled|general|elementary/i.test(s) ? 6 : 4);
+    levels.sort((a, b) => rank(a) - rank(b));
+    // A level with fewer than k people is hidden: its share would point to individuals (round 4, 20 October).
     const rows = levels.map((l) => {
       const at = pop.filter((p) => p.groups[lvlCol] === l);
-      return { level: l, n: at.length, share: at.length ? at.filter((p) => p.groups[attr] === val).length / at.length : 0 };
+      return { level: l, n: at.length, hidden: at.length < k, share: at.length ? at.filter((p) => p.groups[attr] === val).length / at.length : 0 };
     }).filter((r) => r.n > 0);
     const overall = pop.filter((p) => p.groups[attr] === val).length / pop.length;
     const mgmt = pop.filter((p) => order(p.groups[lvlCol]) <= 1);
@@ -703,7 +901,9 @@
     }
     const keys = focus.map((f) => f.dim.key);
     let second = 'Some groups are having a very different experience';
-    if (keys.includes('trust') && (keys.includes('fair') || keys.includes('growth'))) second = 'They don’t yet trust the system';
+    // Only claim a different experience when there is a finding to back it (stress test, edge4: 8 people, no findings).
+    if (!focus.length) second = 'Nothing stands out strongly enough to act on yet';
+    else if (keys.includes('trust') && (keys.includes('fair') || keys.includes('growth'))) second = 'They don’t yet trust the system';
     else if (keys.includes('trust')) second = 'They don’t believe anything will change';
     else if (keys.includes('voice') || keys.includes('mgr')) second = 'Not everyone feels safe to say so';
     return `${first}. ${second}.`;
@@ -721,7 +921,7 @@
 
   function pct(p) { return p == null ? '–' : Math.round(p * 100) + '%'; }
 
-  const api = { parseCSV, detect, buildDataset, analyze, wilson, ztest, moe, pct, likert, redact, groupLabel, concernText, topicOf, THEMES, PREFER_NOT };
+  const api = { similarGroups, commentWords, parseCSV, cleanRows, blockers, MIN_RESPONSES, QUESTION_KEYS, detect, buildDataset, analyze, wilson, ztest, moe, pct, likert, redact, groupLabel, concernText, topicOf, THEMES, PREFER_NOT };
   root.VB_ENGINE = api;
   if (typeof module !== 'undefined') module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);
