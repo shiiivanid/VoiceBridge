@@ -11,6 +11,7 @@ const head = `<title>VoiceBridge</title>
 const body = `<div id="app"></div>
 <script>${r('data.js')}</script>
 <script>${r('engine.js')}</script>
+<script>${r('intake.js')}</script>
 <script>${r('guidance.js')}</script>
 <script>${r('app.js')}</script>`;
 writeFileSync(new URL('./dist/artifact.html', import.meta.url), head + '\n' + body + '\n');

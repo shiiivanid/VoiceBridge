@@ -68,3 +68,33 @@ Shivani's answers to the six open questions from the handout (HANDOFF.md, sectio
 **Decision.** The start screen lists what a file needs (1–5 scale, theme tags, consistent labels, at least 20 responses, a matching headcount), with downloadable templates.
 
 **Why.** Users should know the rules before uploading rather than discovering them through errors, and the report can only be as reliable as the data it gets.
+
+## 10. Every file is read correctly or refused with a reason (21 October)
+
+**Decision.** VoiceBridge never produces a report from data it has misread. Every change it makes to a file is listed on the Check screen. Anything it can't read correctly is refused, with a message naming the row, column or question and saying how to fix it.
+
+**Why.** Testing 75 awkward files showed 12 cases where the report looked trustworthy but was built on misread data (one stray quote mark made it read 39 people instead of 388). For a tool whose purpose is to make leaders trust and act on findings, a confident wrong report is worse than a clear refusal.
+
+## 11. A 0–4 scale is converted; 1–7 and 1–10 scales are refused (21 October)
+
+**Decision.** Answers coded 0–4 are read as 1–5 (0 = Strongly disagree … 4 = Strongly agree), and the Check screen says so. Seven- and ten-point scales are still refused, as decided in round 2, now with a message that names the scale.
+
+**Why.** A 0 can't appear on a 1–5 scale, so a survey with 0s and no 5s can only be 0–4: shifting it is exact, not a guess. Converting a 7- or 10-point scale would change what "positive" means.
+
+## 12. Excel files are read directly (21 October)
+
+**Decision.** VoiceBridge reads .xlsx workbooks as well as CSV, including the filled-in VoiceBridge template (survey and headcount in one workbook).
+
+**Why.** Microsoft Forms, the most common survey tool in South African companies, only exports Excel. Asking HR to convert files first is a step where data gets damaged (the commonest cause of the broken files in the sweep). The reader is built into the page, so the file still never leaves the browser.
+
+## 13. A few unreadable answers are ignored and listed; many are refused (21 October)
+
+**Decision.** If at most 20% of a question's answers can't be read (for example "Agre" or "6"), those answers are treated as unanswered and listed on the Check screen. Above 20%, VoiceBridge refuses the file and names the question.
+
+**Why.** One typo shouldn't stop a whole survey, but a question that is mostly unreadable would give a misleading result. 20% is a judgement call.
+
+## 14. A release locks its settings (21 October)
+
+**Decision.** Once results are released, the anonymity threshold and theme choices used are locked. Changing them means starting a new release, which removes the old one after a confirmation.
+
+**Why.** The release promises that findings can't be quietly edited. Without the lock, someone could change a setting after release and the "locked" findings would shift.

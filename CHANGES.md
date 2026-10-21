@@ -199,7 +199,7 @@ Shivani tested a new fictional company (Thembeka Health, `../Thembeka test data`
 
 **What Shivani asked.** Keep "N people wrote something similar" (not "wrote this"), and add a **See all** under each quote that lists all N comments, for accuracy and human checking.
 
-**What was wrong underneath.** The app only ever counted *word-for-word identical* comments, so "something similar" was really "exactly the same". In the synthetic test companies that looked fine, because the generators reuse sentences. In real data (the the real-data file comments, for example) people almost never write the identical sentence, so similar comments were never counted together.
+**What was wrong underneath.** The app only ever counted *word-for-word identical* comments, so "something similar" was really "exactly the same". In the synthetic test companies that looked fine, because the generators reuse sentences. In real data (the real-data file’s comments, for example) people almost never write the identical sentence, so similar comments were never counted together.
 
 **Fix 19: group comments that say much the same thing in similar words** (`similarGroups()` in `src/engine.js`). The rule is deliberately cautious:
 - two comments join only if most of their meaningful words match;
@@ -212,4 +212,88 @@ It matches words, not meaning, which is why every group can be opened and checke
 
 **Checks.** Results snapshot identical (`after-9-similar-comments.txt`): grouping changes how comments are displayed, never a number. `test/round5.cjs` now has 20 checks, including the hand-made pairs above and that "See all N" lists exactly N comments. All other suites pass (30, 42, 25, 23).
 
-**AI-use log line:** I asked for "see all" on similar comments. Claude pointed out that the app had only been counting identical comments, so "similar" wasn't true on real data. It added cautious similarity grouping, checked it on five sets of comments including the real the real-data file ones (where it found and fixed a wrong merge), and made every group open for a person to check.
+**AI-use log line:** I asked for "see all" on similar comments. Claude pointed out that the app had only been counting identical comments, so "similar" wasn't true on real data. It added cautious similarity grouping, checked it on five sets of comments including the real-data file’s comments (where it found and fixed a wrong merge), and made every group open for a person to check.
+
+## Edge-case round: every kind of file (21 October 2026)
+
+**Where this came from.** Before Demo Day, every behaviour of the app was tested against files a real HR team might upload by mistake. 75 deliberately awkward files were run through the app from upload to the employee page: wrong formats, damaged files, other scales, other survey tools' layouts, odd labels, very large files, and script code hidden in answers.
+
+**What the sweep found.** The app never crashed, froze or showed hidden script code. But for 12 files it produced a believable report from data it had misread, without any warning:
+
+| What was uploaded | What the app did before this round |
+|---|---|
+| One unclosed quote mark in row 40 | Read 39 people instead of 388 |
+| Some rows with missing cells | Dropped 55 people as "empty responses" |
+| A few typos in a question ("6", "Agre") | Turned that question into a way of grouping people |
+| Answers as decimals (3.5) | Same: the question became a grouping column |
+| A 0–4 scale | Moved 3 questions into grouping columns and read the rest on the wrong scale |
+| No header row | Used the first person's answers as question names |
+| Two columns with the same name | Lost one question |
+| A question nobody answered | Left it out without saying so |
+| The survey uploaded as the headcount | Reported a 100% response rate |
+| "F", "female" and "Female" in one survey | Counted three different groups |
+| A leader's response made of spaces | Showed employees "Plan shared" |
+| A different survey with the same organisation name and size | Could load the other survey's release |
+
+It also refused files it could have read (Excel workbooks, which is the only format Microsoft Forms exports; Qualtrics' "Somewhat agree"; "5 - Strongly agree"; title lines above the header), and gave misleading messages for others (a PDF was "empty"; a 1–7 scale had "no rating questions").
+
+**The rule now.** Every file is either read correctly, with every change listed on the Check screen, or refused with a message that says what happened, why it matters and exactly what to change (naming the row, column or question).
+
+**Fix 21: a new file reader** (`src/intake.js`). It runs before the analysis and hands it a clean table; the statistics in `engine.js` did not change.
+- **File types:**
+  - Reads CSV with commas, semicolons, tabs or pipes, in UTF-8, UTF-16 ("Unicode text") or the older Windows format.
+  - Reads Excel workbooks (.xlsx) directly, with no outside code: a built-in reader unzips the workbook in the browser.
+  - The filled-in VoiceBridge Excel template gives both the survey and the headcount from its two sheets.
+  - Refuses PDFs, pictures, Word files, old .xls files, JSON and web pages, naming what the file is and how to export the right one.
+- **Layout:**
+  - Skips title lines above the column names.
+  - Uses the question wording in Qualtrics exports and skips their extra heading rows.
+  - Skips SurveyMonkey's second heading row.
+  - Names blank columns ("Column D") and renames repeated ones ("… (2)") so nothing is lost.
+- **Damage:**
+  - Refuses a file with a stray quote mark, naming the line.
+  - Refuses a file whose rows have shifted into the wrong columns.
+  - Ignores a few stray values after the last column, and says so.
+  - Refuses a file whose first row is answers rather than column names.
+- **Answers:**
+  - Reads the same five points in other wordings: "Somewhat agree", "Agree strongly", "5 - Strongly agree", "Strongly agree (5)", "4.0", lower case and stray spaces, and Afrikaans.
+  - Treats "N/A", "Don’t know" and "Prefer not to say" as unanswered.
+  - Converts a 0–4 scale to 1–5 and says so.
+  - Refuses 1–7 and 0–10 scales, yes/no questions and averages, each with its own message.
+  - Treats a few unreadable answers as unanswered and lists them.
+  - Refuses a question with too many unreadable answers, naming it.
+  - Lists questions that nobody answered.
+- **Labels:**
+  - Treats "female", "FEMALE " and "Female" as one group, and says so.
+  - Asks the user to check when a column mixes codes like "F" with labels like "Woman". These are not merged automatically, consistent with decision 7.
+- **Two files at once:**
+  - Tells the survey and the headcount apart by their content.
+  - Refuses two surveys, three files, or a survey in the headcount box.
+  - A survey's error message stays on screen when a headcount is added afterwards.
+
+**Fix 22: "How VoiceBridge read your file"** on the Check screen lists every change in plain sentences, and a "Please check" box shows anything the user should look at.
+
+**Fix 23: a safety net.** If anything unexpected goes wrong, the page says so in plain words and offers "Go back to the start". It no longer freezes or goes blank. The files stay loaded, and nothing is sent anywhere.
+
+**Fix 24: releases are tied to their data and settings.**
+- Saved release state belongs to the exact survey and headcount files, not to the organisation name and number of responses.
+- After release, the anonymity threshold and theme choices used for that release are locked, so the published findings can't change quietly.
+- "Start a new release" removes the release, after the user confirms, and unlocks them.
+
+**Fix 25: leader responses must have words in them.** A response made only of spaces is refused with a message, instead of showing employees "Plan shared".
+
+**Smaller fixes:**
+- Microsoft Forms fills the Email column with "anonymous". This is now shown as "Empty or ‘anonymous’ · not used", instead of "388 email addresses removed" with advice about collecting emails.
+- Re-choosing the same file in the file picker works.
+- The page warns if the browser can't save the release (private browsing).
+
+**Checks.**
+- `test/edge.mjs` has 94 checks and runs the real app code, from upload to the employee page, in a simulated browser.
+  - **Part 1:** the Kumo survey saved 33 different ways, including CSV variants, encodings, Excel (with Microsoft Forms and template layouts), Qualtrics, SurveyMonkey and every answer wording. Each must produce exactly the same report as the built-in Kumo sample. All 33 do.
+  - **Part 2:** 49 broken or unusual files, each with the exact message or note it must produce.
+  - **Part 3:** release locks, blank responses, saved state per file, and the safety net.
+- All earlier checks still pass: 30 original, 42 stress-test and 20 on-screen.
+- The result snapshot for every test dataset is identical to before this round, so no number changed.
+- The new reader was then tested in Chrome with real files, including the Excel files.
+
+**AI-use log line:** I asked for every behaviour to be tested against wrongly formatted and broken files, so the app never fails in front of a user. Claude generated 75 awkward files and found 12 that produced believable but wrong reports without a warning (for example, one stray quote mark made it read 39 people instead of 388). It wrote a file reader that either reads a file correctly, saying what it changed, or refuses it with a specific fix. It then proved, with 94 automatic checks and a run in a real browser, that 33 correct formats give identical results and every broken file is caught. Two of its own fixes were wrong at first (Excel dates mistaken for averages; adding a headcount hid the survey's error message), and the checks caught both.

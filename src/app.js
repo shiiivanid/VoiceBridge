@@ -1,6 +1,6 @@
 /* VoiceBridge app: screens, state and interactions. */
 (function () {
-  const D = window.VB_DATA, E = window.VB_ENGINE, G = window.VB_GUIDE;
+  const D = window.VB_DATA, E = window.VB_ENGINE, G = window.VB_GUIDE, IN = window.VB_INTAKE;
   const pct = E.pct;
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -51,9 +51,21 @@
     error: null,
   };
   const LEADERS = () => (S.sample ? D.leaders : {});
-  const storeKey = () => 'vb:' + (S.ds ? fingerprint(S.ds.respondents.length + ':' + S.meta.org + ':' + S.ds.dims.map((d) => d.key).join()) : 'none');
-  function load() { try { const v = JSON.parse(localStorage.getItem(storeKey()) || 'null'); if (v) S.store = Object.assign({ release: null, responses: {}, conf: {} }, v); } catch (e) { /* storage unavailable */ } }
-  function save() { try { localStorage.setItem(storeKey(), JSON.stringify(S.store)); } catch (e) { /* storage unavailable */ } }
+  // Saved release state belongs to one exact pair of files: a different survey never picks up another's release.
+  function dataKey() {
+    const r = S.files.responses, h = S.files.headcount;
+    if (!r) return 'none';
+    if (!r.key) r.key = fingerprint(JSON.stringify([r.headers, r.rows.map((x) => r.headers.map((k) => x[k]))]));
+    const hk = h ? (h.key || (h.key = fingerprint(JSON.stringify([h.headers, h.rows.length, h.rows.slice(0, 50)])))) : '-';
+    return r.key + '/' + hk;
+  }
+  const storeKey = () => 'vb2:' + dataKey();
+  function load() {
+    S.store = { release: null, responses: {}, conf: {} };
+    try { const v = JSON.parse(localStorage.getItem(storeKey()) || 'null'); if (v) S.store = Object.assign({ release: null, responses: {}, conf: {} }, v); }
+    catch (e) { S.storageFailed = true; }
+  }
+  function save() { try { localStorage.setItem(storeKey(), JSON.stringify(S.store)); S.storageFailed = false; } catch (e) { S.storageFailed = true; } }
 
   function fingerprint(str) {
     let h1 = 0x811c9dc5, h2 = 0x1234567;
@@ -77,9 +89,25 @@
   // ------------------------------------------------------------ Render root
   function render() {
     const app = $('#app');
-    app.innerHTML = bar() + `<main id="main">${SCREENS[S.screen]()}</main>`;
-    after[S.screen] && after[S.screen]();
+    try {
+      app.innerHTML = bar() + `<main id="main">${SCREENS[S.screen]()}</main>`;
+      after[S.screen] && after[S.screen]();
+    } catch (e) { showProblem(e); }
   }
+  // Safety net: if anything unexpected goes wrong, the page says so plainly instead of freezing or going blank.
+  // The files stay loaded, and nothing has been sent anywhere.
+  function showProblem(e) {
+    try { console.error('VoiceBridge:', e); } catch (x) { /* no console */ }
+    const app = $('#app');
+    app.innerHTML = `<div class="wrap"><section class="check"><div class="hc-warn" role="alert">
+      <h3>${I.wait} Something went wrong on this screen</h3>
+      <p>VoiceBridge hit a problem it didn’t expect. Your files are still loaded in this browser and nothing has been sent anywhere.</p>
+      <p class="faint" style="font-size:13px">Technical detail: ${esc(String((e && e.message) || e)).slice(0, 300)}</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px"><button class="btn btn-primary btn-sm" data-act="home">Go back to the start</button><button class="btn btn-ghost btn-sm" data-act="retry">Try again</button></div>
+    </div></section></div>`;
+  }
+  window.addEventListener('error', (e) => { if (e && e.error) showProblem(e.error); });
+  window.addEventListener('unhandledrejection', (e) => showProblem(e && e.reason));
 
   function bar() {
     const steps = [['results', 'Results', 1], ['release', 'Release', 2], ['follow', 'Follow-through', 3]];
@@ -92,6 +120,12 @@
         return `<button data-go="${k}" ${S.screen === k || (S.screen === 'employees' && k === 'release') ? 'aria-current="page"' : ''}><span class="n ${done ? 'done' : ''}">${done ? I.check : n}</span>${l}</button>`;
       }).join('')}</nav>` : ''}
     </div></header>`;
+  }
+
+  // A refusal says what happened, why it matters and what to do, in that order.
+  function errorBox(err) {
+    if (typeof err === 'string') return `<p class="err" role="alert">${esc(err)}</p>`;
+    return `<div class="err-box" role="alert"><b>${esc(err.title)}</b><p>${esc(err.detail)}</p>${err.fix ? `<p><b>What to do:</b> ${esc(err.fix)}</p>` : ''}</div>`;
   }
 
   // ------------------------------------------------------------ Start
@@ -117,14 +151,16 @@
       <div class="card drop">
         <label class="dropzone" id="dz-resp" for="f-resp">
           <span style="color:var(--accent)">${I.up}</span>
-          ${r ? `<span class="file-ok">${I.check} ${esc(r.name)} <button type="button" class="file-x" data-act="remove-file" data-k="responses" aria-label="Remove ${esc(r.name)}" title="Remove this file">${I.x}</button></span><span class="faint">${E.cleanRows(r.headers, r.rows).rows.length} responses</span>` : `<span class="big">Drop your survey export here</span><span class="faint">You can drop the headcount file at the same time</span><span class="faint">CSV from Microsoft Forms, Google Forms, Qualtrics or SurveyMonkey</span>`}
-          <input id="f-resp" type="file" accept=".csv,text/csv" class="sr">
+          ${r ? `<span class="file-ok">${I.check} ${esc(r.name)} <button type="button" class="file-x" data-act="remove-file" data-k="responses" aria-label="Remove ${esc(r.name)}" title="Remove this file">${I.x}</button></span><span class="faint">${E.cleanRows(r.headers, r.rows).rows.length} responses</span>` : `<span class="big">Drop your survey export here</span><span class="faint">You can drop the headcount file at the same time</span><span class="faint">CSV or Excel from Microsoft Forms, Google Forms, Qualtrics or SurveyMonkey</span>`}
+          <input id="f-resp" type="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" class="sr">
         </label>
         <div class="hc-row">
           ${h ? `${I.check}<span>Headcount: <b>${esc(h.name)}</b> (${h.rows.length} people)</span><button type="button" class="file-x" data-act="remove-file" data-k="headcount" aria-label="Remove ${esc(h.name)}" title="Remove this file">${I.x}</button>` : `<span>Add a headcount file so response rates can be checked for every group.</span><label class="btn-quiet" for="f-hc" style="cursor:pointer">Add headcount</label>`}
-          <input id="f-hc" type="file" accept=".csv,text/csv" class="sr">
+          <input id="f-hc" type="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" class="sr">
         </div>
-        ${S.error ? `<p class="err" role="alert">${esc(S.error)}</p>` : ''}
+        ${S.reading ? `<p class="faint" role="status">Reading ${esc(S.reading)}…</p>` : ''}
+        ${S.error ? errorBox(S.error) : ''}
+        ${S.info ? `<p class="tip" role="status">${I.info}<span>${esc(S.info)}</span></p>` : ''}
         ${r ? `<button class="btn btn-primary btn-lg" data-act="to-check">Continue ${I.arrow}</button>` : ''}
         <div class="or">or</div>
         <button class="sample" data-act="sample">
@@ -142,8 +178,8 @@
   // so people know the rules before they upload rather than finding out from an error.
   function needsCard() {
     const need = [
-      ['One row per person, saved as CSV', 'Export from Microsoft Forms, Google Forms, Qualtrics or SurveyMonkey, or save from Excel as CSV. Delete any “Total” or “Average” rows.'],
-      ['Rating questions on a 1–5 agreement scale', 'Strongly disagree, Disagree, Neither agree nor disagree, Agree, Strongly agree, or the numbers 1–5. Other scales (1–7, 1–10, yes/no) can’t be read yet.'],
+      ['One row per person, as CSV or Excel', 'Export from Microsoft Forms, Google Forms, Qualtrics or SurveyMonkey and upload it as it is. Excel workbooks (.xlsx) and CSV files both work. “Total” or “Average” rows are removed automatically.'],
+      ['Rating questions on a 1–5 agreement scale', 'Strongly disagree, Disagree, Neither agree nor disagree, Agree, Strongly agree (other wordings such as “Somewhat agree” work too), or the numbers 1–5. Answers coded 0–4 are converted. Other scales (1–7, 1–10, yes/no) can’t be read.'],
       ['Each question tagged with its theme', 'Put the theme in square brackets at the start, e.g. “[Belonging] I can be myself at work”, with at least two questions per theme. Untagged questions can be sorted into themes on the next screen.'],
       ['Columns that describe people', 'For example Department, Gender, Race, Occupational level, Length of service. Spell each label the same way every time (always “Female”, never a mix of “F” and “Female”).'],
       [`At least ${E.MIN_RESPONSES} responses`, 'Fewer than that and the results are too uncertain to report, and people could be recognised. Any group smaller than 5 is hidden.'],
@@ -189,37 +225,86 @@
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
-  function readFile(file, kind) {
-    const fr = new FileReader();
-    fr.onload = () => {
-      const parsed = E.parseCSV(String(fr.result));
-      S.error = null;
-      if (!parsed.rows.length) { S.error = `${file.name} looks empty. Export it again as CSV with one row per person.`; return render(); }
-      // Dropped files are told apart by content: the one with rating answers is the survey.
-      // Clean first (summary rows, duplicates, empty answers), so a "Total" row at the bottom can't hide the rating questions.
-      const cleaned = E.cleanRows(parsed.headers, parsed.rows);
-      if (kind === 'auto') kind = E.detect(parsed.headers, cleaned.rows).some((c) => c.role === 'rating') ? 'responses' : 'headcount';
-      if (kind === 'responses') {
-        const cols = E.detect(parsed.headers, cleaned.rows);
-        if (!cols.some((c) => c.role === 'rating')) { S.error = `We couldn’t find rating questions in ${file.name}. VoiceBridge needs answers on a 1–5 scale (numbers, or Strongly disagree to Strongly agree).`; return render(); }
-        S.files.responses = { name: file.name, ...parsed };
-        S.sample = false; S.a = null; S.themeOverrides = {};
-        const guess = file.name.replace(/\.csv$/i, '').split(/[_\s-]+/)[0] || 'Your organisation';
-        S.meta = { org: guess.charAt(0).toUpperCase() + guess.slice(1), survey: 'Employee survey', period: '' };
-      } else {
-        S.files.headcount = { name: file.name, ...parsed };
-        // A corrected headcount uploaded on the Check screen is matched again straight away.
-        if (S.screen === 'check' && S.files.responses) prepare();
-      }
-      render();
-    };
-    fr.onerror = () => { S.error = `We couldn’t read ${file.name}. Try saving it again as CSV.`; render(); };
-    fr.readAsText(file);
+  // Reading uploads. Every file goes through intake.js, which reads CSV and Excel, fixes what is safe to fix,
+  // and refuses (with a reason and a fix) what it can't read correctly. Nothing leaves the browser.
+  async function fileBytes(file) {
+    if (typeof file.arrayBuffer === 'function') return new Uint8Array(await file.arrayBuffer());
+    if (file.bytes) return file.bytes;                                      // test harness
+    if (typeof file.text === 'string') return new TextEncoder().encode(file.text);
+    return new Uint8Array(await new Promise((res, rej) => { const fr = new FileReader(); fr.onload = () => res(fr.result); fr.onerror = () => rej(fr.error); fr.readAsArrayBuffer(file); }));
   }
-
+  const README = /read ?me|instructions|notes|about|help/i;
+  // slot: 'responses' (survey box), 'headcount' (headcount box) or 'auto' (several files dropped at once).
+  function readFiles(list, slot) {
+    const job = (async () => {
+      if (slot !== 'headcount' || S.errorSlot === 'headcount') S.error = null;
+      S.info = null; S.reading = list.map((f) => f.name).join(' and '); render();
+      const before = S.error;
+      try {
+        const sheets = [];
+        for (const f of list) {
+          const res = await IN.read(await fileBytes(f), f.name);
+          if (!res.ok) { S.error = res.error; return; }
+          res.sheets.filter((sh) => !(res.sheets.length > 1 && README.test(sh.name))).forEach((sh) => sheets.push({ ...sh, file: f.name, format: res.format, label: res.sheets.length > 1 ? `the “${sh.name}” sheet of “${f.name}”` : `“${f.name}”`, survey: IN.isSurvey(sh) }));
+        }
+        const surveys = sheets.filter((x) => x.survey), others = sheets.filter((x) => !x.survey);
+        const useSurvey = (x) => {
+          const p = IN.prepareSurvey(x, x.label);
+          if (!p.ok) { S.error = p.error; return false; }
+          S.files.responses = { name: x.file + (x.label.startsWith('the') ? ` (${x.name} sheet)` : ''), headers: p.headers, rows: p.rows, notes: p.notes, warnings: p.warnings, format: x.format };
+          S.sample = false; S.a = null; S.themeOverrides = {};
+          const guess = x.file.replace(/\.(csv|tsv|txt|xlsx)$/i, '').split(/[_\s-]+/)[0] || 'Your organisation';
+          S.meta = { org: guess.charAt(0).toUpperCase() + guess.slice(1), survey: 'Employee survey', period: '' };
+          return true;
+        };
+        const useHeadcount = (x) => {
+          const p = IN.prepareHeadcount(x, x.label);
+          if (!p.ok) { S.error = p.error; return false; }
+          S.files.headcount = { name: x.file + (x.label.startsWith('the') ? ` (${x.name} sheet)` : ''), headers: p.headers, rows: p.rows, notes: p.notes, warnings: p.warnings };
+          return true;
+        };
+        if (slot === 'headcount') {
+          if (surveys.length) { S.error = { title: `${cap(surveys[0].label)} looks like a survey file, not a headcount`, detail: 'It has answers to rating questions. A headcount lists everyone who was invited, with their department, gender and so on, and no answers.', fix: 'Put the survey export in the survey box, and a headcount (or nothing) in the headcount box.' }; return; }
+          if (others.length > 1) { S.error = { title: 'That workbook has more than one sheet of people', detail: `VoiceBridge found ${others.length} sheets (${others.map((x) => `“${x.name}”`).join(', ')}) and can’t tell which is the headcount.`, fix: 'Keep only the headcount sheet, or save it as its own CSV file.' }; return; }
+          if (useHeadcount(others[0]) && S.screen === 'check' && S.files.responses) prepare();
+          return;
+        }
+        if (surveys.length > 1) {
+          S.error = { title: 'More than one survey file', detail: `${surveys.map((x) => cap(x.label)).join(' and ')} all contain survey answers. VoiceBridge reports on one survey at a time.`, fix: 'Upload one survey export, plus its headcount if you have one. To combine two exports, paste them into one file first.' };
+          return;
+        }
+        if (!surveys.length) {
+          if (slot === 'auto' && list.length > 1) { S.error = { title: 'None of those files has survey answers', detail: `VoiceBridge couldn’t find rating questions in ${list.map((f) => `“${f.name}”`).join(' or ')}.`, fix: 'Check that one of them is the survey export (one row per person, with answers from Strongly disagree to Strongly agree).' }; return; }
+          if (slot === 'auto' && others.length === 1 && S.files.responses) { useHeadcount(others[0]); return; }
+          const p = IN.prepareSurvey(others[0], others[0].label);
+          S.error = p.ok ? null : { ...p.error, fix: p.error.fix + (p.error.code === 'norating' ? ' If this is the headcount file, add it with “Add headcount” instead.' : '') };
+          return;
+        }
+        if (others.length > 1) { S.error = { title: 'Too many files', detail: `VoiceBridge needs one survey export and, optionally, one headcount, but got ${sheets.length}: ${sheets.map((x) => x.label).join(', ')}.`, fix: 'Upload just the survey and its headcount.' }; return; }
+        if (!useSurvey(surveys[0])) return;
+        if (others.length === 1) {
+          if (useHeadcount(others[0]) && surveys[0].file === others[0].file) S.info = `Read the survey and the headcount from the two sheets of “${surveys[0].file}”.`;
+        }
+      } catch (e) {
+        S.error = { title: 'VoiceBridge couldn’t read that file', detail: `Something unexpected happened while reading it (${String((e && e.message) || e).slice(0, 120)}).`, fix: 'Save it again from your survey tool or Excel as “CSV UTF-8”, and upload that.' };
+      } finally {
+        if (S.error && S.error !== before) S.errorSlot = slot;
+        S.reading = null; render();
+      }
+    })();
+    pending.add(job); job.finally(() => pending.delete(job));
+    return job;
+  }
+  const pending = new Set();
+  // Lets automated tests wait until every file being read has finished.
+  window.VB_WHEN_IDLE = () => Promise.all([...pending]);
   // ------------------------------------------------------------ Check
   function prepare() {
     const r = S.files.responses;
+    load();
+    // After a release, the settings it was made with are locked, so the published findings can't quietly change.
+    const locked = S.store.release && S.store.release.settings;
+    if (locked) { S.settings.minGroup = locked.minGroup; S.themeOverrides = { ...(locked.themes || {}) }; if (locked.invited) S.settings.invited = locked.invited; }
     S.clean = E.cleanRows(r.headers, r.rows);
     S.cols = E.detect(r.headers, S.clean.rows, { themes: S.themeOverrides });
     S.ds = E.buildDataset(S.cols, S.clean.rows, S.files.headcount ? S.files.headcount.rows : null);
@@ -238,7 +323,7 @@
       ${guessed.length && !general.length ? `<p class="tip">${I.info}<span>${guessed.length} question${guessed.length === 1 ? ' wasn’t' : 's weren’t'} tagged with a theme, so VoiceBridge placed ${guessed.length === 1 ? 'it' : 'them'} by ${guessed.length === 1 ? 'its' : 'their'} wording. Check the placement below.</span></p>` : ''}
       <details class="theme-edit" ${open ? 'open' : ''}><summary>Check or change which theme each question is in</summary>
         <div class="theme-rows">${ratings.map((c) => `<label class="theme-row ${c.theme === 'General' ? 'is-general' : ''}"><span>${esc(c.text)}${c.themeGuessed && !c.themeChosen ? ' <small class="faint">(placed by wording)</small>' : ''}</span>
-          <select data-theme-for="${esc(c.header)}" aria-label="Theme for ${esc(c.text)}">${options.map((t) => `<option ${t === c.theme ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select></label>`).join('')}</div>
+          <select data-theme-for="${esc(c.header)}" aria-label="Theme for ${esc(c.text)}" ${S.store.release ? 'disabled' : ''}>${options.map((t) => `<option ${t === c.theme ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select></label>`).join('')}</div>
       </details>`;
   }
 
@@ -264,6 +349,18 @@
       <p class="faint" style="font-size:13px">Organisations without a headcount file can still use VoiceBridge: start again without one. Every finding is then labelled “silence test not run”.</p></div>`;
   }
 
+  // Everything VoiceBridge changed to read the file, and anything the user should check, in plain sentences.
+  function readNotes() {
+    const r = S.files.responses, h = S.files.headcount;
+    const notes = [...(r && r.notes || []).map((n) => ['survey', n]), ...(h && h.notes || []).map((n) => ['headcount', n])];
+    const warns = [...(r && r.warnings || []), ...(h && h.warnings || [])];
+    if (!notes.length && !warns.length) return '';
+    return `<div class="card check-sec"><h2>${I.info} How VoiceBridge read your file${h && h.notes && h.notes.length ? 's' : ''}</h2>
+      ${warns.length ? `<div class="hc-warn" role="status"><h3>${I.wait} Please check</h3><ul>${warns.map((w) => `<li>${esc(w)}</li>`).join('')}</ul></div>` : ''}
+      ${notes.length ? `<ul class="read-notes">${notes.map(([k, n]) => `<li>${h && h.notes && h.notes.length ? `<b>${k === 'survey' ? 'Survey' : 'Headcount'}:</b> ` : ''}${esc(n)}</li>`).join('')}</ul>` : ''}
+    </div>`;
+  }
+
   function screenCheck() {
     const cols = S.cols, ds = S.ds, r = { ...S.files.responses, rows: S.clean.rows };
     const rm = S.clean.removed;
@@ -274,7 +371,9 @@
     const comments = cols.filter((c) => c.role === 'comment');
     const items = cols.filter((c) => c.role === 'rating').length;
     const reversed = cols.filter((c) => c.reverse);
-    const hasEmail = pii.some((c) => /email/i.test(c.why));
+    // Count real identifiers: Microsoft Forms fills "Email" with "anonymous" when responses are anonymous.
+    const realIds = (c) => S.clean.rows.filter((row) => { const v = String(row[c.header] || '').trim(); return v && !/^(anonymous|anon|n\/?a|-)$/i.test(v) && (!/email/i.test(c.why) || v.includes('@')); }).length;
+    const hasEmail = pii.some((c) => /email/i.test(c.why) && realIds(c) > 0);
     const N = ds.population ? ds.population.length : S.settings.invited;
     return `<div class="wrap"><section class="check">
       <div>
@@ -293,10 +392,15 @@
         </div>
       </div>
 
+      ${readNotes()}
+      ${S.store.release ? `<div class="card check-sec"><h2>${I.lock} Released ${fmtDate(S.store.release.at)}: settings locked</h2>
+        <p class="muted">These results have been released, so the settings they were made with (anonymity threshold ${S.settings.minGroup}${Object.keys(S.themeOverrides || {}).length ? ', your theme choices' : ''}) can’t be changed. Otherwise the published findings could quietly change.</p>
+        ${S.confirmUnrelease ? `<div class="confirm" role="alertdialog"><b>Start a new release?</b><p class="muted">This removes the current release, and every leader response saved in this browser, for this file. It can’t be undone.</p><div class="row"><button class="btn btn-primary btn-sm" data-act="unrelease-yes">Yes, start a new release</button><button class="btn btn-ghost btn-sm" data-act="unrelease-no">Keep the release</button></div></div>` : `<div><button class="btn btn-ghost btn-sm" data-act="unrelease">Start a new release</button></div>`}</div>` : ''}
+
       <div class="card check-sec">
         <h2>${I.shield} Removed before analysis</h2>
         <div class="removed">
-          ${pii.map((c) => `<div class="removed-row"><span><b>${esc(c.header)}</b></span><span>${esc(c.why)} · ${c.filled} removed, never analysed</span></div>`).join('')}
+          ${pii.map((c) => { const n = realIds(c); return `<div class="removed-row"><span><b>${esc(c.header)}</b></span><span>${n ? `${esc(c.why)} · ${n} removed, never analysed` : 'Empty or “anonymous” · not used'}</span></div>`; }).join('')}
           ${ignored.length ? `<div class="removed-row"><span>${ignored.map((c) => esc(c.header)).join(', ')}</span><span>Not needed, not used</span></div>` : ''}
           ${S.clean.total ? `<div class="removed-row"><span>${S.clean.total} row${S.clean.total === 1 ? '' : 's'} that ${S.clean.total === 1 ? 'isn’t' : 'aren’t'} a real response</span><span>${[
             rm.duplicates ? `${rm.duplicates} exact duplicate${rm.duplicates === 1 ? '' : 's'} (the same submission twice)` : '',
@@ -335,7 +439,7 @@
         <h2>${I.eyeoff} Anonymity</h2>
         <div class="inline-field">
           <span>Hide any group smaller than</span>
-          <span class="stepper"><button data-act="k-" aria-label="Fewer">−</button><output id="k-out">${S.settings.minGroup}</output><button data-act="k+" aria-label="More">+</button></span>
+          <span class="stepper"><button data-act="k-" aria-label="Fewer" ${S.store.release ? 'disabled' : ''}>−</button><output id="k-out">${S.settings.minGroup}</output><button data-act="k+" aria-label="More" ${S.store.release ? 'disabled' : ''}>+</button></span>
           <span>people</span>
         </div>
         <p class="tip">${I.info}<span>5 is the common standard. When one group is hidden, the next smallest is hidden too, so nobody can work it out by subtraction.</span></p>
@@ -344,7 +448,7 @@
       ${blockPanel(blocks)}
       <div class="check-go">
         <button class="btn btn-ghost" data-act="home">Use a different file</button>
-        ${blocks.some((b) => b.kind === 'headcount') ? `<label class="btn btn-ghost" for="f-hc2" style="cursor:pointer">Upload a corrected headcount</label><input id="f-hc2" type="file" accept=".csv,text/csv" class="sr">` : ''}
+        ${blocks.some((b) => b.kind === 'headcount') ? `<label class="btn btn-ghost" for="f-hc2" style="cursor:pointer">Upload a corrected headcount</label><input id="f-hc2" type="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" class="sr">` : ''}
         <button class="btn btn-primary btn-lg" data-act="analyse" ${blocks.length ? 'disabled aria-disabled="true" title="Fix the problems above first"' : ''}>Read the results ${I.arrow}</button>
       </div>
     </section></div>`;
@@ -953,6 +1057,7 @@
     const v = r || {};
     return `<form class="compose" data-form="respond" data-id="${f.id}">
       <div class="locked-finding">${I.lock}<span>The finding is locked. Your response appears next to it, word for word, on every employee’s page.</span></div>
+      ${S.composeError ? `<p class="err" role="alert">${esc(S.composeError)}</p>` : ''}
       <label for="r-heard">What did you hear? <small>In your own words, without softening it.</small><textarea id="r-heard" required placeholder="${esc(sug.heard)}">${esc(v.heard || '')}</textarea></label>
       <label for="r-first">What will you do first, and by when? <small>One concrete step is better than five vague ones.</small><textarea id="r-first" required placeholder="${esc(sug.first)}">${esc(v.first || '')}</textarea></label>
       <label for="r-wont">What won’t you do, and why? <small>Optional. Saying no honestly builds more trust than silence.</small><textarea id="r-wont" placeholder="${esc(sug.wont)}">${esc(v.wont || '')}</textarea></label>
@@ -1113,8 +1218,12 @@
     template: (el) => downloadTemplate(el.dataset.k),
     'template-xlsx': () => downloadExcelTemplate(),
     'to-check': () => { prepare(); go('check'); },
-    'k-': () => { S.settings.minGroup = Math.max(3, S.settings.minGroup - 1); $('#k-out').textContent = S.settings.minGroup; },
-    'k+': () => { S.settings.minGroup = Math.min(20, S.settings.minGroup + 1); $('#k-out').textContent = S.settings.minGroup; },
+    retry: () => render(),
+    unrelease: () => { S.confirmUnrelease = true; render(); },
+    'unrelease-no': () => { S.confirmUnrelease = false; render(); },
+    'unrelease-yes': () => { S.store = { release: null, responses: {}, conf: {} }; S.confirmUnrelease = false; save(); prepare(); render(); toast('The release was removed. You can change the settings and release again.'); },
+    'k-': () => { if (S.store.release) return; S.settings.minGroup = Math.max(3, S.settings.minGroup - 1); $('#k-out').textContent = S.settings.minGroup; },
+    'k+': () => { if (S.store.release) return; S.settings.minGroup = Math.min(20, S.settings.minGroup + 1); $('#k-out').textContent = S.settings.minGroup; },
     analyse: () => { if (E.blockers(S.ds).length) return render(); analyse(); go('reading'); },
     'skip-read': () => { clearTimeout(readTimer); go('results'); },
     'toggle-fa': (el) => {
@@ -1150,7 +1259,7 @@
       const at = Date.now();
       const win = S.pendingWindow || 30;
       const payload = JSON.stringify(S.a.focus.map((f) => [f.headline, f.g.fav, f.g.n]));
-      S.store.release = { at, window: win, due: at + win * 86400000, fp: fingerprint(payload + at) };
+      S.store.release = { at, window: win, due: at + win * 86400000, fp: fingerprint(payload + at), settings: { minGroup: S.settings.minGroup, themes: { ...(S.themeOverrides || {}) }, invited: S.settings.invited } };
       S.confirming = false; save(); render(); window.scrollTo({ top: 0, behavior: 'smooth' }); toast('Released to everyone');
     },
     preview: (el) => preview(el.dataset.k),
@@ -1159,13 +1268,13 @@
     dept: (el) => { S.deptPick = el.dataset.v; refreshSheet(); },
     ack: (el) => { S.store.responses[el.dataset.id] = { ...(S.store.responses[el.dataset.id] || {}), status: 'ack', ackAt: Date.now() }; save(); render(); toast('Acknowledged. Employees can see it.'); },
     compose: (el) => { S.composing = el.dataset.id; render(); const f = $('#r-heard'); f && f.focus({ preventScroll: true }); document.getElementById('ft-' + el.dataset.id).scrollIntoView({ behavior: 'smooth', block: 'start' }); },
-    'compose-cancel': () => { S.composing = null; render(); },
+    'compose-cancel': () => { S.composing = null; S.composeError = null; render(); },
     'compose-clear': () => { ['#r-heard', '#r-first', '#r-wont'].forEach((q) => { const x = $(q); if (x) x.value = ''; }); const h = $('#r-heard'); h && h.focus(); },
     reopen: (el) => { S.store.responses[el.dataset.id].status = 'plan'; save(); render(); toast('Reopened. It shows as “Plan shared” again.'); },
     'fill-example': (el) => { const f = S.a.focus.find((x) => x.id === el.dataset.id); const s = suggestions(f); $('#r-heard').value = s.heard; $('#r-first').value = s.first; $('#r-wont').value = s.wont; },
     done: (el) => { S.store.responses[el.dataset.id].status = 'done'; save(); render(); toast('Marked done'); },
     'log-conf': (el) => logConf(el.dataset.id),
-    'reset-demo': () => { S.store = { release: null, responses: {}, conf: {} }; S.empDay = 0; save(); render(); toast('Demo reset. Nothing has been released.'); },
+    'reset-demo': () => { S.store = { release: null, responses: {}, conf: {} }; S.empDay = 0; save(); prepare(); analyse(); render(); toast('Demo reset. Nothing has been released.'); },
     'ai-themes': () => runAiThemes(),
     'ai-off': () => { S.aiThemes = null; S.themeOpen = null; rerenderSection('comments'); },
   };
@@ -1184,14 +1293,14 @@
     const sc = e.target.closest('[data-scroll]');
     if (sc) { e.preventDefault(); const t = document.getElementById(sc.dataset.scroll); t && t.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
     const a = e.target.closest('[data-act]');
-    if (a && actions[a.dataset.act]) { e.preventDefault(); actions[a.dataset.act](a); }
+    if (a && actions[a.dataset.act]) { e.preventDefault(); try { actions[a.dataset.act](a); } catch (err) { showProblem(err); } }
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSheet(); });
   document.addEventListener('change', (e) => {
-    if (e.target.id === 'f-resp' && e.target.files[0]) readFile(e.target.files[0], 'responses');
-    if ((e.target.id === 'f-hc' || e.target.id === 'f-hc2') && e.target.files[0]) readFile(e.target.files[0], 'headcount');
+    if (e.target.id === 'f-resp' && e.target.files[0]) { readFiles([...e.target.files], e.target.files.length > 1 ? 'auto' : 'responses'); try { e.target.value = ''; } catch (x) { /* read-only in tests */ } }
+    if ((e.target.id === 'f-hc' || e.target.id === 'f-hc2') && e.target.files[0]) { readFiles([e.target.files[0]], 'headcount'); try { e.target.value = ''; } catch (x) { /* read-only in tests */ } }
     // Theme chosen for a question on the Check screen: re-read the file with that choice.
-    if (e.target.dataset && e.target.dataset.themeFor) {
+    if (e.target.dataset && e.target.dataset.themeFor && !S.store.release) {
       S.themeOverrides = { ...(S.themeOverrides || {}), [e.target.dataset.themeFor]: e.target.value };
       S.themeEditOpen = true; prepare(); render();
     }
@@ -1205,6 +1314,12 @@
     const form = e.target;
     if (form.dataset.form === 'respond') {
       const id = form.dataset.id;
+      // A response made only of spaces would show employees "Plan shared" with nothing in it.
+      if (!$('#r-heard').value.trim() || !$('#r-first').value.trim()) {
+        S.composeError = 'Write what you heard and what you’ll do first before publishing. Employees will read exactly what you write.';
+        render(); const box = $('#r-heard'); box && box.focus && box.focus(); return;
+      }
+      S.composeError = null;
       const prev = S.store.responses[id] || {};
       const editing = !!prev.heard;
       S.store.responses[id] = { ...prev, status: prev.status === 'done' ? 'done' : 'plan', heard: $('#r-heard').value.trim(), first: $('#r-first').value.trim(), wont: $('#r-wont').value.trim(), when: $('#r-when').value, at: Date.now(), firstAt: prev.firstAt || prev.at || Date.now(), editedAt: editing ? Date.now() : null };
@@ -1221,10 +1336,10 @@
   document.addEventListener('drop', (e) => {
     const dz = e.target.closest && e.target.closest('.dropzone');
     if (!dz) return; e.preventDefault(); dz.classList.remove('over');
-    const files = [...e.dataTransfer.files].filter((f) => /\.csv$/i.test(f.name) || f.type === 'text/csv');
-    if (!files.length) { S.error = 'That isn’t a CSV file. Export your survey results as CSV and try again.'; render(); return; }
-    // If two files are dropped, the one with rating answers is the survey; the other is headcount.
-    files.forEach((f) => readFile(f, dz.id === 'dz-resp' && files.length === 1 ? 'responses' : 'auto'));
+    const files = [...e.dataTransfer.files];
+    if (!files.length) return;
+    // Every file is checked by its content, not its name. With two files, the one with rating answers is the survey.
+    readFiles(files, files.length === 1 ? 'responses' : 'auto');
   });
 
   const SCREENS = { start: screenStart, check: screenCheck, reading: screenReading, results: () => screenResults(), release: screenRelease, follow: screenFollow, employees: () => `<div class="wrap emp-stage">${employeePage(0)}</div>` };

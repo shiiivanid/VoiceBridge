@@ -26,6 +26,7 @@ Click **Try it with Kumo Logistics** to load the sample organisation. Kumo is fi
 ```bash
 node test/validate.mjs   # 30 original checks (Kumo sample and other survey formats)
 node test/stress.mjs     # 42 checks from the Masakhane stress test (17 October 2026)
+node test/edge.mjs       # 94 checks: 33 correct file formats give identical reports; 49 broken files are caught (21 October 2026)
 node test/snapshot.mjs   # prints every result for 7 test files, to compare before and after a change
 ```
 

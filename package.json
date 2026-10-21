@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "node build.mjs && node server.mjs",
-    "test": "node test/validate.mjs && node test/stress.mjs"
+    "test": "node test/validate.mjs && node test/stress.mjs && node test/edge.mjs"
   },
   "engines": {
     "node": ">=20"

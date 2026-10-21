@@ -19,7 +19,7 @@ const store = {}; global.localStorage = { getItem: (k) => store[k] ?? null, setI
 global.scrollTo = () => {}; global.addEventListener = () => {};
 global.FileReader = class { readAsText(f) { this.result = f.text; this.onload(); } };
 global.URL.createObjectURL = () => 'blob:x'; global.URL.revokeObjectURL = () => {};
-for (const f of ['data.js', 'engine.js', 'guidance.js', 'app.js']) vm.runInThisContext(fs.readFileSync(path.join(SRC, f), 'utf8'), { filename: f });
+for (const f of ['data.js', 'engine.js', 'intake.js', 'guidance.js', 'app.js']) vm.runInThisContext(fs.readFileSync(path.join(SRC, f), 'utf8'), { filename: f });
 
 const fire = (type, target) => handlers[type].forEach((h) => h({ target, preventDefault() {}, dataTransfer: null }));
 const el = (data) => ({ dataset: data, closest(sel) { return (sel === '[data-act]' && data.act) || (sel === '[data-go]' && data.go) ? this : null; } });
@@ -32,8 +32,9 @@ const toResults = () => { click({ act: 'analyse' }); click({ act: 'skip-read' })
 
 
 const TH = path.join(UP, 'Thembeka test data');
-upload('f-resp', path.join(TH, 'thembeka_survey_export_aug2026.csv'));
-upload('f-hc', path.join(TH, 'thembeka_headcount_aug2026.csv'));
+(async () => {
+upload('f-resp', path.join(TH, 'thembeka_survey_export_aug2026.csv')); await globalThis.VB_WHEN_IDLE();
+upload('f-hc', path.join(TH, 'thembeka_headcount_aug2026.csv')); await globalThis.VB_WHEN_IDLE();
 click({ act: 'to-check' }); toResults();
 let t = txt(app.innerHTML);
 console.log('On the radar');
@@ -82,3 +83,4 @@ check('...and it opens the full list', q1 > q0, `${q0} -> ${q1}`);
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
+})();

@@ -24,7 +24,7 @@ global.scrollTo = () => {};
 global.addEventListener = () => {};
 global.FileReader = class { readAsText(f) { this.result = f.text; this.onload(); } };
 
-for (const f of ['data.js', 'engine.js', 'guidance.js', 'app.js']) vm.runInThisContext(fs.readFileSync(path.join(SRC, f), 'utf8'), { filename: f });
+for (const f of ['data.js', 'engine.js', 'intake.js', 'guidance.js', 'app.js']) vm.runInThisContext(fs.readFileSync(path.join(SRC, f), 'utf8'), { filename: f });
 
 const S_firstDim = () => (app.innerHTML.match(/data-act="glance" data-dim="([^"]+)"/) || [])[1];
 const fire = (type, target) => handlers[type].forEach((h) => h({ target, preventDefault() {}, dataTransfer: null }));
@@ -33,13 +33,15 @@ const click = (data) => fire('click', el(data));
 const text = () => app.innerHTML.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
 const show = (label, needles) => { const t = text(); console.log(`\n[${label}]`); needles.forEach((n) => console.log(`  ${t.includes(n) ? 'OK  ' : 'MISSING'} "${n}"`)); };
 
+(async () => {
 try {
   show('Start screen', ['What your file needs', 'Download the Excel template', 'Download a survey template']);
   if (MODE === 'sample') {
     click({ act: 'sample' });
   } else {
     fire('change', { id: 'f-resp', files: [{ name: path.basename(SURVEY), text: fs.readFileSync(SURVEY, 'utf8') }] });
-    if (HEADCOUNT && HEADCOUNT !== '-') fire('change', { id: 'f-hc', files: [{ name: path.basename(HEADCOUNT), text: fs.readFileSync(HEADCOUNT, 'utf8') }] });
+    await globalThis.VB_WHEN_IDLE();
+    if (HEADCOUNT && HEADCOUNT !== '-') { fire('change', { id: 'f-hc', files: [{ name: path.basename(HEADCOUNT), text: fs.readFileSync(HEADCOUNT, 'utf8') }] }); await globalThis.VB_WHEN_IDLE(); }
     click({ act: 'to-check' });
   }
   show('Check screen', MODE === 'masakhane' ? ['ways to group people'] : MODE === 'sample' ? ['ways to group people', 'Matched to 600 people'] : HEADCOUNT !== '-' ? ['0 ways to group people', 'no columns to group people by', 'Matched to 26 people', 'None of the headcount'] : ['0 ways to group people', 'no columns to group people by', 'How many people were invited?']);
@@ -72,3 +74,4 @@ try {
   process.exitCode = 1;
 }
 process.exit();
+})();
