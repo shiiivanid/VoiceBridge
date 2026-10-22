@@ -277,6 +277,29 @@ for (const [name, uploads, expect] of BROKEN) {
   check(name, expect(r) && !r.crashed, `stage=${r.stage}; message=${r.error || '(none)'}`);
 }
 
+{
+  // 0–4 coding when hardly anyone strongly disagrees (found with the Kestrel Bay test files, 22 October):
+  // under 2% of answers are 0, and the survey must still be read as 0–4, not one point too low.
+  const fewStrongNo = () => { let k = 0; return (n) => (n === 1 && k++ % 12 ? 2 : n); };
+  const a = fewStrongNo(), b = fewStrongNo();
+  const as15 = withAnswers((n) => (n < 1 ? '' : String(a(n))));
+  const as04 = withAnswers((n) => (n < 1 ? '' : String(b(n) - 1)));
+  const nums = as04.split('\n').slice(1).flatMap((l) => l.split(',')).filter((v) => /^[0-4]$/.test(v));
+  const zeroShare = nums.filter((v) => v === '0').length / nums.length;
+  const r15 = await run([['resp', [file('kestrel.csv', as15)]], ['hc', [file('hc.csv', KHC)]]]);
+  const r04 = await run([['resp', [file('kestrel.csv', as04)]], ['hc', [file('hc.csv', KHC)]]]);
+  check(`0–4 answers with few 0s (${(zeroShare * 100).toFixed(1)}% of answers) give the same report as the same answers coded 1–5`,
+    zeroShare > 0 && zeroShare < 0.02 && r04.stage === 'results' && r15.stage === 'results' && r04.report === r15.report && /coded 0–4/.test(txt(r04.check || '')) && !r04.crashed,
+    `zeros ${zeroShare}; stage ${r04.stage}; same report ${r04.report === r15.report}; note ${/coded 0–4/.test(txt(r04.check || ''))}`);
+
+  // …but a 1–5 survey with a few stray 0s (typos) is still read as 1–5, because it also has 5s.
+  let t = 0;
+  const typos = withAnswers((n) => (n < 1 ? '' : t++ % 150 === 0 ? '0' : String(n)));
+  const rt = await run([['resp', [file('typos.csv', typos)]], ['hc', [file('hc.csv', KHC)]]]);
+  check('A 1–5 survey with a few stray 0s is not mistaken for a 0–4 survey', rt.stage === 'results' && !/coded 0–4/.test(txt(rt.check || '')) && /couldn’t be read as a point on the scale/.test(txt(rt.check || '')) && !rt.crashed,
+    `stage ${rt.stage}; check ${txt(rt.check || '').slice(0, 200)}`);
+}
+
 console.log('\nPart 3 – behaviour after the upload');
 {
   // A blank leader response is not published.

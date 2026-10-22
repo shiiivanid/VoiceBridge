@@ -2305,7 +2305,10 @@ p { margin: 0; }
       const low = share((n) => n === 0) > 0 ? 0 : 1;
       return fail(`${label} uses a ${low}–${top} scale`, `VoiceBridge’s rules (what counts as “positive”, the silence test) are set for a five-point agreement scale, and converting a ${top}-point scale would change what the answers mean.`, 'Upload a survey that used a five-point scale (Strongly disagree to Strongly agree, or 1–5). The start page describes the format.', 'scale');
     }
-    const shift = share((n) => n === 0) >= 0.02 && share((n) => n === 5) === 0;
+    // 0–4: any 0 and no 5 at all. A 1–5 scale has no 0 and a 0–4 scale has no 5, so this holds however few people
+    // chose the lowest answer. (A minimum share of 0s used to be required here; a 0–4 survey where hardly anyone
+    // strongly disagreed slipped under it and was read one point too low.) Stray 0s in a 1–5 survey come with 5s.
+    const shift = share((n) => n === 0) > 0 && share((n) => n === 5) === 0;
     if (shift) notes.push('Answers were coded 0–4. They were read as 1–5 (0 = Strongly disagree … 4 = Strongly agree).');
 
     // Convert every candidate column, counting answers that can't be read.

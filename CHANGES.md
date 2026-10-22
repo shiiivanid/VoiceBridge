@@ -297,3 +297,31 @@ It also refused files it could have read (Excel workbooks, which is the only for
 - The new reader was then tested in Chrome with real files, including the Excel files.
 
 **AI-use log line:** I asked for every behaviour to be tested against wrongly formatted and broken files, so the app never fails in front of a user. Claude generated 75 awkward files and found 12 that produced believable but wrong reports without a warning (for example, one stray quote mark made it read 39 people instead of 388). It wrote a file reader that either reads a file correctly, saying what it changed, or refuses it with a specific fix. It then proved, with 94 automatic checks and a run in a real browser, that 33 correct formats give identical results and every broken file is caught. Two of its own fixes were wrong at first (Excel dates mistaken for averages; adding a headcount hid the survey's error message), and the checks caught both.
+
+## Kestrel Bay re-check: a fresh set of files (22 October 2026)
+
+**What was done.** A new fictional company, Kestrel Bay Foods (320 staff, 241 responses, four planted patterns), was built from scratch, so the check doesn't reuse Kumo or the edge-case files. Its clean survey was then saved or damaged 24 realistic ways. Each file was run in a real browser through the 20 October version and the live 21 October version. The files, the generator and a results log are in the local folder `Format tests 22 Oct` (not in this repo).
+
+**Result.**
+
+| | Pass | Partly | Fail |
+|---|---|---|---|
+| 20 October version | 4 | 6 | 14, of which 7 were believable but wrong reports with no warning |
+| 21 October version (live) | 22 | 1 (near-duplicate, known limitation) | 1 |
+
+**Fix 26: 0–4 surveys where hardly anyone strongly disagrees.**
+- **The fail.** A survey coded 0–4 in which only 1.7% of answers were 0 was read one point too low. Fairness showed 9% positive instead of 47%. The reader only recognised 0–4 when at least 2% of answers were 0, which is stricter than decision 11.
+- **Now.** Any 0 with no 5 at all means 0–4, exactly as decision 11 says. A 1–5 survey with a few stray 0s is still read as 1–5, because it also has 5s.
+- **New checks in `test/edge.mjs` (now 96):**
+  - The same answers coded 0–4 (0.5% zeros) and coded 1–5 must give an identical report.
+  - A 1–5 survey with stray 0s must not be shifted.
+  - The first check failed before the fix and passes after it.
+- **Everything else unchanged.** All checks pass: 30, 42, 96 and 20. The result snapshot for every test dataset is identical, so no other number moved. All 24 Kestrel files were re-run in the browser on the fixed build, and only file 11 changed.
+
+**Found, not fixed (small, for the write-up or a later round):**
+- Excel uploads note "N rows were shorter than the header row". Those are only blank comment boxes, which Excel leaves out, so the note sounds more alarming than it is.
+- When labels differing only in capitals are merged, the shown label can be the all-capitals form ("MAN").
+- The headcount-mismatch message says "(it uses Non-binary)" when it should list all of the headcount's labels.
+- Combined groups are only formed with gender or race. A planted "semi-skilled staff in Durban" pattern surfaced as "semi-skilled staff" overall, because site × level is never tested.
+
+**AI-use log line:** I asked for new test data to check the app again, and to show what the earlier version got wrong. Claude built a fresh fictional company and 24 realistic file variants, and ran them through both versions in a browser. The live version passed 22 and failed one: a 0–4 survey with very few zeros was read one point too low, because the code was stricter than my decision 11. Claude wrote a check that reproduced the failure, fixed the rule to match my decision, and confirmed that no other result changed.

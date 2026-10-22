@@ -81,6 +81,8 @@ Shivani's answers to the six open questions from the handout (HANDOFF.md, sectio
 
 **Why.** A 0 can't appear on a 1–5 scale, so a survey with 0s and no 5s can only be 0–4: shifting it is exact, not a guess. Converting a 7- or 10-point scale would change what "positive" means.
 
+**Corrected 22 October.** The code didn't fully match this decision: it only converted a 0–4 survey when at least 2% of the answers were 0. A 0–4 survey where hardly anyone strongly disagreed slipped under that and was read one point too low. It now follows the rule above exactly (any 0 and no 5). A 1–5 survey with a few stray 0s is still read as 1–5, because it also has 5s.
+
 ## 12. Excel files are read directly (21 October)
 
 **Decision.** VoiceBridge reads .xlsx workbooks as well as CSV, including the filled-in VoiceBridge template (survey and headcount in one workbook).
